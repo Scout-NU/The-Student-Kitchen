@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Student Kitchen</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Student Kitchen</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>The Student Kitchen</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#tips">Tips</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <header>
+    <div class="container">
+      <h1>The Student Kitchen</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#tips">Tips</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Welcome to The Student Kitchen</h2>
+        <p>Simple, affordable, and delicious recipes for college students.</p>
+      </div>
+    </section>
+
+    <section id="recipes" class="content-section">
+      <div class="container">
+        <h2>Featured Recipes</h2>
+        <div class="card-grid">
+          <div class="card"><h3>Pasta Primavera</h3></div>
+          <div class="card"><h3>Avocado Toast</h3></div>
+          <div class="card"><h3>Chicken Stir-Fry</h3></div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Welcome to The Student Kitchen</h2>
-            </div>
-        </section>
-
-        <section id="recipes" class="content-section">
-            <div class="container">
-                <div class="card-grid">
-                    <div class="card">
-                    </div>
-                    <div class="card">
-                    </div>
-                    <div class="card">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="tips" class="content-section">
-            <div class="container">
-                <h2>Cooking Tips</h2>
-                <div class="tips-list">
-                    <article>
-                    </article>
-                    <article>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="content-section">
-            <div class="container">
-                <h2>About Us</h2>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2025 The Student Kitchen. All rights reserved.</p>
-            <p>Contact us: <a href="mailto:info@studentkitchen.com"></a></p>
+    <section id="tips" class="content-section">
+      <div class="container">
+        <h2>Cooking Tips</h2>
+        <div class="tips-list">
+          <article>
+            <h3>Prep Before You Cook</h3>
+            <p>Cut, wash, and measure your ingredients before starting — it makes cooking smoother and faster.</p>
+          </article>
+          <article>
+            <h3>Season as You Go</h3>
+            <p>Don’t wait until the end to season — layer flavor at each step for better results.</p>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <section id="about" class="content-section">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>The Student Kitchen is dedicated to helping students cook simple, affordable, and healthy meals on a budget.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <p>&copy; 2025 The Student Kitchen. All rights reserved.</p>
+      <p>Contact us: <a href="mailto:info@studentkitchen.com">info@studentkitchen.com</a></p>
+    </div>
+  </footer>
 </body>
 </html>
