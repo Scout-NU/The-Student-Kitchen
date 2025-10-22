@@ -1,31 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - The Student Kitchen</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - The Student Kitchen</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>The Student Kitchen</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <h1>The Student Kitchen</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <!-- add other links here to match your main nav if you want -->
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p>If you’d like to get in touch, please email us at <a href="mailto:studentkitchen@northeastern.edu">studentkitchen@northeastern.edu</a>.</p>
+  <main class="contact-page">
+    <!-- HERO -->
+    <section class="hero hero--contact">
+      <div class="container hero__inner">
+        <h1 class="hero__title">Contact</h1>
+        <p class="hero__subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORM PANEL -->
+    <section class="panel panel--contact">
+      <div class="container">
+        <form class="contact-form" action="#" method="post">
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Name" required />
+
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email" required />
+
+          <label class="sr-only" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+
+          <button type="submit" class="btn btn--pill">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SUPPORT / DONATION -->
+    <section class="support">
+      <div class="container">
+        <h2 class="section-title">Support The Student Kitchen</h2>
+        <p class="section-subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <div class="donation-card">
+          <div class="donation-row">
+            <span class="donation-label">Frequency</span>
+            <div class="btn-group">
+              <button class="btn btn--chip is-active" type="button" aria-pressed="true">One Time</button>
+              <button class="btn btn--chip" type="button" aria-pressed="false">Monthly</button>
             </div>
-        </section>
-    </main>
+          </div>
+
+          <div class="donation-row">
+            <span class="donation-label">Donation Amount</span>
+            <div class="btn-group btn-group--wrap">
+              <button class="btn btn--amount" type="button">$10</button>
+              <button class="btn btn--amount" type="button">$20</button>
+              <button class="btn btn--amount" type="button">$50</button>
+              <button class="btn btn--amount" type="button">$100</button>
+            </div>
+          </div>
+
+          <input type="number" class="input input--full" placeholder="Other Amount" min="1" step="1" />
+
+          <button class="btn btn--primary btn--full" type="button">Donate</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <p><a href="mailto:TheStudentKitchen@gmail.com">TheStudentKitchen@gmail.com</a></p>
+        <div class="socials">
+          <!-- Simple SVG icons -->
+          <a class="social" aria-label="Instagram" href="#"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg></a>
+          <a class="social" aria-label="Facebook" href="#"><svg viewBox="0 0 24 24"><path d="M13.5 22V13h3l.5-3.5h-3.5V7.5c0-1 .3-1.7 1.8-1.7H17V2.6C16.6 2.5 15.7 2.4 14.6 2.4 12 2.4 10.2 3.9 10.2 6.9V9.5H7v3.5h3.2V22h3.3z"/></svg></a>
+          <a class="social" aria-label="Email" href="mailto:TheStudentKitchen@gmail.com"><svg viewBox="0 0 24 24"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5 8 6 8-6V6H4z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-columns">
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#tips">Programs</a></li>
+          <li><a href="index.html#about">Our Mission</a></li>
+          <li><a href="index.html#impact">Community Impact</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Student Testimonials</a></li>
+          <li><a href="#">Skills</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ---- Donation amount buttons ----
+      const amountButtons = document.querySelectorAll(".btn--amount");
+      const otherInput = document.querySelector(".input--full");
+    
+      amountButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          amountButtons.forEach(b => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+          otherInput.value = btn.textContent.replace("$", "");
+        });
+      });
+    
+      otherInput.addEventListener("input", () => {
+        if (otherInput.value.trim() !== "") {
+          amountButtons.forEach(b => b.classList.remove("is-active"));
+        }
+      });
+    
+      // ---- Frequency (One Time / Monthly) buttons ----
+      const freqButtons = document.querySelectorAll(".btn--chip");
+      freqButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          freqButtons.forEach(b => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+        });
+      });
+    });
+    </script>    
 </body>
 </html>
