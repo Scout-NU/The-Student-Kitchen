@@ -1,73 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Student Kitchen</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>The Student Kitchen</h1>
+    <div class="container header__inner">
+      <div class="brand"><strong>The</strong><br/>Student<br/>Kitchen</div>
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#tips">Tips</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#mission">Our Mission</a></li>
+          <li><a href="#impact">Community Impact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn--donate" href="#donate">Donate</a></li>
+          <li><input type="search" placeholder="Search" class="nav-search"/></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <!-- Hero -->
+    <section class="hero hero--stacked">
       <div class="container">
-        <h2>Welcome to The Student Kitchen</h2>
-        <p>Simple, affordable, and delicious recipes for college students.</p>
+        <div class="shelf"><h1>THE</h1></div>
+        <div class="shelf"><h1>STUDENT</h1></div>
+        <div class="shelf"><h1>KITCHEN</h1></div>
+        <p class="hero-blurb">Empowering NYC youth to take autonomy over their food and their communities.</p>
       </div>
     </section>
 
-    <section id="recipes" class="content-section">
-      <div class="container">
-        <h2>Featured Recipes</h2>
-        <div class="card-grid">
-          <div class="card"><h3>Pasta Primavera</h3></div>
-          <div class="card"><h3>Avocado Toast</h3></div>
-          <div class="card"><h3>Chicken Stir-Fry</h3></div>
+    <!-- Mission -->
+    <section id="mission" class="split">
+      <div class="container split__inner">
+        <div class="split__text">
+          <h2>Our Mission</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+          <a class="btn btn--pill" href="#">Read more</a>
         </div>
+        <div class="split__media"><div class="media-placeholder"><span>Image</span></div></div>
       </div>
     </section>
 
-    <section id="tips" class="content-section">
-      <div class="container">
-        <h2>Cooking Tips</h2>
-        <div class="tips-list">
-          <article>
-            <h3>Prep Before You Cook</h3>
-            <p>Cut, wash, and measure your ingredients before starting — it makes cooking smoother and faster.</p>
-          </article>
-          <article>
-            <h3>Season as You Go</h3>
-            <p>Don’t wait until the end to season — layer flavor at each step for better results.</p>
-          </article>
+    <!-- Impact -->
+    <section id="impact" class="impact-strip">
+      <div class="container impact__grid">
+        <div class="impact__item"><div class="impact__icon">👥</div><p>Over 60% of students something.</p></div>
+        <div class="impact__item"><div class="impact__icon">🏫</div><p>More than 91% of schools something.</p></div>
+        <div class="impact__item"><div class="impact__icon">📊</div><p>Food tracking 3 in 10 something.</p></div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="split split--reverse">
+      <div class="container split__inner">
+        <div class="split__text">
+          <h2>Our Programs</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+          <a class="btn btn--pill" href="#">View programs</a>
         </div>
+        <div class="split__media"><div class="media-placeholder"><span>Image</span></div></div>
       </div>
     </section>
 
-    <section id="about" class="content-section">
-      <div class="container">
-        <h2>About Us</h2>
-        <p>The Student Kitchen is dedicated to helping students cook simple, affordable, and healthy meals on a budget.</p>
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container testimonials__grid">
+        <article class="t-card"><blockquote>“I loved learning how to prepare new dishes...”</blockquote><cite>— Aileen, 11th grade</cite></article>
+        <div class="t-card t-card--img"><div class="media-placeholder"><span>Image</span></div></div>
+        <div class="t-card t-card--img"><div class="media-placeholder"><span>Image</span></div></div>
+        <article class="t-card"><blockquote>“I like cooking club because I learn things I wouldn’t on my own...”</blockquote><cite>— Dylan, 7th grade</cite></article>
+        <article class="t-card"><blockquote>“Being in the cooking club has been an amazing experience...”</blockquote><cite>— Tarun, 12th grade</cite></article>
+        <div class="t-card t-card--img"><div class="media-placeholder"><span>Image</span></div></div>
       </div>
     </section>
   </main>
 
-  <footer id="contact">
-    <div class="container">
-      <p>&copy; 2025 The Student Kitchen. All rights reserved.</p>
-      <p>Contact us: <a href="mailto:info@studentkitchen.com">info@studentkitchen.com</a></p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <p><a href="mailto:TheStudentKitchen@gmail.com">TheStudentKitchen@gmail.com</a></p>
+        <div class="socials">
+          <a class="social" href="#">📸</a>
+          <a class="social" href="#">📘</a>
+          <a class="social" href="mailto:TheStudentKitchen@gmail.com">✉️</a>
+        </div>
+      </div>
+      <div class="footer-columns">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#mission">Our Mission</a></li>
+          <li><a href="#impact">Community Impact</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Student Testimonials</a></li>
+          <li><a href="#">Skills</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>
