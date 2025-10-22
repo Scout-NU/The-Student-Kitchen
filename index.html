@@ -9,65 +9,113 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>The Student Kitchen</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#tips">Tips</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="community-impact.html">Community Impact</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <main>
-        <section id="home" class="hero">
+        <section id="home" class="hero-simple">
             <div class="container">
-                <h2>Welcome to The Student Kitchen</h2>
+                <h2>The Student Kitchen</h2>
+                <p>Our vision is to empower NYC youth to take autonomy over their food and their communities.</p>
             </div>
         </section>
 
-        <section id="recipes" class="content-section">
+        <section class="image-placeholder">
+            <div class="placeholder-box"></div>
+        </section>
+
+        <section class="what-we-do">
             <div class="container">
-                <div class="card-grid">
-                    <div class="card">
+                <h2>What We Do</h2>
+                <p>The Student Kitchen is an after-school program for New York City students grades K-12 that uses cooking workshops to build healthy habits, grow students' confidence in the kitchen, and explore new cultures.</p>
+            </div>
+        </section>
+
+        <section class="how-we-do-it">
+            <div class="image-placeholder-left">
+                <div class="placeholder-box"></div>
+            </div>
+            <div class="dark-content">
+                <div class="content-inner">
+                    <h2>How We Do It</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    
+                    <h2>Programs</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    
+                    <button class="learn-more-btn">View Programs</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">icon</div>
+                        <p>Statistic</p>
                     </div>
-                    <div class="card">
+                    <div class="stat-item">
+                        <div class="stat-icon">icon</div>
+                        <p>Statistic</p>
                     </div>
-                    <div class="card">
+                    <div class="stat-item">
+                        <div class="stat-icon">icon</div>
+                        <p>Statistic</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="tips" class="content-section">
+        <section id="tips" class="testimonials">
             <div class="container">
-                <h2>Cooking Tips</h2>
-                <div class="tips-list">
-                    <article>
-                    </article>
-                    <article>
-                    </article>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>“I liked learning how to prepare new dishes, especially with peers and students in my school. Cooking club is great to explore and learn about different cultures and backgrounds. I truly enjoy the club because of the opportunity we get to expand our knowledge.”</p>
+                        <p class="author">- Arleen, 11th grade</p>
+                    </div>
+                    <div class="testimonial-image">
+                        <div class="placeholder-box"></div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item reverse">
+                    <div class="testimonial-image">
+                        <div class="placeholder-box"></div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>“I like the cooking club because I learn things that I wouldn't really learn on my own time. One time I made white sauce for halal food and I made it again at home for my family.  Also Mr. Averbuch has taught many of us some terminology and how to be safe in the kitchen.”</p>
+                        <p class="author">- Dylan, 12th grade</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>“Being in the cooking club has been an amazing experience for me… We get the opportunity to take part in making cuisines which helps us become more confident in the kitchen and in the process we can also alternate some ingredients which shows how much creativity can be made by the cook (us!). I love meeting new people with many backgrounds who volunteer in teaching us a cuisine of their background or in their field of work and I hope to learn more cuisines before the school year ends!”</p>
+                        <p class="author">- Tanea, 12th grade</p>
+                    </div>
+                    <div class="testimonial-image">
+                        <div class="placeholder-box"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="about" class="content-section">
             <div class="container">
-                <h2>About Us</h2>
             </div>
         </section>
     </main>
 
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2025 The Student Kitchen. All rights reserved.</p>
-            <p>Contact us: <a href="mailto:info@studentkitchen.com"></a></p>
-        </div>
-    </footer>
+    <div id="footer"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 </body>
 </html>
