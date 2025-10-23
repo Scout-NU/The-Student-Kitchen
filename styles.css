@@ -1,6 +1,24 @@
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;line-height:1.6;color:#333;cursor:url('pizza.png')0 0,auto;}
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  cursor: none; /* CHANGE THIS LINE - remove the pizza.png reference */
+}
 .container{max-width:1200px;margin:0 auto;padding:0 20px;}
+
+/* ===========================
+   CUSTOM PIZZA CURSOR
+   =========================== */
+   .custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-out;
+    font-size: 24px;
+    will-change: transform;
+}
 
 /* header and nav bar 
 - need to change nav bar and header color to match homepage in the other branch */
