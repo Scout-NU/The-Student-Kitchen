@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programs - The Student Kitchen</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main>
+    <section class="programs-hero">
+      <div class="container">
+        <h1>Programs</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+
+    <!-- Add your programs content here -->
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+    
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+</body>
+</html>

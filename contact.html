@@ -7,18 +7,8 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>The Student Kitchen</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-          <li><a href="mission.html" class="active">Mission</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+
+  <div id="header"></div>
 
   <main class="contact-page">
     <!-- heading -->
@@ -86,27 +76,8 @@
     </section>
   </main>
 
-  <!-- footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-left">
-        <p><a href="mailto:TheStudentKitchen@gmail.com">TheStudentKitchen@gmail.com</a></p>
-      </div>
+  <div id="footer"></div>
 
-      <div class="footer-columns">
-        <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#tips">Programs</a></li>
-          <li><a href="index.html#about">Our Mission</a></li>
-          <li><a href="index.html#impact">Community Impact</a></li>
-        </ul>
-        <ul>
-          <li><a href="#">Student Testimonials</a></li>
-          <li><a href="#">Skills</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Donation amount buttons 
@@ -136,6 +107,13 @@
         });
       });
     });
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
     </script>    
 </body>
 </html>
