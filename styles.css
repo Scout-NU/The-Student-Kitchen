@@ -1,6 +1,81 @@
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;line-height:1.6;color:#333;cursor:url('pizza.png')0 0,auto;}
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  cursor: none; /* CHANGE THIS LINE - remove the pizza.png reference */
+}
 .container{max-width:1200px;margin:0 auto;padding:0 20px;}
+
+/* ===========================
+   CUSTOM PIZZA CURSOR
+   =========================== */
+   .custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease-out;
+    font-size: 24px;
+    will-change: transform;
+}
+
+/* ===========================
+   JIGGLING EGG PAN
+   =========================== */
+   .floating-hat {
+    position: absolute;
+    font-size: 48px;
+    pointer-events: none;
+    z-index: 50;
+    left: 50%;
+    top: 40%;
+    transform: translate(200px, -50%);
+    animation: jiggleBounce 0.8s ease-in-out;
+}
+
+@keyframes jiggleBounce {
+    0% {
+        transform: translate(200px, -50%) rotate(0deg) scale(1);
+    }
+    10% {
+        transform: translate(200px, -60px) rotate(-15deg) scale(1.1);
+    }
+    20% {
+        transform: translate(200px, -45px) rotate(15deg) scale(0.95);
+    }
+    30% {
+        transform: translate(200px, -58px) rotate(-12deg) scale(1.08);
+    }
+    40% {
+        transform: translate(200px, -48px) rotate(12deg) scale(0.98);
+    }
+    50% {
+        transform: translate(200px, -55px) rotate(-10deg) scale(1.05);
+    }
+    60% {
+        transform: translate(200px, -50px) rotate(8deg) scale(1.02);
+    }
+    70% {
+        transform: translate(200px, -52px) rotate(-5deg) scale(1.01);
+    }
+    80% {
+        transform: translate(200px, -50px) rotate(3deg) scale(1);
+    }
+    90% {
+        transform: translate(200px, -51px) rotate(-2deg) scale(1);
+    }
+    100% {
+        transform: translate(200px, -50%) rotate(0deg) scale(1);
+    }
+}
+
+/* Make hero section positioned so hat stays within it */
+.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+}
 
 /* header and nav bar 
 - need to change nav bar and header color to match homepage in the other branch */

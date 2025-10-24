@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-
+  <div class="custom-cursor">🍕</div>
   <div id="header"></div>
 
   <main>
@@ -32,5 +32,6 @@
         .then(response => response.text())
         .then(data => document.getElementById('footer').innerHTML = data);
   </script>
+  <script src="cursor.js"></script>
 </body>
 </html>
