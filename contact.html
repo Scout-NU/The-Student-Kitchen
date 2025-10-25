@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - The Student Kitchen</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="custom-cursor">🍕</div>
+  <div id="header"></div>
+
+  <main class="contact-page">
+    <!-- heading -->
+    <section class="hero hero--contact">
+      <div class="container hero__inner">
+        <h1 class="hero__title">Contact</h1>
+        <p class="hero__subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </section>
+
+    <!--  contact form panel -->
+    <section class="panel panel--contact">
+      <div class="container">
+        <form class="contact-form" action="#" method="post">
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Name" required />
+
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email" required />
+
+          <label class="sr-only" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+
+          <button type="submit" class="btn btn--pill">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- donation section -->
+    <section class="support">
+      <div class="container">
+        <h2 class="section-title">Support The Student Kitchen</h2>
+        <p class="section-subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <div class="donation-card">
+          <div class="donation-row">
+            <span class="donation-label">Frequency</span>
+            <div class="btn-group">
+              <button class="btn btn--chip is-active" type="button" aria-pressed="true">One Time</button>
+              <button class="btn btn--chip" type="button" aria-pressed="false">Monthly</button>
+            </div>
+          </div>
+
+          <div class="donation-row">
+            <span class="donation-label">Donation Amount</span>
+            <div class="btn-group btn-group--wrap">
+              <button class="btn btn--amount" type="button">$10</button>
+              <button class="btn btn--amount" type="button">$20</button>
+              <button class="btn btn--amount" type="button">$50</button>
+              <button class="btn btn--amount" type="button">$100</button>
+            </div>
+          </div>
+
+          <input type="number" class="input input--full" placeholder="Other Amount" min="1" step="1" />
+
+          <button class="btn btn--primary btn--full" type="button">Donate</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Donation amount buttons 
+      const amountButtons = document.querySelectorAll(".btn--amount");
+      const otherInput = document.querySelector(".input--full");
+    
+      amountButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          amountButtons.forEach(b => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+          otherInput.value = btn.textContent.replace("$", "");
+        });
+      });
+    
+      otherInput.addEventListener("input", () => {
+        if (otherInput.value.trim() !== "") {
+          amountButtons.forEach(b => b.classList.remove("is-active"));
+        }
+      });
+    
+      //  frequency buttons 
+      const freqButtons = document.querySelectorAll(".btn--chip");
+      freqButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          freqButtons.forEach(b => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+        });
+      });
+    });
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>  
+    <script src="cursor.js"></script>   
+</body>
+</html>

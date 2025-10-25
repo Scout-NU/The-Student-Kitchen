@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Mission - The Student Kitchen</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="mission-page">
+
+  <div class="custom-cursor">🍕</div> 
+  <div id="header"></div>
+
+  <section class="mission-hero">
+    <h1>Our Mission</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+
+  <section class="mission-banner">
+    <img src="images/mission-banner.jpg" alt="Community outreach">
+  </section>
+
+  <section class="about-section">
+    <div class="about-image">
+      <img src="images/about-us.jpg" alt="About Us">
+    </div>
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id.</p>
+    </div>
+  </section>
+
+  <section class="about-section reverse">
+    <div class="about-image">
+      <img src="images/about-ben.jpg" alt="About Ben">
+    </div>
+    <div class="about-text">
+      <h2>About Ben</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <script src="cursor.js"></script>
+</body>
+</html>
