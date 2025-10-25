@@ -1,37 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Programs - The Student Kitchen</title>
-  <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="custom-cursor">🍕</div>
-  <div id="header"></div>
+    <header>
+        <div class="container">
+            <h1>The Student Kitchen</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="index.html#tips">Tips</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <section class="programs-hero">
-      <div class="container">
-        <h1>Programs</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </section>
+    <main>
+        <section class="hero programs-hero">
+            <div class="container">
+                <h2>Programs</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien <br> 
+                    vitae pellentesque sem placerat. In id </p>
+            </div>
+        </section>
 
-    <!-- Add your programs content here -->
-  </main>
+        <section class="content-section">
+            <div class="container">
+                <div class="programs-grid">
+                    <div class="program-card">
+                    
+                    </div>
+                    <div class="program-card"></div>
+                    <div class="program-card"></div>
+                </div>
+            </div>
+        </section>
 
-  <div id="footer"></div>
+        <section class="content-section contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>For questions or requests regarding<br>
+                    cooking programs, please contact us!</p>
+                    <button class="contact-button">Contact</button>
+            </div>
+        </section>
 
-  <script>
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('header').innerHTML = data);
-    
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
-  </script>
-  <script src="cursor.js"></script>
-</body>
-</html>
+        <section class="testimonials">
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">“I liked learning how to prepare new dishes, especially with peers and students in my school. Cooking club is great to explore and learn about different cultures and backgrounds. I truly enjoy the club because of the opportunity we get to expand our knowledge.” </p>
+                        <p class="testimonial-author">-Arleen, 11th grade</p>
+                    </div>
+                    
+                    <div class="testimonial-image">
+                        <img src="your-image.jpg">
+                    </div>
+                    
+                    <div class="testimonial-image">
+                        <img src="your-image2.jpg">
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">“I like the cooking club because I learn things that I wouldn't really learn on my own time. One time I made white sauce for halal food and I made it again at home for my family.  Also Mr. Averbuch has taught many of us some terminology and how to be safe in the kitchen.” </p>
+                        <p class="testimonial-author">- Dylan, 12th grade</p>
+                    </div>
+                </div>
+        </section>
+
+        <section class="content-section skills-section">
+            <div class="skills">
+                <h2>Skills</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae <br>
+                    pellentesque sem placerat. In id </p>
+        
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <div class="container">
+                <div class="skills-item">
+                    <div class="skills-image">
+                        <img src="your-image.jpg">
+                    </div>
+                    <div class="skills-content">
+                        <h3>Skills & Safety Training</h3>
+                        <ul>
+                            <li>Practice proper knife technique</li>
+                            <li>Learn to use different kitchen utensils and equipment</li>
+                            <li>Gain confidence in cooking for themselves and others for meals in cheaper, healthier ways than eating out</li>
+                            <li>Grow and develop outside of traditional academic spaces, including creativity with dishes, self confidence, and communication</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="skills-item">
+                    <div class="skills-image">
+                        <img src="your-image2.jpg">
+                    </div>
+                    <div class="skills-content">
+                        <h3>Skills & Safety Training</h3>
+                        <ul>
+                            <li>Practice proper knife technique</li>
+                            <li>Learn to use different kitchen utensils and equipment</li>
+                            <li>Gain confidence in cooking for themselves and others for meals in cheaper, healthier ways than eating out</li>
+                            <li>Grow and develop outside of traditional academic spaces, including creativity with dishes, self confidence, and communication</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="skills-item">
+                    <div class="skills-image">
+                        <img src="your-image3.jpg">
+                    </div>
+                    <div class="skills-content">
+                        <h3>Skills & Safety Training</h3>
+                        <ul>
+                            <li>Practice proper knife technique</li>
+                            <li>Learn to use different kitchen utensils and equipment</li>
+                            <li>Gain confidence in cooking for themselves and others for meals in cheaper, healthier ways than eating out</li>
+                            <li>Grow and develop outside of traditional academic spaces, including creativity with dishes, self confidence, and communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
