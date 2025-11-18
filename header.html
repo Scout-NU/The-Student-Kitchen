@@ -1,20 +1,27 @@
 <header class="site-header">
     <div class="header-container">
         <div class="header-left">
-            <h1><li><a href="index.html">The Student Kitchen</a></li></h1>
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="The Student Kitchen" class="header-logo">
+            </a>
         </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="mission.html">Our Mission</a></li>
+                <li><a href="community-impact.html">Community Impact</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
         <div class="header-right">
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="mission.html">Our Mission</a></li>
-                    <li><a href="community-impact.html">Community Impact</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="donate.html" class="donate-btn">Donate</a>
-            <input type="text" class="search-bar" placeholder="Search...">
+            <button class="search-icon-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                    <path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <a href="donate.html" class="donate-btn">DONATE</a>
         </div>
     </div>
 </header>
