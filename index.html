@@ -4,103 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Student Kitchen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="custom-cursor">🍕</div> 
     <div id="header"></div>
     <main>
-        <section class="hero-section">
-            <div class="floating-hat">🍳</div>
-            <div class="container">
-                <h1 class="hero-title">The Student Kitchen</h1>
-                <p class="hero-subtitle">Our vision is to empower NYC youth to take autonomy over their food and their communities.</p>
-            </div>
-        </section>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container">
-                <h1 class="hero-title">The Student Kitchen</h1>
-                <p class="hero-subtitle">Our vision is to empower NYC youth to take autonomy over their food and their communities.</p>
+        <!-- Hero Section with Decorative Shelves -->
+        <section class="hero-title-section">
+            <div class="hero-title-container">
+                <div class="shelf-wrapper">
+                    <div class="shelf shelf-1">
+                        <div class="shelf-decorations">
+                            <div class="book book-1"></div>
+                            <div class="book book-2"></div>
+                            <div class="book book-3"></div>
+                            <div class="book book-4"></div>
+                            <div class="book book-5"></div>
+                            <div class="book book-6"></div>
+                            <div class="book book-7"></div>
+                            <div class="book book-8"></div>
+                            <div class="kitchen-item bowl"></div>
+                            <div class="kitchen-item whisk"></div>
+                        </div>
+                        <div class="shelf-content">
+                            <h1 class="hero-title-word">The</h1>
+                        </div>
+                    </div>
+                    <div class="shelf shelf-2">
+                        <div class="shelf-decorations">
+                            <div class="book book-1"></div>
+                            <div class="book book-2"></div>
+                            <div class="book book-3"></div>
+                            <div class="book book-4"></div>
+                            <div class="book book-5"></div>
+                            <div class="book book-6"></div>
+                            <div class="book book-7"></div>
+                            <div class="book book-8"></div>
+                            <div class="kitchen-item rolling-pin"></div>
+                        </div>
+                        <div class="shelf-content">
+                            <h1 class="hero-title-word">Student</h1>
+                        </div>
+                    </div>
+                    <div class="shelf shelf-3">
+                        <div class="shelf-decorations">
+                            <div class="book book-1"></div>
+                            <div class="book book-2"></div>
+                            <div class="book book-3"></div>
+                            <div class="book book-4"></div>
+                            <div class="book book-5"></div>
+                            <div class="book book-6"></div>
+                            <div class="kitchen-item salt-pepper-1"></div>
+                            <div class="kitchen-item salt-pepper-2"></div>
+                        </div>
+                        <div class="shelf-content">
+                            <h1 class="hero-title-word">Kitchen</h1>
+                        </div>
+                    </div>
+                    <div class="shelf shelf-4">
+                        <div class="shelf-decorations">
+                            <div class="book book-1"></div>
+                            <div class="book book-2"></div>
+                            <div class="book book-3"></div>
+                            <div class="kitchen-item bowl-small"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Hero Image -->
-        <section class="hero-image-section">
-            <div class="hero-image-placeholder"></div>
-        </section>
-
-        <!-- What We Do Section -->
-        <section class="what-we-do-section">
-            <div class="container">
-                <h2>What We Do</h2>
-                <p>The Student Kitchen is an after-school program for New York City students grades K-12 that uses cooking workshops to build healthy habits, grow students' confidence in the kitchen, and explore new cultures.</p>
-            </div>
-        </section>
-
-        <!-- How We Do It & Programs Section -->
-        <section class="split-section">
-            <div class="split-left">
-                <div class="split-image-placeholder"></div>
-            </div>
-            <div class="split-right">
-                <div class="split-content">
-                    <h2>How We Do It</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    
-                    <h2>Programs</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim lorem dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    
-                    <button class="view-programs-btn">View Programs</button>
+        <!-- Our Mission Section -->
+        <section class="mission-section">
+            <div class="mission-container">
+                <div class="mission-text">
+                    <h2 class="section-heading">Our Mission</h2>
+                    <p class="section-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id</p>
+                    <button class="read-more-btn">READ MORE</button>
+                </div>
+                <div class="mission-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Statistics Section -->
-        <section class="stats-section">
-            <div class="container">
-                <div class="stats-container">
-                    <div class="stat-box">
-                        <div class="stat-icon">icon</div>
-                        <p class="stat-text">Statistic</p>
+        <section class="statistics-section">
+            <div class="statistics-container">
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <img src="people-icon.png" alt="People Icon" class="header-logo">
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-icon">icon</div>
-                        <p class="stat-text">Statistic</p>
+                    <p class="stat-text">Statistic 1</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <img src="building-icon.png" alt="Building Icon" class="header-logo">
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-icon">icon</div>
-                        <p class="stat-text">Statistic</p>
+                    <p class="stat-text">Statistic 2</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper pie-chart-wrapper">
+                        <img src="pie-chart-icon-1.png" alt="Pie Chart Icon" class="pie-chart-icon-1">
+                        <img src="pie-chart-icon-2.png" alt="Pie Chart Icon" class="pie-chart-icon-2">
                     </div>
+                    <p class="stat-text">Statistic 3</p>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials-section">
-            <div class="container">
-                <div class="testimonial-row">
-                    <div class="testimonial-text">
+        <!-- Programs Section -->
+        <section class="programs-section">
+            <div class="programs-container">
+                <div class="programs-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder"></div>
+                    </div>
+                </div>
+                <div class="programs-text">
+                    <h2 class="section-heading">Programs</h2>
+                    <p class="section-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id</p>
+                    <button class="view-programs-btn">VIEW PROGRAMS</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Testimonials Section -->
+        <section class="student-testimonials-section">
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="quotation-mark">"</div>
+                    <div class="testimonial-image-top">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="testimonial-content">
                         <p class="testimonial-quote">"I liked learning how to prepare new dishes, especially with peers and students in my school. Cooking club is great to explore and learn about different cultures and backgrounds. I truly enjoy the club because of the opportunity we get to expand our knowledge."</p>
-                        <p class="testimonial-author">– Arleen, 11th grade</p>
+                        <p class="testimonial-author">- Arleen, 11th grade</p>
                     </div>
-                    <div class="testimonial-image-box"></div>
                 </div>
-
-                <div class="testimonial-row reverse">
-                    <div class="testimonial-image-box"></div>
-                    <div class="testimonial-text">
+                <div class="testimonial-card reverse-card">
+                    <div class="quotation-mark">"</div>
+                    <div class="testimonial-content">
                         <p class="testimonial-quote">"I like the cooking club because I learn things that I wouldn't really learn on my own time. One time I made white sauce for halal food and I made it again at home for my family. Also Mr. Averbuch has taught many of us some terminology and how to be safe in the kitchen."</p>
-                        <p class="testimonial-author">– Dylan, 12th grade</p>
+                        <p class="testimonial-author">- Dylan, 12th grade</p>
+                    </div>
+                    <div class="testimonial-image-bottom">
+                        <div class="image-placeholder"></div>
                     </div>
                 </div>
-
-                <div class="testimonial-row">
-                    <div class="testimonial-text">
-                        <p class="testimonial-quote">"Being in the cooking club has been an amazing experience for me… We get the opportunity to take part in making cuisines which helps us become more confident in the kitchen and in the process we can also alternate some ingredients which shows how much creativity can be made by the cook (us!). I love meeting new people with many backgrounds who volunteer in teaching us a cuisine of their background or in their field of work and I hope to learn more cuisines before the school year ends!"</p>
-                        <p class="testimonial-author">– Tanea, 12th grade</p>
+                <div class="testimonial-card">
+                    <div class="quotation-mark">"</div>
+                    <div class="testimonial-image-top">
+                        <div class="image-placeholder"></div>
                     </div>
-                    <div class="testimonial-image-box"></div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-quote">"Being in the cooking club has been an amazing experience for me… We get the opportunity to take part in making cuisines which helps us become more confident in the kitchen and in the process we can also alternate some ingredients which shows how much creativity can be made by the cook (us!)."</p>
+                        <p class="testimonial-author">- Tanea, 12th grade</p>
+                    </div>
                 </div>
             </div>
         </section>
