@@ -1455,7 +1455,7 @@ nav a:hover{color:#3498db;}
     color: white;
     border: none;
     border-radius: 1.875rem;
-    cursor: url('pizza.png') 0 0, auto; 
+    cursor: url('assets/pizza.png') 0 0, auto; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-weight: 600;
 }
