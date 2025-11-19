@@ -774,9 +774,8 @@ nav a:hover{color:#3498db;}
 /* Keep shelf-4 unchanged - it should stay full width */
 .hero-title-section.scrolled .hero-title-container {
   position: relative;
-  /* Account for: 3 shelves (9.5rem * 3) + 2 margins between shelves (2rem * 2) + shelf-4 height (9.5rem) + shelf-4 margin-bottom (2rem) */
-  /* Total: 28.5rem + 4rem + 9.5rem + 2rem = 44rem */
-  padding-bottom: calc(9.5rem * 3 + 2rem * 2 + 9.5rem + 2rem);
+  /* Only add padding for shelf-4's height + margin since it's absolutely positioned */
+  padding-bottom: calc(9.5rem + 2rem);
 }
 
 .hero-title-section.scrolled .shelf-wrapper {
