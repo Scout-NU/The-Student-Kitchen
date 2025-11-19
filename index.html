@@ -76,22 +76,13 @@
                             <img src="assets/book-1.png" alt="Book" class="shelf-item">
                             <img src="assets/book-2.png" alt="Book" class="shelf-item">
                             <img src="assets/book-3.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-4.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-5.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-1.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-2.png" alt="Book" class="shelf-item">
-                            <img src="assets/bowl-small.png" alt="Bowl" class="shelf-item">
-                            <img src="assets/paddle.png" alt="Paddle" class="shelf-item">
-                            <img src="assets/whisk.png" alt="Whisk" class="shelf-item">  
-                            <img src="assets/bowl-large.png" alt="Bowl" class="shelf-item"> 
-                            <img src="assets/book-1.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-2.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-3.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-4.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-5.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-1.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-2.png" alt="Book" class="shelf-item">                           
                         </div>
+                    </div>
+                </div>
+                <div class="hero-mission-box">
+                    <div class="hero-mission-box-inner">
+                        <p class="hero-mission-text">Empowering NYC youth to take autonomy over their food and their communities.</p>
+                        <button class="hero-view-programs-btn">VIEW PROGRAMS</button>
                     </div>
                 </div>
             </div>
@@ -202,6 +193,38 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
     </script>
-    <script src="cursor.js"></script> 
+    <script src="cursor.js"></script>
+    <script>
+        // Scroll detection for hero section transformation
+        const heroSection = document.querySelector('.hero-title-section');
+        let hasScrolled = false;
+
+        function handleScroll() {
+            const scrollY = window.scrollY || window.pageYOffset;
+            
+            if (scrollY > 5 && !hasScrolled) {
+                heroSection.classList.add('scrolled');
+                hasScrolled = true;
+            } else if (scrollY <= 5 && hasScrolled) {
+                heroSection.classList.remove('scrolled');
+                hasScrolled = false;
+            }
+        }
+
+        // Use throttled scroll listener for better performance
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Check initial scroll position
+        handleScroll();
+    </script> 
 </body>
 </html>

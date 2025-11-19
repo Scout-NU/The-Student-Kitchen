@@ -258,12 +258,18 @@ nav a:hover{color:#3498db;}
 .hero-title-container {
   max-width: 68.4375rem;
   width: 100%;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  transition: gap 0.5s ease, align-items 0.5s ease;
 }
 
 .shelf-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0;
+  width: 100%;
+  transition: width 0.5s ease, flex 0.5s ease;
 }
 
 .shelf {
@@ -271,31 +277,21 @@ nav a:hover{color:#3498db;}
   border-radius: 0.625rem;
   height: 9.5rem;
   position: relative;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
   background: #FFFBF6;
+  transition: width 0.5s ease, overflow 0.5s ease;
 }
+
 
 .shelf-content {
   position: relative;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.shelf-1 .shelf-content {
-  justify-content: flex-start;
   padding-left: 2rem;
-}
-
-.shelf-2 .shelf-content {
-  justify-content: center;
-  padding-right: 12rem;
-}
-
-.shelf-3 .shelf-content {
-  justify-content: flex-end;
   padding-right: 2rem;
+  transition: padding 0.5s ease;
+  overflow: hidden;
 }
 
 .hero-title-word {
@@ -305,9 +301,42 @@ nav a:hover{color:#3498db;}
   color: #C55026;
   line-height: 1;
   margin: 0;
-  text-align: center;
-  position: relative;
+  text-align: left;
+  position: absolute;
   z-index: 2;
+  transition: left 0.5s ease, transform 0.5s ease;
+  white-space: nowrap;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Shelf 1: left aligned at padding position */
+.shelf-1 .hero-title-word {
+  left: 2rem;
+}
+
+/* Shelf 2: centered */
+.shelf-2 .shelf-content {
+  justify-content: center;
+  padding-right: 12rem;
+}
+
+.shelf-2 .hero-title-word {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding-right: 12rem;
+}
+
+/* Shelf 3: right aligned */
+.shelf-3 .shelf-content {
+  justify-content: flex-end;
+  padding-right: 2rem;
+}
+
+.shelf-3 .hero-title-word {
+  right: 2rem;
+  left: auto;
+  transform: translateY(-50%);
 }
 
 /* Shelf Decorations - Books and Kitchen Items OVERALL not individual */
@@ -319,6 +348,7 @@ nav a:hover{color:#3498db;}
   height: 100%;
   z-index: 1;
   pointer-events: none;
+  transition: overflow 0.5s ease;
 }
 
 /* Shelf Items (Images) */
@@ -328,6 +358,7 @@ nav a:hover{color:#3498db;}
   height: 75%;
   width: 75%;
   object-fit: contain;
+  transition: left 0.5s ease, opacity 0.3s ease, transform 0.5s ease;
 }
 
 /* Shelf 1 - "The" (decorations on RIGHT side only) */
@@ -557,7 +588,218 @@ nav a:hover{color:#3498db;}
   transform: rotate(5deg);
 }
 
-/* Shelf 4 - Empty shelf */
+
+/* Hero Mission Box (Right Side) */
+.hero-mission-box {
+  display: block;
+  flex: 0 0 auto;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding-left: 0;
+  transition: opacity 0.5s ease, width 0.5s ease, visibility 0s ease 0.5s, padding-left 0.5s ease;
+}
+
+.hero-mission-box-inner {
+  border: 1px solid #C55026;
+  border-radius: 0.625rem;
+  border-style: solid;
+  border-color: #C55026;
+  padding: 2rem;
+  height: calc(9.5rem * 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.hero-mission-text {
+  font-family: 'Heebo', sans-serif;
+  font-size: clamp(2.25rem, 2.75vw, 2.75rem);
+  font-weight: 400;
+  color: #C55026;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+}
+
+.hero-view-programs-btn {
+  background: #FFFBF6;
+  border: 1px solid #056D70;
+  color: #056D70;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.hero-view-programs-btn:hover {
+  background: #056D70;
+  color: #FFFBF6;
+}
+
+/* Scroll-triggered transformation */
+.hero-title-section.scrolled .hero-title-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  position: relative;
+  transition: gap 0.5s ease, align-items 0.5s ease;
+}
+
+.hero-title-section.scrolled .shelf-wrapper {
+  flex: 0 0 auto;
+  width: 50%;
+  transition: width 0.5s ease, flex 0.5s ease;
+}
+
+.hero-title-section.scrolled .hero-mission-box {
+  width: 50%;
+  opacity: 1;
+  padding-left: 2rem;
+  visibility: visible;
+  transition: opacity 0.5s ease, width 0.5s ease, visibility 0s ease 0s, padding-left 0.5s ease;
+}
+
+/* Transform shelves 1-3 to shrink left */
+.hero-title-section.scrolled .shelf-1,
+.hero-title-section.scrolled .shelf-2,
+.hero-title-section.scrolled .shelf-3 {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* When scrolled, all text moves to left position */
+.hero-title-section.scrolled .shelf-1 .shelf-content,
+.hero-title-section.scrolled .shelf-2 .shelf-content,
+.hero-title-section.scrolled .shelf-3 .shelf-content {
+  justify-content: flex-start;
+  padding-left: 2rem;
+  padding-right: 0;
+}
+
+/* Smoothly move all text to left position using left property */
+.hero-title-section.scrolled .shelf-1 .hero-title-word {
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.hero-title-section.scrolled .shelf-2 .hero-title-word {
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.hero-title-section.scrolled .shelf-3 .hero-title-word {
+  left: 2rem;
+  right: auto;
+  transform: translateY(-50%);
+}
+
+/* Move shelf items left and hide overflow */
+.hero-title-section.scrolled .shelf-1 .shelf-decorations,
+.hero-title-section.scrolled .shelf-2 .shelf-decorations,
+.hero-title-section.scrolled .shelf-3 .shelf-decorations {
+  overflow: hidden;
+}
+
+/* Adjust shelf-1 items to move left */
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(1) { left: 3rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(2) { left: 5.5rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(3) { left: 8rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(4) { left: 10.5rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(5) { left: 13rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(6) { left: 15.5rem !important; }
+
+/* Adjust shelf-2 items to move left */
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(1) { left: 3rem !important; }
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(2) { left: 5.5rem !important; }
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(3) { left: 8rem !important; }
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(4) { left: 10.5rem !important; }
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(5) { left: 13rem !important; }
+
+/* Adjust shelf-3 items to move left */
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(1) { left: 1.5rem !important; }
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(2) { left: 4rem !important; }
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(3) { left: 6.5rem !important; }
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(4) { left: 9rem !important; }
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(5) { left: 11.5rem !important; }
+
+/* Explicitly set positions for shelf-3 items 6-10 to prevent animation before hiding */
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(6) { 
+  left: 14rem !important; 
+  transition: none !important;
+}
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(7) { 
+  left: 16.5rem !important; 
+  transition: none !important;
+}
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(8) { 
+  left: 19rem !important; 
+  transition: none !important;
+}
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(9) { 
+  left: 3rem !important; 
+  transition: none !important;
+}
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(10) { 
+  left: 6rem !important; 
+  transition: none !important;
+}
+
+/* Hide items that don't fit - disable all transitions to prevent animation */
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(n+7),
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(n+6),
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(n+6) {
+  opacity: 0 !important;
+  pointer-events: none;
+  transition: none !important;
+  visibility: hidden !important;
+}
+
+/* Specifically target shelf-3 items 9 and 10 which are positioned low and might appear on shelf-4 */
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(9),
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(10) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Keep shelf-4 unchanged - it should stay full width */
+.hero-title-section.scrolled .hero-title-container {
+  position: relative;
+  /* Account for: 3 shelves (9.5rem * 3) + 2 margins between shelves (2rem * 2) + shelf-4 height (9.5rem) + shelf-4 margin-bottom (2rem) */
+  /* Total: 28.5rem + 4rem + 9.5rem + 2rem = 44rem */
+  padding-bottom: calc(9.5rem * 3 + 2rem * 2 + 9.5rem + 2rem);
+}
+
+.hero-title-section.scrolled .shelf-wrapper {
+  position: relative;
+}
+
+/* ============================================
+   SHELF-4 - COMPLETE REBUILD - NO TRANSITIONS
+   ============================================ */
+
+/* Base shelf-4 - NO transitions ever */
+.shelf-4 {
+  transition: none !important;
+}
+
+/* All shelf-4 items - NO transitions, NO animations */
+.shelf-4 .shelf-item {
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
+}
+
+/* Shelf-4 item positions - static, no transitions - only 3 items */
 .shelf-4 .shelf-item:nth-child(1) {
   width: clamp(1.5rem, 2vw, 2.5rem);
   left: 3rem;
@@ -579,74 +821,47 @@ nav a:hover{color:#3498db;}
   transform: rotate(-1deg);
 }
 
-.shelf-4 .shelf-item:nth-child(4) {
-  width: clamp(1.5rem, 2vw, 2.5rem);
-  left: 10.5rem;
-  top: 0.8rem;
-  transform: rotate(2deg);
+/* Scrolled state - shelf-4 stays full width, NO transitions, NO animations */
+.hero-title-section.scrolled .shelf-4 {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  margin-left: 0;
+  margin-bottom: 2rem;
+  z-index: 1;
+  top: calc(9.5rem * 3 + 2rem * 3);
+  transition: none !important;
+  animation: none !important;
 }
 
-.shelf-4 .shelf-item:nth-child(5) {
-  width: clamp(1.75rem, 2.2vw, 2.75rem);
-  left: 13rem;
-  top: 1.2rem;
-  transform: rotate(-1.5deg);
+/* Scrolled state - all shelf-4 items stay exactly where they are - lock positions */
+.hero-title-section.scrolled .shelf-4 .shelf-item {
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
 }
 
-.shelf-4 .shelf-item:nth-child(6) {
-  width: clamp(1.25rem, 1.8vw, 2rem);
-  left: 15.5rem;
-  top: 0.6rem;
-  transform: rotate(2.5deg);
+.hero-title-section.scrolled .shelf-4 .shelf-item:nth-child(1) {
+  left: 3rem !important;
+  top: 1rem !important;
+  transform: rotate(-2deg) !important;
 }
 
-.shelf-4 .shelf-item:nth-child(7) {
-  width: clamp(1.5rem, 2vw, 2.5rem);
-  left: 18rem;
-  top: 1.3rem;
-  transform: rotate(-2deg);
+.hero-title-section.scrolled .shelf-4 .shelf-item:nth-child(2) {
+  left: 5.5rem !important;
+  top: 0.5rem !important;
+  transform: rotate(1.5deg) !important;
 }
 
-.shelf-4 .shelf-item:nth-child(8) {
-  width: clamp(2.5rem, 3vw, 3.5rem);
-  left: 2rem;
-  top: 2.5rem;
-  transform: rotate(-8deg);
+.hero-title-section.scrolled .shelf-4 .shelf-item:nth-child(3) {
+  left: 8rem !important;
+  top: 1.4rem !important;
+  transform: rotate(-1deg) !important;
 }
 
-.shelf-4 .shelf-item:nth-child(9) {
-  width: clamp(3rem, 4vw, 4.5rem);
-  left: 20rem;
-  top: 2rem;
-  transform: rotate(5deg);
-}
-
-.shelf-4 .shelf-item:nth-child(10) {
-  width: clamp(2.5rem, 3vw, 3.5rem);
-  left: 25rem;
-  top: 1.5rem;
-  transform: rotate(-6deg);
-}
-
-.shelf-4 .shelf-item:nth-child(11) {
-  width: clamp(3rem, 4vw, 4.5rem);
-  left: 30rem;
-  top: 2.5rem;
-  transform: rotate(4deg);
-}
-
-.shelf-4 .shelf-item:nth-child(12) {
-  width: clamp(1.5rem, 2vw, 2.5rem);
-  left: 35rem;
-  top: 1rem;
-  transform: rotate(-2deg);
-}
-
-.shelf-4 .shelf-item:nth-child(13) {
-  width: clamp(1.75rem, 2.2vw, 2.75rem);
-  left: 37.5rem;
-  top: 0.5rem;
-  transform: rotate(1.5deg);
+.hero-title-section.scrolled .shelf-4 .shelf-decorations {
+  transition: none !important;
+  animation: none !important;
 }
 
 /* Our Mission Section */
