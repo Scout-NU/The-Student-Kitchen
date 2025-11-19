@@ -197,6 +197,7 @@
     <script>
         // Scroll detection for hero section transformation
         const heroSection = document.querySelector('.hero-title-section');
+        const heroMissionBox = document.querySelector('.hero-mission-box');
         let hasScrolled = false;
 
         function handleScroll() {
@@ -204,9 +205,23 @@
             
             if (scrollY > 5 && !hasScrolled) {
                 heroSection.classList.add('scrolled');
+                // Set visibility immediately for Firefox compatibility
+                if (heroMissionBox) {
+                    heroMissionBox.style.visibility = 'visible';
+                    heroMissionBox.style.pointerEvents = 'auto';
+                }
                 hasScrolled = true;
             } else if (scrollY <= 5 && hasScrolled) {
                 heroSection.classList.remove('scrolled');
+                // Delay hiding for smooth transition
+                if (heroMissionBox) {
+                    setTimeout(function() {
+                        if (!heroSection.classList.contains('scrolled')) {
+                            heroMissionBox.style.visibility = 'hidden';
+                            heroMissionBox.style.pointerEvents = 'none';
+                        }
+                    }, 500);
+                }
                 hasScrolled = false;
             }
         }
