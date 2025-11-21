@@ -126,97 +126,171 @@
     </script>
     <script src="cursor.js"></script>
     <script>
+        // Infinite Loop Carousel - Based on reference design
         const carousel = document.querySelector('.carousel');
         const track = document.querySelector('.carousel-track');
         const prevButton = document.querySelector('.arrow.prev');
         const nextButton = document.querySelector('.arrow.next');
         
+        // Get original slides
         const originalSlides = Array.from(track.querySelectorAll('.card'));
         const totalSlides = originalSlides.length;
         
-        for (let i = 0; i < 3; i++) {
-            originalSlides.forEach(slide => {
-                const clone = slide.cloneNode(true);
-                track.appendChild(clone);
-            });
-        }
-        
-        for (let i = 0; i < 3; i++) {
-            originalSlides.slice().reverse().forEach(slide => {
-                const clone = slide.cloneNode(true);
-                track.insertBefore(clone, track.firstChild);
-            });
-        }
-        
-        const allSlides = Array.from(track.querySelectorAll('.card'));
-        
-        let currentIndex = totalSlides * 3;
-        let isTransitioning = false;
-        
-        function updateCarousel(animate = true) {
-            const slideWidth = allSlides[0].offsetWidth + 20; 
-            const carouselCenter = carousel.offsetWidth / 2;
-            const slideCenter = allSlides[0].offsetWidth / 2;
+        if (totalSlides === 0) {
+            console.error('No slides found in carousel');
+        } else {
+            // Wait for images to load and get actual dimensions
+            const firstCard = originalSlides[0];
+            const cardHeight = firstCard.offsetHeight || 550; // fallback to CSS height (34.375rem)
             
-            // Calculate position to center current slide
-            const offset = carouselCenter - slideCenter - (currentIndex * slideWidth);
+            // Set up track container for absolute positioning
+            track.style.position = 'relative';
+            track.style.width = '100%';
+            track.style.height = cardHeight + 'px';
+            track.style.display = 'block';
+            track.style.minHeight = cardHeight + 'px';
             
-            track.style.transition = animate ? 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)' : 'none';
-            track.style.transform = `translateX(${offset}px)`;
-            
-            // Update active class - only center slide is active
-            allSlides.forEach((slide, idx) => {
-                slide.classList.toggle('active', idx === currentIndex);
+            // Set up cards with absolute positioning (like reference)
+            originalSlides.forEach((card, index) => {
+                // Use a larger percentage of container width for more horizontal space
+                const carouselWidth = carousel.offsetWidth || window.innerWidth;
+                const cardWidth = Math.min(carouselWidth * 0.75, 800); // 75% of container, max 800px
+                
+                card.style.position = 'absolute';
+                card.style.width = cardWidth + 'px';
+                card.style.height = cardHeight + 'px';
+                card.style.left = '50%';
+                card.style.top = '0';
+                card.style.marginLeft = (-cardWidth / 2) + 'px';
+                card.style.transition = 'transform .4s ease, opacity .4s ease';
+                card.style.cursor = 'pointer';
+                card.style.opacity = '1'; // Make sure cards are visible initially
+                card.dataset.index = index;
             });
-        }
-        
-        function checkAndResetPosition() {
-            // If we're getting close to the end, reset to middle
-            if (currentIndex >= totalSlides * 5) {
-                currentIndex = totalSlides * 3;
-                updateCarousel(false);
-            } else if (currentIndex <= totalSlides) {
-                currentIndex = totalSlides * 3;
-                updateCarousel(false);
+            
+            // Track current position (0 to totalSlides-1)
+            let currentIndex = 0;
+            let isTransitioning = false;
+            
+            // Update carousel positions based on current index
+            function updateCarousel() {
+                originalSlides.forEach((card, index) => {
+                    // Calculate relative position: how many slides away from current
+                    let relativePosition = index - currentIndex;
+                    
+                    // Handle wrapping for infinite loop
+                    if (relativePosition > totalSlides / 2) {
+                        relativePosition -= totalSlides;
+                    } else if (relativePosition < -totalSlides / 2) {
+                        relativePosition += totalSlides;
+                    }
+                    
+                    if (relativePosition === 0) {
+                        // Current slide - center, full size
+                        card.style.transform = 'translateX(0) scale(1)';
+                        card.style.opacity = '1';
+                        card.style.zIndex = '1';
+                    } else if (relativePosition === 1) {
+                        // Next slide - right side
+                        card.style.transform = 'translateX(40%) scale(0.8)';
+                        card.style.opacity = '0.4';
+                        card.style.zIndex = '0';
+                    } else if (relativePosition === -1) {
+                        // Previous slide - left side
+                        card.style.transform = 'translateX(-40%) scale(0.8)';
+                        card.style.opacity = '0.4';
+                        card.style.zIndex = '0';
+                    } else {
+                        // Other slides - hidden
+                        card.style.opacity = '0';
+                        card.style.zIndex = '0';
+                    }
+                });
             }
-        }
-        
-        function moveNext() {
-            if (isTransitioning) return;
-            isTransitioning = true;
             
-            currentIndex++;
-            updateCarousel(true);
+            // Move to next slide (infinite loop)
+            function moveNext() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                
+                // Increment with modulo for infinite loop
+                currentIndex = (currentIndex + 1) % totalSlides;
+                
+                updateCarousel();
+                
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 400);
+            }
             
+            // Move to previous slide (infinite loop)
+            function movePrev() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                
+                // Decrement with modulo for infinite loop
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                
+                updateCarousel();
+                
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 400);
+            }
+            
+            // Event listeners
+            nextButton.addEventListener('click', moveNext);
+            prevButton.addEventListener('click', movePrev);
+            
+            // Initialize carousel - call immediately and after images load
+            updateCarousel();
+            
+            // Also update after a short delay to ensure dimensions are correct
             setTimeout(() => {
-                checkAndResetPosition();
-                isTransitioning = false;
-            }, 650);
-        }
-        
-        function movePrev() {
-            if (isTransitioning) return;
-            isTransitioning = true;
+                // Recalculate card widths to ensure they're correct
+                const carouselWidth = carousel.offsetWidth || window.innerWidth;
+                const newCardWidth = Math.min(carouselWidth * 0.75, 800);
+                
+                originalSlides.forEach((card) => {
+                    card.style.width = newCardWidth + 'px';
+                    card.style.marginLeft = (-newCardWidth / 2) + 'px';
+                });
+                
+                updateCarousel();
+            }, 100);
             
-            currentIndex--;
-            updateCarousel(true);
+            // Update when images are loaded - recalculate widths
+            originalSlides.forEach(card => {
+                const img = card.querySelector('img');
+                if (img) {
+                    img.addEventListener('load', () => {
+                        const carouselWidth = carousel.offsetWidth || window.innerWidth;
+                        const newCardWidth = Math.min(carouselWidth * 0.75, 800);
+                        card.style.width = newCardWidth + 'px';
+                        card.style.marginLeft = (-newCardWidth / 2) + 'px';
+                        updateCarousel();
+                    });
+                }
+            });
             
-            setTimeout(() => {
-                checkAndResetPosition();
-                isTransitioning = false;
-            }, 650);
+            // Handle window resize - recalculate card widths
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    // Recalculate card widths on resize
+                    const carouselWidth = carousel.offsetWidth || window.innerWidth;
+                    const newCardWidth = Math.min(carouselWidth * 0.75, 800);
+                    
+                    originalSlides.forEach((card) => {
+                        card.style.width = newCardWidth + 'px';
+                        card.style.marginLeft = (-newCardWidth / 2) + 'px';
+                    });
+                    
+                    updateCarousel();
+                }, 250);
+            });
         }
-        
-        nextButton.addEventListener('click', moveNext);
-        prevButton.addEventListener('click', movePrev);
-        
-        setTimeout(() => {
-            updateCarousel(false);
-        }, 50);
-        
-        window.addEventListener('resize', () => {
-            updateCarousel(false);
-        });
     </script>
 </body>
 </html>
