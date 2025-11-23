@@ -110,8 +110,8 @@ nav a:hover{color:#3498db;}
 .contact-page{background:#FFFBF6;color:#222;}
 .contact-page .hero--contact{background:#FFFBF6;color:#C55026;padding:60px 0 40px;text-align:center;}
 .contact-page .hero__inner{padding-bottom:20px;}
-.contact-page .hero__title{font-size:clamp(2.5rem,4vw,3rem);margin:10px 0;color:#C55026;font-weight:700;}
-.contact-page .hero__subtitle{max-width:800px;margin:0 auto 40px;color:#C55026;line-height:1.6;font-size:1.1rem;}
+.contact-page .hero__title{font-family: 'New Spirit', serif;font-size:clamp(2.5rem,4vw,3rem);margin:10px 0;color:#C55026;font-weight:700;} /* Added font family */
+.contact-page .hero__subtitle{font-family: 'Heebo', sans-serif;max-width:800px;margin:0 auto 40px;color:#C55026;line-height:1.6;font-size:1.75rem;font-weight:400;} /* Added font family and increased size */
 /* styling for contact panel */ 
 .panel--contact{background:#FFF1DC;border-radius:8px;margin:0 0 60px;padding:40px 20px;}
 .panel--contact .container{padding:24px 16px;}
@@ -123,7 +123,7 @@ nav a:hover{color:#3498db;}
 .contact-form .btn:hover{background:#045a5c;}
 /* styling for donations */ 
 .support{padding:60px 0 80px;background:#FFFBF6;}
-.section-title{font-size:clamp(2rem,3vw,2.5rem);text-align:center;margin:0 0 16px;color:#C55026;font-weight:700;}
+.section-title{font-family: 'New Spirit', serif;font-size:clamp(2.5rem,4vw,3rem);text-align:center;margin:0 0 16px;color:#C55026;font-weight:700;}
 .section-subtitle{text-align:center;color:#C55026;max-width:800px;margin:0 auto 40px;line-height:1.6;font-size:1.1rem;}
 .donation-card{max-width:700px;margin:40px auto 0;border:1px solid #ccc;border-radius:8px;padding:30px;background:#fff;}
 .donation-row{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;margin-bottom:20px;}
@@ -144,7 +144,7 @@ nav a:hover{color:#3498db;}
 
 /* Scope */
 .mission-page { 
-  background:#fff9f7; /* Very light peachy background */
+  background:#FFFBF6; /* Changed from #fff9f7 to match */
   color:#222; 
 }
 
@@ -154,17 +154,20 @@ nav a:hover{color:#3498db;}
   padding:3rem 0 1.25rem;
 }
 .mission-hero h1 {
-  font-size:clamp(1.8rem,3vw,2.1rem);
+  font-family: 'New Spirit', serif; /* Added font family */
+  font-size:clamp(2.5rem,4vw,3rem); /* Increased size to match */
   font-weight:700;
-  color:#d4704a; /* Orange color for the title */
-  margin-bottom:10px;
+  color:#C55026; /* Changed from #d4704a */
+  margin-bottom:0.625rem;
 }
 .mission-hero p {
-  max-width:45rem;
+  font-family: 'Heebo', sans-serif; /* Added font family */
+  max-width:68rem; /* Increased from 45rem */
   margin:0 auto;
-  color:#d4704a; /* Orange color for subtitle text */
-  font-size:1rem;
-  line-height:1.6;
+  color:#C55026; /* Changed from #d4704a */
+  font-size:1.75rem; /* Increased from 1rem */
+  font-weight:400;
+  line-height:1.5;
 }
 
 /* Full-width banner (large image under hero) */
@@ -203,47 +206,19 @@ nav a:hover{color:#3498db;}
 /* Text block */
 .about-text { max-width:32.5rem; }
 .about-text h2 {
-  font-size:1.15rem;
-  color:#d4704a; /* Orange color for section headings */
-  margin-bottom:10px;
+  font-family: 'Heebo', sans-serif; /* Added font family */
+  font-size:1.5rem; /* Increased from 1.15rem */
+  font-weight:700; /* Added weight */
+  color:#C55026; /* Changed from #d4704a */
+  margin-bottom:0.625rem;
 }
 .about-text p {
-  font-size:.95rem;
-  color:#222;
+  font-family: 'Heebo', sans-serif; /* Added font family */
+  font-size:1rem; /* Increased from .95rem */
+  font-weight:400;
+  color:#C55026; /* Changed from #222 */
   line-height:1.6;
-}
-
-
-/* ---------- Responsive ---------- */
-@media (max-width: 56.25rem) {
-  .mission-banner img { height:18.75rem; }
-  .about-section {
-    gap:1.75rem;
-    padding:1.75rem 0;
-  }
-  .about-image img {
-    width:13.75rem;
-    height:13.75rem;
-  }
-  .about-text { max-width:100%; }
-}
-
-@media (max-width: 45rem) {
-  .about-section,
-  .about-section.reverse {
-    flex-direction:column;
-    text-align:center;
-  }
-  .about-image img {
-    width:12.5rem;
-    height:12.5rem;
-  }
-  .mission-banner img { height:15rem; }
-}
-/* =========================
-   END: MISSION PAGE STYLES
-   ========================= */ 
-
+} 
 /* ===========================
    START: HOMEPAGE STYLES
    =========================== */
