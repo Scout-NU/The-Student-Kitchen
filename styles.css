@@ -193,6 +193,7 @@ nav a:hover{color:#3498db;}
   width:16.25rem;
   height:16.25rem;
   object-fit:cover;
+  object-position:center 10%; 
   border-radius:0.375rem;
   display:block;
   background:#efefef;
