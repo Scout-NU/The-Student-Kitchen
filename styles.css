@@ -807,111 +807,364 @@ nav a:hover{color:#3498db;}
   max-width: 11.625rem;
 }
 
+
+
+
 /* Programs Section */
-.programs-section {
-  background: #FFFBF6;
-  padding: 6.25rem 1.5rem;
-}
-
-.programs-container {
-  max-width: 90rem;
-  margin: 0 auto;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-direction: row-reverse;
-}
-
-.programs-text {
-  flex: 1;
-  padding: 0 0 0 6.125rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.25rem;
-}
-
-.programs-image {
-  flex: 0 0 auto;
-  padding: 0 2.375rem;
-}
-
-/* Student Testimonials Section */
-.student-testimonials-section {
-  background: #FFFBF6;
-  padding: 6.25rem 1.5rem;
-}
-
-.testimonials-container {
-  max-width: 90rem;
-  margin: 0 auto;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.testimonial-card {
-  width: clamp(18.75rem, 23.4375vw, 23.4375rem);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.testimonial-card.reverse-card {
-  flex-direction: column-reverse;
-}
-
-.quotation-mark {
-  position: absolute;
-  left: 1.125rem;
-  top: 0;
-  font-family: 'Heebo', sans-serif;
-  font-size: clamp(3rem, 5vw, 5rem);
+/* Hero Section */
+.programs-hero h2 {
   color: #C55026;
-  line-height: 1;
-  z-index: 1;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin: 0 0 1rem 0;
 }
 
-.testimonial-image-top,
-.testimonial-image-bottom {
+.programs-hero p {
+  color: #C55026;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+}
+
+/* Programs Grid Layout */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 90rem; /* Contains the grid */
+  justify-items: center; /* Centers cards within grid */
+}
+
+.programs-section .container {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  background: #D7D7D7;
+}
+
+/* Program Cards in Grid */
+.program-card {
+  background-color: #FFF1DC!important;
+  border-radius: 0.625rem;
+  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 12.5rem;
+  flex-direction: column;
+  width: 27.75rem; /* 444px */
+  min-height: 66.5625rem; /* 1065px */
 }
 
-.testimonial-image-bottom {
-  border-radius: 0 0 0.625rem 0.625rem;
+.program-card-image {
+  width: 100%;
+  height: 15rem;
+  background-color: #D7D7D7;
 }
 
-.testimonial-content {
-  background: #FFF1DC;
-  padding: 2rem 1.5rem 2rem 3.625rem;
-  flex: 1;
+.program-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.reverse-card .testimonial-content {
-  border-radius: 0.625rem 0.625rem 0 0;
+.program-level {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #C55026;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.testimonial-quote {
-  font-family: 'Heebo', sans-serif;
+.program-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #C55026;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.program-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.program-tag {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.tag-green {
+  background: #E8F5E9;
+  border-color: #4CAF50;
+  color: #2E7D32;
+}
+
+.tag-blue {
+  background: #E3F2FD;
+  border-color: #2196F3;
+  color: #1565C0;
+}
+
+.tag-pink {
+  background: #FCE4EC;
+  border-color: #E91E63;
+  color: #C2185B;
+}
+
+.tag-orange {
+  background: #FFF3E0;
+  border-color: #FF9800;
+  color: #E65100;
+}
+
+.tag-purple {
+  background: #F3E5F5;
+  border-color: #9C27B0;
+  color: #6A1B9A;
+}
+
+.program-description {
   font-size: 0.875rem;
   font-weight: 400;
-  color: #C55026;
-  line-height: 1.5;
-  margin: 0 0 0.625rem 0;
-}
-
-.testimonial-author {
-  font-family: 'Heebo', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #C55026;
-  line-height: 1.5;
+  color: #5D4037;
+  line-height: 1.6;
   margin: 0;
 }
+
+/* Program Dropdowns */
+.program-dropdown {
+  border: 1px solid #C55026;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.program-dropdown summary {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #C55026;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFBF6;
+  transition: background 0.2s ease;
+}
+
+.program-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.program-dropdown summary::after {
+  content: '▼';
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.program-dropdown[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.program-dropdown summary:hover {
+  background: #FFF1DC;
+}
+
+.dropdown-content {
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #5D4037;
+  line-height: 1.6;
+  background: #FFFBF6;
+}
+
+.dropdown-content p {
+  margin: 0;
+}
+
+/* Contact Section Styling */
+.contact-section {
+  background-color: #2D7F7B !important;
+  padding: 1rem 0;
+  margin: 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.contact-section .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 3rem;
+  max-width: none !important; 
+  width: 100% !important;
+  padding: 0 4rem !important;
+  margin: 0 !important;
+}
+
+.contact-section h2 {
+  font-size: 2rem !important;
+  font-weight: 400 !important;
+  color: #FFFFFF !important;
+  margin: 0 !important;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.contact-section * {
+  color: #FFFFFF !important;
+}
+
+.contact-section p {
+  display: none !important;
+}
+
+.contact-button {
+  background-color: #FFFFFF !important;
+  color: #2D7F7B !important;
+  border: 2px solid #FFFFFF !important;
+  padding: 0.875rem 2.5rem !important;
+  font-size: 0.9375rem !important;
+  font-weight: 700 !important;
+  border-radius: 0.25rem !important;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.contact-button:hover {
+  background-color: #F0F0F0 !important;
+  color: #2D7F7B !important;
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+  .contact-section .container {
+      padding: 0 2rem;
+      gap: 1.5rem;
+  }
+  
+  .contact-section h2 {
+      font-size: 1rem;
+  }
+  
+  .contact-button {
+      padding: 0.625rem 1.5rem;
+      font-size: 0.75rem;
+  }
+}
+/* Testimonials Three Column Layout */
+.testimonials-three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.testimonial-box {
+  background: #FFF1DC;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.quote-large {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #C55026;
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.testimonial-box .testimonial-text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5D4037;
+  line-height: 1.6;
+  margin: 2.5rem 0 1rem 0;
+  font-style: italic;
+}
+
+.testimonial-box .testimonial-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #C55026;
+  margin: 0;
+}
+
+/* Skills Section  */
+.skills-section h2 {
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  color: #C55026;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.skills-section > .container > p {
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  font-weight: 400;
+  color: #C55026;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 45rem;
+  margin: 0 auto 3rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 64rem) {
+  .programs-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .testimonials-three-col {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .programs-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .testimonials-three-col {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+  }
+  
+  .skills-item {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+  
+  .skills-image {
+      width: 100%;
+  }
+  
+  .contact-section h2 {
+      font-size: 1rem;
+  }
+  
+  .contact-button {
+      padding: 0.625rem 1.5rem;
+      font-size: 0.75rem;
+  }
+}
+
+/* =================
 
 /* Community Impact Page Styles */
 .impact {
