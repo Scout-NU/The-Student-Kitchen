@@ -76,22 +76,13 @@
                             <img src="assets/book-1.png" alt="Book" class="shelf-item">
                             <img src="assets/book-2.png" alt="Book" class="shelf-item">
                             <img src="assets/book-3.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-4.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-5.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-1.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-2.png" alt="Book" class="shelf-item">
-                            <img src="assets/bowl-small.png" alt="Bowl" class="shelf-item">
-                            <img src="assets/paddle.png" alt="Paddle" class="shelf-item">
-                            <img src="assets/whisk.png" alt="Whisk" class="shelf-item">  
-                            <img src="assets/bowl-large.png" alt="Bowl" class="shelf-item"> 
-                            <img src="assets/book-1.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-2.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-3.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-4.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-5.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-1.png" alt="Book" class="shelf-item">
-                            <img src="assets/book-2.png" alt="Book" class="shelf-item">                           
                         </div>
+                    </div>
+                </div>
+                <div class="hero-mission-box">
+                    <div class="hero-mission-box-inner">
+                        <p class="hero-mission-text">Empowering NYC youth to take autonomy over their food and their communities.</p>
+                        <a href = "programs.html" class="hero-view-programs-btn">VIEW PROGRAMS</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +94,7 @@
                 <div class="mission-text">
                     <h2 class="section-heading">Our Mission</h2>
                     <p class="section-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id</p>
-                    <button class="read-more-btn">READ MORE</button>
+                    <a href = "mission.html" class="read-more-btn">READ MORE</a>
                 </div>
                 <div class="mission-image">
                     <div class="image-frame">
@@ -149,7 +140,7 @@
                 <div class="programs-text">
                     <h2 class="section-heading">Programs</h2>
                     <p class="section-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id</p>
-                    <button class="view-programs-btn">VIEW PROGRAMS</button>
+                    <a href = "programs.html" class="view-programs-btn">VIEW PROGRAMS</a>
                 </div>
             </div>
         </section>
@@ -202,6 +193,53 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
     </script>
-    <script src="cursor.js"></script> 
+    <script src="cursor.js"></script>
+    <script>
+        // Scroll detection for hero section transformation
+        const heroSection = document.querySelector('.hero-title-section');
+        const heroMissionBox = document.querySelector('.hero-mission-box');
+        let hasScrolled = false;
+
+        function handleScroll() {
+            const scrollY = window.scrollY || window.pageYOffset;
+            
+            if (scrollY > 5 && !hasScrolled) {
+                heroSection.classList.add('scrolled');
+                // Set visibility immediately for Firefox compatibility
+                if (heroMissionBox) {
+                    heroMissionBox.style.visibility = 'visible';
+                    heroMissionBox.style.pointerEvents = 'auto';
+                }
+                hasScrolled = true;
+            } else if (scrollY <= 5 && hasScrolled) {
+                heroSection.classList.remove('scrolled');
+                // Delay hiding for smooth transition
+                if (heroMissionBox) {
+                    setTimeout(function() {
+                        if (!heroSection.classList.contains('scrolled')) {
+                            heroMissionBox.style.visibility = 'hidden';
+                            heroMissionBox.style.pointerEvents = 'none';
+                        }
+                    }, 500);
+                }
+                hasScrolled = false;
+            }
+        }
+
+        // Use throttled scroll listener for better performance
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Check initial scroll position
+        handleScroll();
+    </script> 
 </body>
 </html>

@@ -106,46 +106,47 @@ nav a:hover{color:#3498db;}
 .content-section h2{font-size:2rem;margin-bottom:2rem;color:#2c3e50;}
 
 /* START OF STYLING FOR CONTACT PAGE */ 
-
 /* base layout */ 
-.contact-page{background:#fff;color:#222;}
-.contact-page .hero--contact{background:#fff;color:#000;padding:2.5rem 0 0;text-align:center;}
-.contact-page .hero__inner{padding-bottom:1.25rem;}
-.contact-page .hero__title{font-size:clamp(1.8rem,3vw,2.5rem);margin:0.625rem 0;}
-.contact-page .hero__subtitle{max-width:43.75rem;margin:0 auto 1.25rem;color:#333;line-height:1.6;font-size:1rem;}
-
+.contact-page{background:#FFFBF6;color:#222;}
+.contact-page .hero--contact{background:#FFFBF6;color:#C55026;padding:60px 0 40px;text-align:center;}
+.contact-page .hero__inner{padding-bottom:20px;}
+.contact-page .hero__title{font-family: 'New Spirit', serif;font-size:clamp(2.5rem,4vw,3rem);margin:10px 0;color:#C55026;font-weight:700;} /* Added font family */
+.contact-page .hero__subtitle{font-family: 'Heebo', sans-serif;max-width:800px;margin:0 auto 40px;color:#C55026;line-height:1.6;font-size:1.75rem;font-weight:400;} /* Added font family and increased size */
 /* styling for contact panel */ 
-.panel--contact{background:#f7f7f7;border-radius:0.5rem;margin:0 0 1.875rem;}
-.panel--contact .container{padding:1.5rem 1rem;}
-.contact-form{max-width:37.5rem;margin:0 auto;display:grid;gap:0.75rem;}
-.contact-form input,.contact-form textarea{width:100%;border:1px solid #ccc;border-radius:0.375rem;padding:0.625rem 0.75rem;font:inherit;background:#fff;color:#222;}
-.contact-form textarea{resize:vertical;}
-.btn{display:inline-block;border:1px solid #aaa;background:#f2f2f2;padding:0.5rem 0.875rem;border-radius:0.375rem;font:inherit;cursor:pointer;}
-.btn:hover{background:#e9e9e9;} 
-
+.panel--contact{background:#FFF1DC;border-radius:8px;margin:0 0 60px;padding:40px 20px;}
+.panel--contact .container{padding:24px 16px;}
+.contact-form{max-width:600px;margin:0 auto;display:grid;gap:16px;}
+.contact-form input,.contact-form textarea{width:100%;border:1px solid #ccc;border-radius:6px;padding:12px 16px;font:inherit;background:#fff;color:#222;font-size:.95rem;}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#999;}
+.contact-form textarea{resize:vertical;min-height:120px;}
+.contact-form .btn{justify-self:end;background:#056D70;color:#fff;border:none;padding:10px 24px;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;transition:background .3s ease;}
+.contact-form .btn:hover{background:#045a5c;}
 /* styling for donations */ 
-.support{padding:1.25rem 0 2.5rem;background:#fff;}
-.section-title{font-size:clamp(1.5rem,2.2vw,2rem);text-align:center;margin:0 0 0.625rem;color:#000;}
-.section-subtitle{text-align:center;color:#444;max-width:45rem;margin:0 auto 1.5rem;line-height:1.5;font-size:.95rem;}
-.donation-card{max-width:43.75rem;margin:1.25rem auto 0;border:1px solid #ccc;border-radius:0.5rem;padding:1.25rem;background:#fff;}
-.donation-row{display:grid;grid-template-columns:9.375rem 1fr;gap:0.625rem;align-items:center;margin-bottom:0.875rem;}
-.donation-label{color:#333;font-size:.9rem;}
-.btn-group{display:flex;gap:0.5rem;flex-wrap:wrap;}
-.btn--chip,.btn--amount{border:1px solid #ccc;background:#fafafa;padding:0.5rem 0.75rem;border-radius:0.375rem;cursor:pointer;}
-.btn--chip.is-active,.btn--amount.is-active{background:#ddd;border-color:#aaa;}
-.input.input--full{width:100%;border:1px solid #ccc;border-radius:0.375rem;padding:0.625rem 0.75rem;margin:0.375rem 0 0.625rem;background:#fff;}
-.btn--primary{background:#333;color:#fff;border-radius:0.375rem;padding:0.625rem 1rem;border:1px solid #333;}
-.btn--primary:hover{background:#555;}
-
+.support{padding:60px 0 80px;background:#FFFBF6;}
+.section-title{font-family: 'New Spirit', serif;font-size:clamp(2.5rem,4vw,3rem);text-align:center;margin:0 0 16px;color:#C55026;font-weight:700;}
+.section-subtitle{text-align:center;color:#C55026;max-width:800px;margin:0 auto 40px;line-height:1.6;font-size:1.1rem;}
+.donation-card{max-width:700px;margin:40px auto 0;border:1px solid #ccc;border-radius:8px;padding:30px;background:#fff;}
+.donation-row{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;margin-bottom:20px;}
+.donation-label{color:#333;font-size:.95rem;font-weight:500;}
+.btn-group{display:flex;gap:10px;flex-wrap:wrap;}
+.btn--chip,.btn--amount{border:2px solid #056D70;background:#fff;color:#056D70;padding:10px 20px;border-radius:6px;cursor:pointer;font-weight:500;transition:all .3s ease;}
+.btn--chip:hover,.btn--amount:hover{background:#f0f0f0;}
+.btn--chip.is-active,.btn--amount.is-active{background:#056D70;color:#fff;border-color:#056D70;}
+.input.input--full{width:100%;border:1px solid #ccc;border-radius:6px;padding:12px 16px;margin:10px 0;background:#fff;font-size:.95rem;}
+.btn--primary{background:#056D70;color:#fff;border-radius:6px;padding:12px 24px;border:none;font-weight:600;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;width:100%;margin-top:10px;transition:background .3s ease;}
+.btn--primary:hover{background:#045a5c;}
 /* helper for phone view */ 
-@media(max-width:45rem){.donation-row{grid-template-columns:1fr;gap:0.375rem;}}
+@media(max-width:720px){.donation-row{grid-template-columns:1fr;gap:10px;}.donation-label{margin-bottom:5px;}} 
 
 /* ===========================
    START: MISSION PAGE STYLES
    =========================== */
 
 /* Scope */
-.mission-page { background:#fff; color:#222; }
+.mission-page { 
+  background:#FFFBF6; /* Changed from #fff9f7 to match */
+  color:#222; 
+}
 
 /* Hero (title + short blurb) */
 .mission-hero {
@@ -153,28 +154,31 @@ nav a:hover{color:#3498db;}
   padding:3rem 0 1.25rem;
 }
 .mission-hero h1 {
-  font-size:clamp(1.8rem,3vw,2.1rem);
+  font-family: 'New Spirit', serif; /* Added font family */
+  font-size:clamp(2.5rem,4vw,3rem); /* Increased size to match */
   font-weight:700;
-  color:#000;
+  color:#C55026; /* Changed from #d4704a */
   margin-bottom:0.625rem;
 }
 .mission-hero p {
-  max-width:45rem;
+  font-family: 'Heebo', sans-serif; /* Added font family */
+  max-width:68rem; /* Increased from 45rem */
   margin:0 auto;
-  color:#444;
-  font-size:1rem;
-  line-height:1.6;
+  color:#C55026; /* Changed from #d4704a */
+  font-size:1.75rem; /* Increased from 1rem */
+  font-weight:400;
+  line-height:1.5;
 }
 
 /* Full-width banner (large image under hero) */
 .mission-banner { margin:1.375rem 0 2.625rem; }
 .mission-banner img {
   width:100%;
-  height:22.5rem;               /* matches the tall gray block in the mockup */
+  height:360px;
   display:block;
   object-fit:cover;
-  border-radius:0.375rem;
-  background:#e9e9e9;         /* graceful placeholder if image is missing */
+  border-radius:6px;
+  background:#e9e9e9;
 }
 
 /* Reusable split section (image + text) */
@@ -192,56 +196,29 @@ nav a:hover{color:#3498db;}
   width:16.25rem;
   height:16.25rem;
   object-fit:cover;
+  object-position:center 10%; 
   border-radius:0.375rem;
   display:block;
-  background:#efefef;         /* placeholder gray like wireframe */
+  background:#efefef;
   border:1px solid #e3e3e3;
 }
 
 /* Text block */
 .about-text { max-width:32.5rem; }
 .about-text h2 {
-  font-size:1.15rem;          /* small section headings as in mockup */
-  color:#000;
+  font-family: 'Heebo', sans-serif; /* Added font family */
+  font-size:1.5rem; /* Increased from 1.15rem */
+  font-weight:700; /* Added weight */
+  color:#C55026; /* Changed from #d4704a */
   margin-bottom:0.625rem;
 }
 .about-text p {
-  font-size:.95rem;
-  color:#222;
+  font-family: 'Heebo', sans-serif; /* Added font family */
+  font-size:1rem; /* Increased from .95rem */
+  font-weight:400;
+  color:#C55026; /* Changed from #222 */
   line-height:1.6;
-}
-
-
-/* ---------- Responsive ---------- */
-@media (max-width: 56.25rem) {
-  .mission-banner img { height:18.75rem; }
-  .about-section {
-    gap:1.75rem;
-    padding:1.75rem 0;
-  }
-  .about-image img {
-    width:13.75rem;
-    height:13.75rem;
-  }
-  .about-text { max-width:100%; }
-}
-
-@media (max-width: 45rem) {
-  .about-section,
-  .about-section.reverse {
-    flex-direction:column;   /* stack image on top for mobile */
-    text-align:center;
-  }
-  .about-image img {
-    width:12.5rem;
-    height:12.5rem;
-  }
-  .mission-banner img { height:15rem; }
-}
-/* =========================
-   END: MISSION PAGE STYLES
-   ========================= */
-
+} 
 /* ===========================
    START: HOMEPAGE STYLES
    =========================== */
@@ -258,12 +235,18 @@ nav a:hover{color:#3498db;}
 .hero-title-container {
   max-width: 68.4375rem;
   width: 100%;
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  transition: gap 0.5s ease, align-items 0.5s ease;
 }
 
 .shelf-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0;
+  width: 100%;
+  transition: width 0.5s ease, flex 0.5s ease;
 }
 
 .shelf {
@@ -271,31 +254,21 @@ nav a:hover{color:#3498db;}
   border-radius: 0.625rem;
   height: 9.5rem;
   position: relative;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
   background: #FFFBF6;
+  transition: width 0.5s ease, overflow 0.5s ease;
 }
+
 
 .shelf-content {
   position: relative;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.shelf-1 .shelf-content {
-  justify-content: flex-start;
   padding-left: 2rem;
-}
-
-.shelf-2 .shelf-content {
-  justify-content: center;
-  padding-right: 12rem;
-}
-
-.shelf-3 .shelf-content {
-  justify-content: flex-end;
   padding-right: 2rem;
+  transition: padding 0.5s ease;
+  overflow: hidden;
 }
 
 .hero-title-word {
@@ -305,9 +278,42 @@ nav a:hover{color:#3498db;}
   color: #C55026;
   line-height: 1;
   margin: 0;
-  text-align: center;
-  position: relative;
+  text-align: left;
+  position: absolute;
   z-index: 2;
+  transition: left 0.5s ease, transform 0.5s ease;
+  white-space: nowrap;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Shelf 1: left aligned at padding position */
+.shelf-1 .hero-title-word {
+  left: 2rem;
+}
+
+/* Shelf 2: centered */
+.shelf-2 .shelf-content {
+  justify-content: center;
+  padding-right: 12rem;
+}
+
+.shelf-2 .hero-title-word {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding-right: 12rem;
+}
+
+/* Shelf 3: right aligned */
+.shelf-3 .shelf-content {
+  justify-content: flex-end;
+  padding-right: 2rem;
+}
+
+.shelf-3 .hero-title-word {
+  right: 2rem;
+  left: auto;
+  transform: translateY(-50%);
 }
 
 /* Shelf Decorations - Books and Kitchen Items OVERALL not individual */
@@ -319,6 +325,7 @@ nav a:hover{color:#3498db;}
   height: 100%;
   z-index: 1;
   pointer-events: none;
+  transition: overflow 0.5s ease;
 }
 
 /* Shelf Items (Images) */
@@ -328,6 +335,7 @@ nav a:hover{color:#3498db;}
   height: 75%;
   width: 75%;
   object-fit: contain;
+  transition: left 0.5s ease, opacity 0.3s ease, transform 0.5s ease;
 }
 
 /* Shelf 1 - "The" (decorations on RIGHT side only) */
@@ -557,7 +565,219 @@ nav a:hover{color:#3498db;}
   transform: rotate(5deg);
 }
 
-/* Shelf 4 - Empty shelf */
+
+/* Hero Mission Box (Right Side) */
+.hero-mission-box {
+  display: block;
+  flex: 0 0 auto;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding-left: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, width 0.5s ease, padding-left 0.5s ease;
+}
+
+.hero-mission-box-inner {
+  border: 1px solid #C55026;
+  border-radius: 0.625rem;
+  border-style: solid;
+  border-color: #C55026;
+  padding: 2rem;
+  height: calc(9.5rem * 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.hero-mission-text {
+  font-family: 'Heebo', sans-serif;
+  font-size: clamp(2.25rem, 2.75vw, 2.75rem);
+  font-weight: 400;
+  color: #C55026;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+}
+
+.hero-view-programs-btn {
+  background: #FFFBF6;
+  border: 1px solid #056D70;
+  color: #056D70;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.hero-view-programs-btn:hover {
+  background: #056D70;
+  color: #FFFBF6;
+}
+
+/* Scroll-triggered transformation */
+.hero-title-section.scrolled .hero-title-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  position: relative;
+  transition: gap 0.5s ease, align-items 0.5s ease;
+}
+
+.hero-title-section.scrolled .shelf-wrapper {
+  flex: 0 0 auto;
+  width: 50%;
+  transition: width 0.5s ease, flex 0.5s ease;
+}
+
+.hero-title-section.scrolled .hero-mission-box {
+  width: 50%;
+  opacity: 1;
+  padding-left: 2rem;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.5s ease, width 0.5s ease, padding-left 0.5s ease;
+}
+
+/* Transform shelves 1-3 to shrink left */
+.hero-title-section.scrolled .shelf-1,
+.hero-title-section.scrolled .shelf-2,
+.hero-title-section.scrolled .shelf-3 {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* When scrolled, all text moves to left position */
+.hero-title-section.scrolled .shelf-1 .shelf-content,
+.hero-title-section.scrolled .shelf-2 .shelf-content,
+.hero-title-section.scrolled .shelf-3 .shelf-content {
+  justify-content: flex-start;
+  padding-left: 2rem;
+  padding-right: 0;
+}
+
+/* Smoothly move all text to left position using left property */
+.hero-title-section.scrolled .shelf-1 .hero-title-word {
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.hero-title-section.scrolled .shelf-2 .hero-title-word {
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.hero-title-section.scrolled .shelf-3 .hero-title-word {
+  left: 2rem;
+  right: auto;
+  transform: translateY(-50%);
+}
+
+/* Move shelf items left and hide overflow */
+.hero-title-section.scrolled .shelf-1 .shelf-decorations,
+.hero-title-section.scrolled .shelf-2 .shelf-decorations,
+.hero-title-section.scrolled .shelf-3 .shelf-decorations {
+  overflow: hidden;
+}
+
+/* Adjust shelf-1 items to move left */
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(1) { left: 3rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(2) { left: 5.5rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(3) { left: 8rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(4) { left: 10.5rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(5) { left: 13rem !important; }
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(6) { left: 15.5rem !important; }
+
+/* Adjust shelf-2 items to move left */
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(1) { left: 3rem !important; }
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(2) { left: 5.5rem !important; }
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(3) { left: 8rem !important; }
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(4) { left: 10.5rem !important; }
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(5) { left: 13rem !important; }
+
+/* Adjust shelf-3 items to move left */
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(1) { left: 1.5rem !important; }
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(2) { left: 4rem !important; }
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(3) { left: 6.5rem !important; }
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(4) { left: 9rem !important; }
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(5) { left: 11.5rem !important; }
+
+/* Explicitly set positions for shelf-3 items 6-10 to prevent animation before hiding */
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(6) { 
+  left: 14rem !important; 
+  transition: none !important;
+}
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(7) { 
+  left: 16.5rem !important; 
+  transition: none !important;
+}
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(8) { 
+  left: 19rem !important; 
+  transition: none !important;
+}
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(9) { 
+  left: 3rem !important; 
+  transition: none !important;
+}
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(10) { 
+  left: 6rem !important; 
+  transition: none !important;
+}
+
+/* Hide items that don't fit - disable all transitions to prevent animation */
+.hero-title-section.scrolled .shelf-1 .shelf-item:nth-child(n+7),
+.hero-title-section.scrolled .shelf-2 .shelf-item:nth-child(n+6),
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(n+6) {
+  opacity: 0 !important;
+  pointer-events: none;
+  transition: none !important;
+  visibility: hidden !important;
+}
+
+/* Specifically target shelf-3 items 9 and 10 which are positioned low and might appear on shelf-4 */
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(9),
+.hero-title-section.scrolled .shelf-3 .shelf-item:nth-child(10) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Keep shelf-4 unchanged - it should stay full width */
+.hero-title-section.scrolled .hero-title-container {
+  position: relative;
+  /* Only add padding for shelf-4's height + margin since it's absolutely positioned */
+  padding-bottom: calc(9.5rem + 2rem);
+}
+
+.hero-title-section.scrolled .shelf-wrapper {
+  position: relative;
+}
+
+/* ============================================
+   SHELF-4 - COMPLETE REBUILD - NO TRANSITIONS
+   ============================================ */
+
+/* Base shelf-4 - NO transitions ever */
+.shelf-4 {
+  transition: none !important;
+}
+
+/* All shelf-4 items - NO transitions, NO animations */
+.shelf-4 .shelf-item {
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
+}
+
+/* Shelf-4 item positions - static, no transitions - only 3 items */
 .shelf-4 .shelf-item:nth-child(1) {
   width: clamp(1.5rem, 2vw, 2.5rem);
   left: 3rem;
@@ -579,74 +799,47 @@ nav a:hover{color:#3498db;}
   transform: rotate(-1deg);
 }
 
-.shelf-4 .shelf-item:nth-child(4) {
-  width: clamp(1.5rem, 2vw, 2.5rem);
-  left: 10.5rem;
-  top: 0.8rem;
-  transform: rotate(2deg);
+/* Scrolled state - shelf-4 stays full width, NO transitions, NO animations */
+.hero-title-section.scrolled .shelf-4 {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  margin-left: 0;
+  margin-bottom: 2rem;
+  z-index: 1;
+  top: calc(9.5rem * 3 + 2rem * 3);
+  transition: none !important;
+  animation: none !important;
 }
 
-.shelf-4 .shelf-item:nth-child(5) {
-  width: clamp(1.75rem, 2.2vw, 2.75rem);
-  left: 13rem;
-  top: 1.2rem;
-  transform: rotate(-1.5deg);
+/* Scrolled state - all shelf-4 items stay exactly where they are - lock positions */
+.hero-title-section.scrolled .shelf-4 .shelf-item {
+  transition: none !important;
+  animation: none !important;
+  will-change: auto !important;
 }
 
-.shelf-4 .shelf-item:nth-child(6) {
-  width: clamp(1.25rem, 1.8vw, 2rem);
-  left: 15.5rem;
-  top: 0.6rem;
-  transform: rotate(2.5deg);
+.hero-title-section.scrolled .shelf-4 .shelf-item:nth-child(1) {
+  left: 3rem !important;
+  top: 1rem !important;
+  transform: rotate(-2deg) !important;
 }
 
-.shelf-4 .shelf-item:nth-child(7) {
-  width: clamp(1.5rem, 2vw, 2.5rem);
-  left: 18rem;
-  top: 1.3rem;
-  transform: rotate(-2deg);
+.hero-title-section.scrolled .shelf-4 .shelf-item:nth-child(2) {
+  left: 5.5rem !important;
+  top: 0.5rem !important;
+  transform: rotate(1.5deg) !important;
 }
 
-.shelf-4 .shelf-item:nth-child(8) {
-  width: clamp(2.5rem, 3vw, 3.5rem);
-  left: 2rem;
-  top: 2.5rem;
-  transform: rotate(-8deg);
+.hero-title-section.scrolled .shelf-4 .shelf-item:nth-child(3) {
+  left: 8rem !important;
+  top: 1.4rem !important;
+  transform: rotate(-1deg) !important;
 }
 
-.shelf-4 .shelf-item:nth-child(9) {
-  width: clamp(3rem, 4vw, 4.5rem);
-  left: 20rem;
-  top: 2rem;
-  transform: rotate(5deg);
-}
-
-.shelf-4 .shelf-item:nth-child(10) {
-  width: clamp(2.5rem, 3vw, 3.5rem);
-  left: 25rem;
-  top: 1.5rem;
-  transform: rotate(-6deg);
-}
-
-.shelf-4 .shelf-item:nth-child(11) {
-  width: clamp(3rem, 4vw, 4.5rem);
-  left: 30rem;
-  top: 2.5rem;
-  transform: rotate(4deg);
-}
-
-.shelf-4 .shelf-item:nth-child(12) {
-  width: clamp(1.5rem, 2vw, 2.5rem);
-  left: 35rem;
-  top: 1rem;
-  transform: rotate(-2deg);
-}
-
-.shelf-4 .shelf-item:nth-child(13) {
-  width: clamp(1.75rem, 2.2vw, 2.75rem);
-  left: 37.5rem;
-  top: 0.5rem;
-  transform: rotate(1.5deg);
+.hero-title-section.scrolled .shelf-4 .shelf-decorations {
+  transition: none !important;
+  animation: none !important;
 }
 
 /* Our Mission Section */
@@ -1843,4 +2036,367 @@ nav a:hover{color:#3498db;}
     .skills-image {
         width: 100%;
     }
+}
+
+
+/* =========================
+   Community Impact
+   ========================= */
+
+.impact {
+  background: #FFFBF6;
+  padding: 5rem 1.25rem;
+  text-align: center;
+}
+
+.impact h1 {
+  font-family: 'New Spirit', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #C55026;
+  margin-bottom: 0.5rem;
+}
+
+.impact .section-description {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #C55026;
+  max-width: 68rem;
+  margin: 0 auto 0rem;
+  line-height: 1.5;
+}
+
+
+/* Carousel Section - Full Width */
+.carousel-section {
+  background: #FFFBF6;
+  width: 100%;
+  padding: 0.5rem 0 5rem;
+  margin: 0;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 0.625rem;
+  overflow: visible;
+  width: 100%;
+  justify-content: center;
+}
+
+.carousel .card {
+  position: relative;
+  width: 34.375rem;
+  height: 34.375rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.carousel .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.arrow {
+  background: white;
+  border: none;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  color: #2A9D8F;
+  font-weight: 300;
+  position: absolute;
+  z-index: 10;
+}
+
+.arrow.prev {
+  left: 2rem;
+}
+
+.arrow.next {
+  right: 2rem;
+}
+
+.arrow:hover {
+  background: #2A9D8F;
+  color: white;
+  transform: scale(1.1);
+}
+
+
+.partners {
+  background-color: #FFFBF6;
+  padding: 5rem 1.25rem;
+  text-align: center;
+}
+
+.partners h1 {
+  font-family: 'New Spirit', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #C55026;
+  margin-bottom: 0.5 rem;
+}
+
+.partners .section-description {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #C55026;
+  max-width: 68rem;
+  margin: 0 auto 7rem;
+  line-height: 1.5;
+}
+
+.map-container {
+  position: relative;
+  margin: 2.5rem auto 0;
+  border-radius: 0;
+  overflow: visible;
+  height: 30rem;
+  max-width: 56.25rem;
+}
+
+.map-container .map {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+.map-popup {
+  position: absolute;
+  top: 50%;
+  right: 3.125rem;
+  transform: translateY(-50%);
+  background: white;
+  padding: 2.1875rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.15);
+  max-width: 21.25rem;
+  z-index: 10;
+}
+
+.map-popup .close {
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.9375rem;
+  background: transparent;
+  border: 0.0625rem solid #E5E5E5;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #333;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  line-height: 1;
+  font-family: 'Heebo', sans-serif;
+}
+
+.map-popup .close:hover {
+  background: #f0f0f0;
+}
+
+.popup-icon {
+  width: 5rem;
+  height: 5rem;
+  background: #D32F2F;
+  border-radius: 0;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.popup-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popup-content h3 {
+  font-family: 'Heebo', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.9375rem;
+  color: #333;
+}
+
+.popup-content p {
+  font-family: 'Heebo', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1.25rem;
+}
+
+.site-btn {
+  background: transparent;
+  border: 0.125rem solid #2A9D8F;
+  color: #2A9D8F;
+  padding: 0.625rem 1.75rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03125rem;
+}
+
+.site-btn:hover {
+  background: #2A9D8F;
+  color: white;
+}
+
+.partner-logos-section {
+  width: 100%;
+  background: #FFFBF6;
+  padding: 0;
+  margin: 0;
+}
+
+.partner-logos-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 5rem 0 7rem;
+  position: relative;
+}
+
+.logos-track {
+  display: flex;
+  gap: 0;
+  animation: scroll-logos 20s linear infinite;
+  width: fit-content;
+}
+
+.logos-track img {
+  height: 12.5rem;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+@keyframes scroll-logos {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-30%);
+  }
+}
+
+.partner-logos-carousel:hover .logos-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 64rem) {
+  .impact h1,
+  .partners h1 {
+      font-size: 2.5rem;
+  }
+  
+  .impact .section-description,
+  .partners .section-description {
+      font-size: 1.5rem;
+  }
+  
+  .impact-stats {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 2.5rem 1.875rem;
+  }
+  
+  .carousel {
+      gap: 1.25rem;
+  }
+  
+  .carousel .card {
+      width: 17.5rem;
+      height: 23.75rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .impact,
+  .partners {
+      padding: 3.75rem 1.25rem;
+  }
+  
+  .impact h1,
+  .partners h1 {
+      font-size: 2rem;
+  }
+  
+  .impact .section-description,
+  .partners .section-description {
+      font-size: 1.25rem;
+  }
+  
+  .carousel {
+      flex-direction: column;
+      gap: 1.25rem;
+  }
+  
+  .carousel-track {
+      flex-direction: column;
+      max-width: 18.75rem;
+  }
+  
+  .carousel .card {
+      width: 100%;
+      max-width: 18.75rem;
+      height: 25rem;
+  }
+  
+  .partner-logos {
+      gap: 1.875rem;
+  }
+  
+  .partner-logos img {
+      height: 4.375rem;
+  }
+  
+  .map-popup {
+      position: relative;
+      right: auto;
+      transform: none;
+      margin: 1.25rem auto;
+      max-width: 100%;
+  }
+  
+  .map-container {
+      height: auto;
+      min-height: 25rem;
+  }
 }
