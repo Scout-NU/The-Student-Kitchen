@@ -18,6 +18,16 @@ body {
 }
 .container{max-width:75rem;margin:0 auto;padding:0 1.25rem;}
 
+/* Make sure all clickable elements maintain the hidden cursor */
+a, button, input, textarea, select, [role="button"], .contact-button, .hero-view-programs-btn, .read-more-btn, .view-programs-btn, .donate-btn, .search-icon-btn, .site-btn, .arrow, details, summary {
+  cursor: none !important;
+}
+
+/* Ensure links maintain no cursor */
+a:hover, a:active, a:focus {
+  cursor: none !important;
+} 
+
 /* ===========================
    CUSTOM PIZZA CURSOR
    =========================== */
