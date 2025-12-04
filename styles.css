@@ -5,8 +5,8 @@
 
 
 @font-face {
-  font-family: 'New Spirit';
-  src: url('fonts/fonnts.com-New-Spirit-.otf') format('opentype');
+  font-family: 'New Spirit Semibold';
+  src: url('fonts/fonnts.com-New-Spirit-Semi-Bold.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -65,7 +65,7 @@ nav a:hover{color:#3498db;}
 .contact-page{background:#FFFBF6;color:#222;}
 .contact-page .hero--contact{background:#FFFBF6;color:#C55026;padding:60px 0 40px;text-align:center;}
 .contact-page .hero__inner{padding-bottom:20px;}
-.contact-page .hero__title{font-family: 'New Spirit', serif;font-size:clamp(2.5rem,4vw,3rem);margin:10px 0;color:#C55026;font-weight:700;} /* Added font family */
+.contact-page .hero__title{font-family: 'New Spirit Semibold', serif;font-size:clamp(2.5rem,4vw,3rem);margin:10px 0;color:#C55026;font-weight:700;} /* Added font family */
 .contact-page .hero__subtitle{font-family: 'Heebo', sans-serif;max-width:800px;margin:0 auto 40px;color:#C55026;line-height:1.6;font-size:1.75rem;font-weight:400;} /* Added font family and increased size */
 /* styling for contact panel */ 
 .panel--contact{background:#FFF1DC;border-radius:8px;margin:0 0 60px;padding:40px 20px;}
@@ -78,7 +78,7 @@ nav a:hover{color:#3498db;}
 .contact-form .btn:hover{background:#045a5c;}
 /* styling for donations */ 
 .support{padding:60px 0 80px;background:#FFFBF6;}
-.section-title{font-family: 'New Spirit', serif;font-size:clamp(2.5rem,4vw,3rem);text-align:center;margin:0 0 16px;color:#C55026;font-weight:700;}
+.section-title{font-family: 'New Spirit Semibold', serif;font-size:clamp(2.5rem,4vw,3rem);text-align:center;margin:0 0 16px;color:#C55026;font-weight:700;}
 .section-subtitle{text-align:center;color:#C55026;max-width:800px;margin:0 auto 40px;line-height:1.6;font-size:1.1rem;}
 .donation-card{max-width:700px;margin:40px auto 0;border:1px solid #ccc;border-radius:8px;padding:30px;background:#fff;}
 .donation-row{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;margin-bottom:20px;}
@@ -109,7 +109,7 @@ nav a:hover{color:#3498db;}
   padding:3rem 0 1.25rem;
 }
 .mission-hero h1 {
-  font-family: 'New Spirit', serif; /* Added font family */
+  font-family: 'New Spirit Semibold', serif; /* Added font family */
   font-size:clamp(2.5rem,4vw,3rem); /* Increased size to match */
   font-weight:700;
   color:#C55026; /* Changed from #d4704a */
@@ -227,7 +227,7 @@ nav a:hover{color:#3498db;}
 }
 
 .hero-title-word {
-  font-family: 'New Spirit', serif;
+  font-family: 'New Spirit Semibold', serif;
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 600;
   color: #C55026;
@@ -1090,7 +1090,7 @@ nav a:hover{color:#3498db;}
 }
 
 .programs-hero h2 {
-  font-family: 'New Spirit', serif;
+  font-family: 'New Spirit Semibold', serif;
   color: #C55026;
   font-size: clamp(2.5rem, 4vw, 3rem); /* Was 1.75rem - too small! */
   font-weight: 700;
@@ -1169,7 +1169,7 @@ letter-spacing: var(--Static-Title-Medium-Tracking, 0.15px);
 .program-title {
 align-self: stretch;
 color: #AE4721;
-font-family: 'New Spirit', serif;
+font-family: 'New Spirit Semibold', serif;
 font-size: var(--Static-Headline-Medium-Size, 28px);
 font-style: normal;
 font-weight: 400;
@@ -1525,7 +1525,7 @@ section.skills-section .skills-content {
 section.skills-section .skills-content h3 {
 align-self: stretch!important;
 color: #AE4721 !important;
-font-family: 'New Spirit', serif !important;
+font-family: 'New Spirit Semibold', serif !important;
 font-size: var(--Static-Headline-Medium-Size, 28px)!important;
 font-style: normal!important;
 font-weight: 700!important;
@@ -2317,7 +2317,7 @@ section.skills-section .skills-content li::before {
 }
 
 .impact h1 {
-  font-family: 'New Spirit', serif;
+  font-family: 'New Spirit Semibold', serif;
   font-size: 3rem;
   font-weight: 700;
   color: #C55026;
@@ -2419,7 +2419,7 @@ section.skills-section .skills-content li::before {
 }
 
 .partners h1 {
-  font-family: 'New Spirit', serif;
+  font-family: 'New Spirit Semibold', serif;
   font-size: 3rem;
   font-weight: 700;
   color: #C55026;
