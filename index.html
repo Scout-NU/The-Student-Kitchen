@@ -7,11 +7,10 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=New+Spirit:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="custom-cursor">🍕</div> 
     <div id="header"></div>
     <main>
         <!-- Hero Section with Decorative Shelves -->
@@ -149,33 +148,33 @@
         <section class="student-testimonials-section">
             <div class="testimonials-container">
                 <div class="testimonial-card">
-                    <div class="quotation-mark">"</div>
                     <div class="testimonial-image-top">
                         <div class="image-placeholder"></div>
                     </div>
                     <div class="testimonial-content">
+                        <div class="quotation-mark"></div>
+                        <p class="testimonial-quote">"Being in the cooking club has been an amazing experience for me… We get the opportunity to take part in making cuisines which helps us become more confident in the kitchen and in the process we can also alternate some ingredients which shows how much creativity can be made by the cook (us!)."</p>
+                        <p class="testimonial-author">- Tanea, 12th grade</p>
+                    </div>
+                </div>
+                <div class="testimonial-card testimonial-card-flipped">
+                    <div class="testimonial-image-top">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="quotation-mark"></div>
                         <p class="testimonial-quote">"I liked learning how to prepare new dishes, especially with peers and students in my school. Cooking club is great to explore and learn about different cultures and backgrounds. I truly enjoy the club because of the opportunity we get to expand our knowledge."</p>
                         <p class="testimonial-author">- Arleen, 11th grade</p>
                     </div>
                 </div>
-                <div class="testimonial-card reverse-card">
-                    <div class="quotation-mark">"</div>
-                    <div class="testimonial-content">
-                        <p class="testimonial-quote">"I like the cooking club because I learn things that I wouldn't really learn on my own time. One time I made white sauce for halal food and I made it again at home for my family. Also Mr. Averbuch has taught many of us some terminology and how to be safe in the kitchen."</p>
-                        <p class="testimonial-author">- Dylan, 12th grade</p>
-                    </div>
-                    <div class="testimonial-image-bottom">
-                        <div class="image-placeholder"></div>
-                    </div>
-                </div>
                 <div class="testimonial-card">
-                    <div class="quotation-mark">"</div>
                     <div class="testimonial-image-top">
                         <div class="image-placeholder"></div>
                     </div>
                     <div class="testimonial-content">
-                        <p class="testimonial-quote">"Being in the cooking club has been an amazing experience for me… We get the opportunity to take part in making cuisines which helps us become more confident in the kitchen and in the process we can also alternate some ingredients which shows how much creativity can be made by the cook (us!)."</p>
-                        <p class="testimonial-author">- Tanea, 12th grade</p>
+                        <div class="quotation-mark"></div>
+                        <p class="testimonial-quote">"I like the cooking club because I learn things that I wouldn't really learn on my own time. One time I made white sauce for halal food and I made it again at home for my family. Also Mr. Averbuch has taught many of us some terminology and how to be safe in the kitchen."</p>
+                        <p class="testimonial-author">- Dylan, 12th grade</p>
                     </div>
                 </div>
             </div>
@@ -193,53 +192,18 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
     </script>
-    <script src="cursor.js"></script>
     <script>
-        // Scroll detection for hero section transformation
         const heroSection = document.querySelector('.hero-title-section');
         const heroMissionBox = document.querySelector('.hero-mission-box');
-        let hasScrolled = false;
 
-        function handleScroll() {
-            const scrollY = window.scrollY || window.pageYOffset;
-            
-            if (scrollY > 5 && !hasScrolled) {
-                heroSection.classList.add('scrolled');
-                // Set visibility immediately for Firefox compatibility
-                if (heroMissionBox) {
-                    heroMissionBox.style.visibility = 'visible';
-                    heroMissionBox.style.pointerEvents = 'auto';
-                }
-                hasScrolled = true;
-            } else if (scrollY <= 5 && hasScrolled) {
-                heroSection.classList.remove('scrolled');
-                // Delay hiding for smooth transition
-                if (heroMissionBox) {
-                    setTimeout(function() {
-                        if (!heroSection.classList.contains('scrolled')) {
-                            heroMissionBox.style.visibility = 'hidden';
-                            heroMissionBox.style.pointerEvents = 'none';
-                        }
-                    }, 500);
-                }
-                hasScrolled = false;
+        setTimeout(function() {
+            heroSection.classList.add('scrolled');
+            // Set visibility immediately for Firefox compatibility
+            if (heroMissionBox) {
+                heroMissionBox.style.visibility = 'visible';
+                heroMissionBox.style.pointerEvents = 'auto';
             }
-        }
-
-        // Use throttled scroll listener for better performance
-        let ticking = false;
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                window.requestAnimationFrame(function() {
-                    handleScroll();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-
-        // Check initial scroll position
-        handleScroll();
+        }, 2000);
     </script> 
 </body>
 </html>

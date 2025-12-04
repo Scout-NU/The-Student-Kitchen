@@ -1,3 +1,18 @@
+/* ===========================
+   NEW SPIRIT FONT FACE
+   =========================== 
+*/
+
+
+@font-face {
+  font-family: 'New Spirit';
+  src: url('fonts/fonnts.com-New-Spirit-.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 :root {
   --base-font-size: 16px;
   --spacing-unit: 0.25rem; /* 4px base unit */
@@ -7,79 +22,19 @@
 html {
   font-size: var(--base-font-size);
   scroll-behavior: smooth;
+  background-color: #FFFBF6;
 }
 
 body {
   font-family: 'Heebo', 'Segoe UI', Tahoma, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
-  cursor: none; /* CHANGE THIS LINE - remove the pizza.png reference */
   font-size: 1rem;
+  background-color: #FFFBF6;
+  min-height: 100vh;
 }
 .container{max-width:75rem;margin:0 auto;padding:0 1.25rem;}
 
-/* ===========================
-   CUSTOM PIZZA CURSOR
-   =========================== */
-   .custom-cursor {
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.05s ease-out;
-    font-size: 1.5rem;
-    will-change: transform;
-}
-
-/* ===========================
-   JIGGLING EGG PAN
-   =========================== */
-   .floating-hat {
-    position: absolute;
-    font-size: 3rem;
-    pointer-events: none;
-    z-index: 50;
-    left: 50%;
-    top: 40%;
-    transform: translate(12.5rem, -50%);
-    animation: jiggleBounce 0.8s ease-in-out;
-}
-
-@keyframes jiggleBounce {
-    0% {
-        transform: translate(12.5rem, -50%) rotate(0deg) scale(1);
-    }
-    10% {
-        transform: translate(12.5rem, -3.75rem) rotate(-15deg) scale(1.1);
-    }
-    20% {
-        transform: translate(12.5rem, -2.8125rem) rotate(15deg) scale(0.95);
-    }
-    30% {
-        transform: translate(12.5rem, -3.625rem) rotate(-12deg) scale(1.08);
-    }
-    40% {
-        transform: translate(12.5rem, -3rem) rotate(12deg) scale(0.98);
-    }
-    50% {
-        transform: translate(12.5rem, -3.4375rem) rotate(-10deg) scale(1.05);
-    }
-    60% {
-        transform: translate(12.5rem, -3.125rem) rotate(8deg) scale(1.02);
-    }
-    70% {
-        transform: translate(12.5rem, -3.25rem) rotate(-5deg) scale(1.01);
-    }
-    80% {
-        transform: translate(12.5rem, -3.125rem) rotate(3deg) scale(1);
-    }
-    90% {
-        transform: translate(12.5rem, -3.1875rem) rotate(-2deg) scale(1);
-    }
-    100% {
-        transform: translate(12.5rem, -50%) rotate(0deg) scale(1);
-    }
-}
 
 /* Make hero section positioned so hat stays within it */
 .hero-section {
@@ -272,7 +227,7 @@ nav a:hover{color:#3498db;}
 }
 
 .hero-title-word {
-  font-family: 'New Spirit', 'Playfair Display', serif;
+  font-family: 'New Spirit', serif;
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 600;
   color: #C55026;
@@ -934,6 +889,124 @@ nav a:hover{color:#3498db;}
   justify-content: center;
 }
 
+/* Programs Section - Homepage */
+.programs-section {
+  background: #FFFBF6;
+  padding: 6.25rem 1.5rem;
+}
+
+.programs-container {
+  max-width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.programs-text {
+  flex: 1;
+  padding: 0 0 0 6.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.programs-image {
+  flex: 0 0 auto;
+  padding: 0 2.375rem;
+}
+
+/* Student Testimonials Section - Homepage */
+.student-testimonials-section {
+  background: #FFFBF6;
+  padding: 6.25rem 1.5rem;
+}
+
+.testimonials-container {
+  max-width: 90rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+.testimonial-image-top {
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 0;
+}
+
+.testimonial-image-top .image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #D7D7D7;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-card-flipped {
+  flex-direction: column-reverse;
+}
+
+.testimonial-content {
+  background: #FFF1DC;
+  padding: 2rem;
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial-content .quotation-mark {
+  width: 50px;
+  height: 44px;
+  position: absolute;
+  left: -10px;
+  top: 23px;
+  display: block;
+}
+
+.testimonial-content .quotation-mark::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='44' viewBox='0 0 50 44' fill='none'%3E%3Cpath d='M19.0576 0C20.0132 0.000111737 20.6958 0.279479 21.1056 0.837638C21.652 1.25667 21.9264 1.88587 21.9264 2.72392C21.9264 3.56202 21.6521 4.33061 21.1056 5.02903C20.5594 5.72703 19.8768 6.21555 19.0576 6.4949C16.3254 7.333 14.2067 8.87018 12.704 11.1051C11.3382 13.3398 10.6561 15.6445 10.656 18.0188C10.656 21.5109 11.8168 23.8864 14.1392 25.1435C16.4614 26.4006 18.1696 27.5877 19.2624 28.7051C20.3551 29.8226 20.9008 31.4994 20.9008 33.7341C20.9007 36.5276 19.9445 38.9715 18.032 41.0667C16.1195 43.0222 14.1388 44 12.0896 44C8.12825 43.9999 5.1227 42.3943 3.0736 39.182C1.02445 35.9693 0 31.9869 0 27.2376C0.00014303 23.0474 1.16098 18.8569 3.48321 14.6667C5.80548 10.4764 8.53815 6.98497 11.68 4.19139C14.822 1.39773 17.2817 0 19.0576 0Z' fill='%23C55026'/%3E%3Cpath d='M47.1296 0C48.0856 0 48.7693 0.279299 49.1792 0.837638C49.7256 1.25667 50 1.88587 50 2.72392C50 3.56202 49.7257 4.33061 49.1792 5.02903C48.6328 5.72727 47.9492 6.21557 47.1296 6.4949C44.3977 7.33304 42.2802 8.87033 40.7776 11.1051C39.4117 13.3398 38.7297 15.6445 38.7296 18.0188C38.7296 21.5109 39.8904 23.8864 42.2128 25.1435C44.535 26.4006 46.2432 27.5877 47.336 28.7051C48.4286 29.8226 48.9744 31.4994 48.9744 33.7341C48.9743 36.5276 48.018 38.9716 46.1056 41.0667C44.1931 43.0222 42.2124 44 40.1632 44C36.2018 44 33.1963 42.3943 31.1472 39.182C29.0981 35.9693 28.0736 31.9869 28.0736 27.2376C28.0737 23.0474 29.2346 18.8569 31.5568 14.6667C33.8791 10.4764 36.6117 6.98497 39.7536 4.19139C42.8952 1.39814 45.3538 0.000408176 47.1296 0Z' fill='%23C55026'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.testimonial-quote {
+  font-family: 'Heebo', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #C55026;
+  line-height: 1.75rem;
+  margin: 3rem 0 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.testimonial-author {
+  font-family: 'Heebo', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #C55026;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
 /* Statistics Section */
 .statistics-section {
   background: #FFF1DC;
@@ -1096,7 +1169,7 @@ letter-spacing: var(--Static-Title-Medium-Tracking, 0.15px);
 .program-title {
 align-self: stretch;
 color: #AE4721;
-font-family: "Noto Serif";
+font-family: 'New Spirit', serif;
 font-size: var(--Static-Headline-Medium-Size, 28px);
 font-style: normal;
 font-weight: 400;
@@ -1452,7 +1525,7 @@ section.skills-section .skills-content {
 section.skills-section .skills-content h3 {
 align-self: stretch!important;
 color: #AE4721 !important;
-font-family: "Noto Serif"!important;
+font-family: 'New Spirit', serif !important;
 font-size: var(--Static-Headline-Medium-Size, 28px)!important;
 font-style: normal!important;
 font-weight: 700!important;
@@ -1920,13 +1993,8 @@ section.skills-section .skills-content li::before {
   }
   
   .testimonials-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .testimonial-card {
-    width: 100%;
-    max-width: 23.4375rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -1943,6 +2011,11 @@ section.skills-section .skills-content li::before {
   .programs-section,
   .student-testimonials-section {
     padding: 3.75rem 1.25rem;
+  }
+  
+  .testimonials-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
   .statistics-section {
