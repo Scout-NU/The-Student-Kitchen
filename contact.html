@@ -29,6 +29,17 @@
     <section class="panel panel--contact">
       <div class="container">
         <form class="contact-form" action="#" method="post">
+          <label class="sr-only" for="topic">Topic</label>
+          <select id="topic" name="topic" class="form-select" required>
+            <option value="" disabled selected>Topic</option>
+            <option value="general">General Inquiry</option>
+            <option value="partnership">Partnership</option>
+            <option value="volunteer">Volunteer Opportunities</option>
+            <option value="donation">Donation Question</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+
           <label class="sr-only" for="name">Name</label>
           <input id="name" name="name" type="text" placeholder="Name" required />
 
@@ -52,7 +63,8 @@
           incididunt ut labore et dolore magna aliqua.
         </p>
 
-        <div class="donation-card">
+        <div class="donation-card" style="background: transparent; border: none; box-shadow: none; display: flex; justify-content: center; align-items: center; padding: 2rem 0;">
+          <!-- Commented out for now - will be implemented later
           <div class="donation-row">
             <span class="donation-label">Frequency</span>
             <div class="btn-group">
@@ -72,8 +84,9 @@
           </div>
 
           <input type="number" class="input input--full" placeholder="Other Amount" min="1" step="1" />
+          -->
 
-          <button class="btn btn--primary btn--full" type="button">Donate</button>
+          <a href="https://YOUR-DONATION-LINK-HERE.com" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="width: auto; padding: 1rem 3rem;">Donate Now</a>
         </div>
       </div>
     </section>
@@ -81,8 +94,46 @@
 
   <div id="footer"></div>
 
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
   <script>
+    // Initialize EmailJS with your public key
+    (function() {
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    })();
+
     document.addEventListener("DOMContentLoaded", () => {
+      // Contact form submission
+      const contactForm = document.querySelector(".contact-form");
+      
+      contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = "Sending...";
+        submitBtn.disabled = true;
+        
+        // Send email using EmailJS
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+          .then(function() {
+            submitBtn.textContent = "Sent!";
+            contactForm.reset();
+            setTimeout(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            }, 3000);
+          }, function(error) {
+            submitBtn.textContent = "Error - Try Again";
+            console.log('Failed:', error);
+            setTimeout(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            }, 3000);
+          });
+      });
+
       // Donation amount buttons 
       const amountButtons = document.querySelectorAll(".btn--amount");
       const otherInput = document.querySelector(".input--full");
