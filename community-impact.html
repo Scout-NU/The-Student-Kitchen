@@ -12,14 +12,14 @@
 </head>
 <body>
 
+    <div class="custom-cursor">🍕</div>
     <div id="header"></div>
 
     <main>
         <section class="impact">
             <div class="container">
                 <h1>Community Impact</h1>
-                <p class="section-description">This is a list of our past and ongoing partnerships. If you would like to bring 
-                  The Student Kitchen to you, do not hesitate to reach out.</p>
+                <p class="section-description">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
             </div>
         </section>
         
@@ -52,47 +52,94 @@
             </div>
         </section>
         
- <section class="statistics-section">
-    <div class="statistics-container">
-        <div class="stat-item">
-            <div class="stat-icon-wrapper">
-                <img src="assets/people-icon.png" alt="People Icon" class="header-logo">
+        <section class="statistics-section">
+            <div class="statistics-container">
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <img src="assets/building-icon.png" alt="Building Icon" class="header-logo">
+                    </div>
+                    <p class="stat-text">18 School, community, and nonprofit partners in 2025</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <img src="assets/people-icon.png" alt="People Icon" class="header-logo">
+                    </div>
+                    <p class="stat-text">6 afterschool workshop series in 2025 </p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrapper">
+                        <img src="assets/pot.png" alt="pot Icon" class="header-logo">
+                    </div>
+                    <p class="stat-text">Over 40 workshops held in 2025</p>
+                </div>
             </div>
-            <p class="stat-text">18 School, community, and nonprofit partners in 2025</p>
-        </div>
-        <div class="stat-item">
-            <div class="stat-icon-wrapper">
-                <img src="assets/building-icon.png" alt="Building Icon" class="header-logo">
-            </div>
-            <p class="stat-text">6 afterschool workshop series in 2025 </p>
-        </div>
-        <div class="stat-item">
-            <div class="stat-icon-wrapper pie-chart-wrapper">
-                <img src="assets/pie-chart-icon-1.png" alt="Pie Chart Icon" class="pie-chart-icon-1">
-                <img src="assets/pie-chart-icon-2.png" alt="Pie Chart Icon" class="pie-chart-icon-2">
-            </div>
-            <p class="stat-text">Over 40 workshops held in 2025</p>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section class="partners">
             <div class="container">
                 <h1>Community Partners</h1>
-                <p class="section-description">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+                <p class="section-description">Through partnerships across New York City, The Student Kitchen brings hands-on cooking education and food access to communities in need.</p>
                 
                 <div class="map-container">
-                    <img src="assets/newyorkmap.png" alt="Map of New York" class="map" />
+                    <img src="assets/map.png" alt="Map of New York" class="map" />
                     
-                    <div class="map-popup">
-                        <button class="close" aria-label="Close">×</button>
+                    
+                    <div class="map-pin" data-location="0" style="top: 4%; left: 61%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="1" style="top: 9%; left: 58%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="2" style="top: 5%; left: 75%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="3" style="top: 17%; left: 62%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    
+                    <div class="map-pin" data-location="4" style="top: 53%; left: 36%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="5" style="top: 74%; left: 39%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="6" style="top: 58%; left: 86%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    
+                    <div class="map-pin" data-location="7" style="top: 89%; left: 50%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="8" style="top: 82%; left: 41%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="9" style="top: 84%; left: 50%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="10" style="top: 84%; left: 60%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="11" style="top: 86%; left: 55%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    <div class="map-pin" data-location="12" style="top: 89%; left: 60%;">
+                        <img src="assets/pin.png" alt="Location pin" />
+                    </div>
+                    
+                    <div class="map-popup" id="popup">
+                        <div class="popup-header">
+                            <button class="close" id="closeBtn">×</button>
+                        </div>
+                        <button class="nav-arrow nav-arrow-left" id="prevBtn">‹</button>
+                        <button class="nav-arrow nav-arrow-right" id="nextBtn">›</button>
                         <div class="popup-content">
                             <div class="popup-icon">
-                                <img src="assets/partner-icon.png" alt="Partner logo" />
+                                <img id="partnerIcon" src="assets/people.png" alt="Partner logo" />
                             </div>
-                            <h3>Plaza Proletaria</h3>
-                            <p>Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop-in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.</p>
-                            <button class="site-btn">Site</button>
+                            <h3 id="partnerName">Plaza Proletaria</h3>
+                            <p id="partnerDescription">Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop-in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.</p>
+                            <a href="#" id="siteLink" class="site-btn" target="_blank" rel="noopener noreferrer">SITE</a>
                         </div>
                     </div>
                 </div>
@@ -124,36 +171,207 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
     </script>
+
+
     <script>
-        // Infinite Loop Carousel - Based on reference design
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Initializing map interactions...');
+            
+            const partners = [
+                {
+                    name: "Art for Aid",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop-in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/artforaid.png",
+                    website: "https://www.artforaid.info/"
+                },
+                {
+                    name: "In-Tech Academy",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop-in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/intech.png",
+                    website: "https://www.in-techacademy.org/"
+                },
+                {
+                    name: "High School for the Visual Arts",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/highschoolforarts.png",
+                    website: "https://www.schools.nyc.gov/schools/X418"
+                },
+                {
+                    name: "Harriet Tubman Charter School",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/harriet.png",
+                    website: "https://www.htcsbronx.org/"
+                },
+                {
+                    name: "Plaza Proletaria",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/plaza.png",
+                    website: "https://www.instagram.com/plazaproletaria/?hl=en"
+                },
+                {
+                    name: "Loisada",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/loisada.png",
+                    website: "https://loisaida.org/"
+                },
+                {
+                    name: "Asian Americans for Equity (AAFE)",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/aafe.png",
+                    website: "https://www.aafe.org/"
+                },
+                {
+                    name: "Collective Focus",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/collectivefocus.png",
+                    website: "https://collectivefocus.site/"
+                },
+                {
+                    name: "El Puente EPIC CENTER",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/elpuente.png",
+                    website: "https://www.elpuente.org/"
+                },
+                {
+                    name: "Thirdspace",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/thirdspace.png",
+                    website: "https://linktr.ee/thirdspacenyc"
+                },
+                {
+                    name: "Bushwick Ayuda Mutua",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/bushwick.png",
+                    website: "https://bushwickayudamutua.com/"
+                },
+                {
+                    name: "BK Rot",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/bkrot.png",
+                    website: "https://www.bkrot.org/"
+                },
+                {
+                    name: "MESA Charter High School",
+                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    icon: "assets/mesa.png",
+                    website: "https://www.mesacharter.org/"
+                }
+            ];
+
+            let currentLocation = 0;
+            const popup = document.getElementById('popup');
+            const closeBtn = document.getElementById('closeBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const pins = document.querySelectorAll('.map-pin');
+
+            console.log('Found', pins.length, 'pins');
+
+            function updatePopup(index) {
+                const partner = partners[index];
+                document.getElementById('partnerName').textContent = partner.name;
+                document.getElementById('partnerDescription').textContent = partner.description;
+                document.getElementById('partnerIcon').src = partner.icon;
+                document.getElementById('siteLink').href = partner.website;
+
+                // Update active pin
+                pins.forEach((pin, i) => {
+                    pin.classList.toggle('active', i === index);
+                });
+            }
+
+            function showPopup(index) {
+                console.log('Showing popup for location', index);
+                currentLocation = index;
+                updatePopup(index);
+                popup.classList.add('active');
+            }
+
+            function hidePopup() {
+                console.log('Hiding popup');
+                popup.classList.remove('active');
+                pins.forEach(pin => pin.classList.remove('active'));
+            }
+
+            // Navigate to next location
+            function nextLocation() {
+                currentLocation = (currentLocation + 1) % partners.length;
+                updatePopup(currentLocation);
+            }
+
+            // Navigate to previous location
+            function prevLocation() {
+                currentLocation = (currentLocation - 1 + partners.length) % partners.length;
+                updatePopup(currentLocation);
+            }
+
+            pins.forEach((pin, index) => {
+                pin.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showPopup(index);
+                });
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    hidePopup();
+                });
+            }
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    nextLocation();
+                });
+            }
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    prevLocation();
+                });
+            }
+
+            document.addEventListener('click', (e) => {
+                const isClickInsidePopup = popup && popup.contains(e.target);
+                const isClickOnPin = Array.from(pins).some(pin => pin.contains(e.target));
+                
+                if (!isClickInsidePopup && !isClickOnPin && popup && popup.classList.contains('active')) {
+                    hidePopup();
+                }
+            });
+
+            console.log('Map interactions initialized');
+        });
+    </script>
+
+    <!-- Carousel script -->
+    <script>
+        // Infinite Loop Carousel
         const carousel = document.querySelector('.carousel');
         const track = document.querySelector('.carousel-track');
         const prevButton = document.querySelector('.arrow.prev');
         const nextButton = document.querySelector('.arrow.next');
         
-        // Get original slides
         const originalSlides = Array.from(track.querySelectorAll('.card'));
         const totalSlides = originalSlides.length;
         
         if (totalSlides === 0) {
             console.error('No slides found in carousel');
         } else {
-            // Wait for images to load and get actual dimensions
             const firstCard = originalSlides[0];
-            const cardHeight = firstCard.offsetHeight || 550; // fallback to CSS height (34.375rem)
+            const cardHeight = firstCard.offsetHeight || 550;
             
-            // Set up track container for absolute positioning
             track.style.position = 'relative';
             track.style.width = '100%';
             track.style.height = cardHeight + 'px';
             track.style.display = 'block';
             track.style.minHeight = cardHeight + 'px';
             
-            // Set up cards with absolute positioning (like reference)
             originalSlides.forEach((card, index) => {
-                // Use a larger percentage of container width for more horizontal space
                 const carouselWidth = carousel.offsetWidth || window.innerWidth;
-                const cardWidth = Math.min(carouselWidth * 0.75, 800); // 75% of container, max 800px
+                const cardWidth = Math.min(carouselWidth * 0.75, 800);
                 
                 card.style.position = 'absolute';
                 card.style.width = cardWidth + 'px';
@@ -163,21 +381,17 @@
                 card.style.marginLeft = (-cardWidth / 2) + 'px';
                 card.style.transition = 'transform .4s ease, opacity .4s ease';
                 card.style.cursor = 'pointer';
-                card.style.opacity = '1'; // Make sure cards are visible initially
+                card.style.opacity = '1';
                 card.dataset.index = index;
             });
             
-            // Track current position (0 to totalSlides-1)
             let currentIndex = 0;
             let isTransitioning = false;
             
-            // Update carousel positions based on current index
             function updateCarousel() {
                 originalSlides.forEach((card, index) => {
-                    // Calculate relative position: how many slides away from current
                     let relativePosition = index - currentIndex;
                     
-                    // Handle wrapping for infinite loop
                     if (relativePosition > totalSlides / 2) {
                         relativePosition -= totalSlides;
                     } else if (relativePosition < -totalSlides / 2) {
@@ -185,107 +399,65 @@
                     }
                     
                     if (relativePosition === 0) {
-                        // Current slide - center, full size
                         card.style.transform = 'translateX(0) scale(1)';
                         card.style.opacity = '1';
                         card.style.zIndex = '1';
                     } else if (relativePosition === 1) {
-                        // Next slide - right side
                         card.style.transform = 'translateX(40%) scale(0.8)';
                         card.style.opacity = '0.4';
                         card.style.zIndex = '0';
                     } else if (relativePosition === -1) {
-                        // Previous slide - left side
                         card.style.transform = 'translateX(-40%) scale(0.8)';
                         card.style.opacity = '0.4';
                         card.style.zIndex = '0';
                     } else {
-                        // Other slides - hidden
                         card.style.opacity = '0';
                         card.style.zIndex = '0';
                     }
                 });
             }
             
-            // Move to next slide (infinite loop)
             function moveNext() {
                 if (isTransitioning) return;
                 isTransitioning = true;
-                
-                // Increment with modulo for infinite loop
                 currentIndex = (currentIndex + 1) % totalSlides;
-                
                 updateCarousel();
-                
-                setTimeout(() => {
-                    isTransitioning = false;
-                }, 400);
+                setTimeout(() => { isTransitioning = false; }, 400);
             }
             
-            // Move to previous slide (infinite loop)
             function movePrev() {
                 if (isTransitioning) return;
                 isTransitioning = true;
-                
-                // Decrement with modulo for infinite loop
                 currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                
                 updateCarousel();
-                
-                setTimeout(() => {
-                    isTransitioning = false;
-                }, 400);
+                setTimeout(() => { isTransitioning = false; }, 400);
             }
             
-            // Event listeners
             nextButton.addEventListener('click', moveNext);
             prevButton.addEventListener('click', movePrev);
             
-            // Initialize carousel - call immediately and after images load
             updateCarousel();
             
-            // Also update after a short delay to ensure dimensions are correct
             setTimeout(() => {
-                // Recalculate card widths to ensure they're correct
                 const carouselWidth = carousel.offsetWidth || window.innerWidth;
                 const newCardWidth = Math.min(carouselWidth * 0.75, 800);
-                
                 originalSlides.forEach((card) => {
                     card.style.width = newCardWidth + 'px';
                     card.style.marginLeft = (-newCardWidth / 2) + 'px';
                 });
-                
                 updateCarousel();
             }, 100);
             
-            // Update when images are loaded - recalculate widths
-            originalSlides.forEach(card => {
-                const img = card.querySelector('img');
-                if (img) {
-                    img.addEventListener('load', () => {
-                        const carouselWidth = carousel.offsetWidth || window.innerWidth;
-                        const newCardWidth = Math.min(carouselWidth * 0.75, 800);
-                        card.style.width = newCardWidth + 'px';
-                        card.style.marginLeft = (-newCardWidth / 2) + 'px';
-                        updateCarousel();
-                    });
-                }
-            });
-            
-            // Handle window resize - recalculate card widths
             let resizeTimeout;
             window.addEventListener('resize', () => {
                 clearTimeout(resizeTimeout);
                 resizeTimeout = setTimeout(() => {
-                    // Recalculate card widths on resize
                     const carouselWidth = carousel.offsetWidth || window.innerWidth;
                     const newCardWidth = Math.min(carouselWidth * 0.75, 800);
-                    
                     originalSlides.forEach((card) => {
                         card.style.width = newCardWidth + 'px';
                         card.style.marginLeft = (-newCardWidth / 2) + 'px';
                     });
-                    
                     updateCarousel();
                 }, 250);
             });
