@@ -93,6 +93,34 @@ nav a:hover{color:#3498db;}
 /* helper for phone view */ 
 @media(max-width:720px){.donation-row{grid-template-columns:1fr;gap:10px;}.donation-label{margin-bottom:5px;}} 
 
+/* Style the select dropdown to match other form inputs */
+.contact-form select.form-select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #d4c5b9;
+  border-radius: 8px;
+  background-color: #faf8f5;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 3rem;
+  cursor: pointer;
+}
+
+.contact-form select.form-select:focus {
+  outline: none;
+  border-color: #5a9a8e;
+}
+
+/* Style for placeholder-like option */
+.contact-form select.form-select option[value=""] {
+  color: #999;
+} 
+
 /* ===========================
    START: MISSION PAGE STYLES
    =========================== */
