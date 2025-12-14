@@ -19,8 +19,7 @@
       <div class="container hero__inner">
         <h1 class="hero__title">Contact</h1>
         <p class="hero__subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+          Please send us an inquiry in regards to programming or about collaborating. We look forward to hearing from you.
         </p>
       </div>
     </section>
@@ -59,8 +58,9 @@
       <div class="container">
         <h2 class="section-title">Support The Student Kitchen</h2>
         <p class="section-subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+          We teach students essential cooking skills and provide access to quality ingredients. 
+          Your contribution funds resources that empower 
+          students to cook affordable and nutritious meals.
         </p>
 
         <div class="donation-card" style="background: transparent; border: none; box-shadow: none; display: flex; justify-content: center; align-items: center; padding: 2rem 0;">
@@ -100,7 +100,7 @@
   <script>
     // Initialize EmailJS with your public key
     (function() {
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      emailjs.init("C8UkVUNx1UQofGnv1"); // Replace with your EmailJS public key
     })();
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -116,7 +116,7 @@
         submitBtn.disabled = true;
         
         // Send email using EmailJS
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        emailjs.sendForm('service_gmvhl2p', 'template_snxzj64', this)
           .then(function() {
             submitBtn.textContent = "Sent!";
             contactForm.reset();
