@@ -2582,6 +2582,25 @@ section.skills-section .skills-content li::before {
     font-size: clamp(2rem, 10vw, 4rem) !important;
   }
   
+  /* Fix pre-transition alignment: all shelves align left on mobile */
+  .shelf-1 .hero-title-word,
+  .shelf-2 .hero-title-word,
+  .shelf-3 .hero-title-word {
+    left: 1rem !important;
+    right: auto !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  .shelf-2 .shelf-content {
+    justify-content: flex-start !important;
+    padding-right: 1rem !important;
+  }
+  
+  .shelf-3 .shelf-content {
+    justify-content: flex-start !important;
+    padding-right: 1rem !important;
+  }
+  
   .hero-title-section.scrolled .hero-title-container {
     flex-direction: column;
     gap: 1rem;
@@ -2589,12 +2608,28 @@ section.skills-section .skills-content li::before {
   
   .hero-title-section.scrolled .shelf-wrapper {
     width: 100%;
+    order: 1;
   }
   
   .hero-title-section.scrolled .hero-mission-box {
     width: 100%;
     padding-left: 0;
-    margin-top: 1rem;
+    margin-top: 0;
+    order: 2;
+  }
+  
+  /* Ensure shelf-4 stays within shelf-wrapper on mobile */
+  .hero-title-section.scrolled .shelf-4 {
+    width: 100% !important;
+    position: relative !important;
+    margin-bottom: 1rem;
+    order: 4;
+  }
+  
+  /* Ensure shelf-wrapper contains all shelves properly */
+  .hero-title-section.scrolled .shelf-wrapper {
+    display: flex;
+    flex-direction: column;
   }
   
   .hero-mission-box-inner {
