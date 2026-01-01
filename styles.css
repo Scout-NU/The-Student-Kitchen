@@ -3011,6 +3011,14 @@ section.skills-section .skills-content li::before {
   color: #8B3618;
 }
 
+.main-nav a.active {
+  color: #AE4721;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  font-weight: 600;
+}
+
 .donate-btn {
   background: #fff;
   color: #056D70;
