@@ -1364,6 +1364,92 @@ nav a:hover{color:#3498db;}
   padding: 0 2.375rem;
 }
 
+/* News Articles Section - Homepage */
+.news-section {
+  background: #FFFBF6;
+  padding: 6.25rem 1.5rem;
+}
+
+.news-section .container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.news-section .section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.news-card {
+  background: #FFF1DC;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.news-title {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #C55026;
+  margin: 0;
+}
+
+.news-excerpt {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5D4037;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.news-link {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #056D70;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-link:hover {
+  color: #045a5c;
+}
+
+@media (max-width: 64rem) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .news-section {
+    padding: 3.75rem 1.25rem;
+  }
+  
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Student Testimonials Section - Homepage */
 .student-testimonials-section {
   background: #FFFBF6;
@@ -2482,6 +2568,7 @@ section.skills-section .skills-content li::before {
   
   .mission-section,
   .programs-section,
+  .news-section,
   .student-testimonials-section {
     padding: 3.75rem 1.25rem;
   }
