@@ -7,7 +7,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=New+Spirit:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=New+Spirit:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
@@ -54,7 +54,7 @@
     </section>
 
     <!-- donation section -->
-    <section class="support">
+    <section class="support" id="donate">
       <div class="container">
         <h2 class="section-title">Support The Student Kitchen</h2>
         <p class="section-subtitle">
@@ -163,7 +163,21 @@
     });
         fetch('header.html')
             .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data);
+            .then(data => {
+              document.getElementById('header').innerHTML = data;
+              // Handle scrolling to donate section after header loads
+              if (window.location.hash === '#donate') {
+                setTimeout(() => {
+                  const donateSection = document.getElementById('donate');
+                  if (donateSection) {
+                    const headerHeight = document.querySelector('.site-header')?.offsetHeight || 0;
+                    const elementPosition = donateSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                  }
+                }, 200);
+              }
+            });
         
         fetch('footer.html')
             .then(response => response.text())

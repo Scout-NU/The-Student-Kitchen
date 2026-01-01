@@ -12,6 +12,19 @@
   font-display: swap;
 }
 
+/* ===========================
+   HEEBO SEMIBOLD FONT FACE
+   =========================== 
+*/
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('fonts/heebo-semi-bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root {
   --base-font-size: 16px;
@@ -1596,6 +1609,14 @@ nav a:hover{color:#3498db;}
     height: 15rem;
     background-color: #D7D7D7;
     flex-shrink: 0; /* Prevent shrinking */
+    overflow: hidden;
+  }
+
+  .program-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
 /* Card content can grow */
@@ -2769,7 +2790,7 @@ section.skills-section .skills-content li::before {
   }
   
   .impact h1 {
-    font-family: 'New Spirit', serif;
+    font-family: 'New Spirit Semibold', serif;
     font-size: 3rem;
     font-weight: 700;
     color: #C55026;
