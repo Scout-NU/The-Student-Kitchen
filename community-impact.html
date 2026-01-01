@@ -12,7 +12,6 @@
 </head>
 <body>
 
-    <div class="custom-cursor">🍕</div>
     <div id="header"></div>
 
     <main>
@@ -77,17 +76,13 @@
         </section>
 
         <section class="partners">
-            <div class="container">
-                <h1>Community Partners</h1>
-                <p class="section-description">Through partnerships across New York City, The Student Kitchen brings hands-on cooking education and food access to communities in need.</p>
-                
-                <div class="map-container">
-                    <img src="assets/map.png" alt="Map of New York" class="map" />
-                    
-                    
-                    <div class="map-pin" data-location="0" style="top: 4%; left: 61%;">
-                        <img src="assets/pin.png" alt="Location pin" />
-                    </div>
+            <div class="map-container">
+                <div class="map-stage">
+                  <img src="assets/map.png" alt="Map of New York" class="map" />
+              
+                  <div class="map-pin" data-location="0" style="top: 4%; left: 61%;">
+                    <img src="assets/pin.png" alt="Location pin" />
+                  </div>
                     <div class="map-pin" data-location="1" style="top: 9%; left: 58%;">
                         <img src="assets/pin.png" alt="Location pin" />
                     </div>
@@ -126,22 +121,25 @@
                     <div class="map-pin" data-location="12" style="top: 89%; left: 60%;">
                         <img src="assets/pin.png" alt="Location pin" />
                     </div>
+                </div>
+
                     
-                    <div class="map-popup" id="popup">
-                        <div class="popup-header">
-                            <button class="close" id="closeBtn">×</button>
-                        </div>
-                        <button class="nav-arrow nav-arrow-left" id="prevBtn">‹</button>
-                        <button class="nav-arrow nav-arrow-right" id="nextBtn">›</button>
-                        <div class="popup-content">
-                            <div class="popup-icon">
-                                <img id="partnerIcon" src="assets/people.png" alt="Partner logo" />
-                            </div>
-                            <h3 id="partnerName">Plaza Proletaria</h3>
-                            <p id="partnerDescription">Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop-in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.</p>
-                            <a href="#" id="siteLink" class="site-btn" target="_blank" rel="noopener noreferrer">SITE</a>
-                        </div>
+                <div class="map-popup" id="popup">
+                    <div class="popup-header">
+                      <button class="close" id="closeBtn">×</button>
                     </div>
+                    <button class="nav-arrow nav-arrow-left" id="prevBtn">‹</button>
+                    <button class="nav-arrow nav-arrow-right" id="nextBtn">›</button>
+                
+                    <div class="popup-content">
+                      <div class="popup-icon">
+                        <img id="partnerIcon" src="assets/people.png" alt="Partner logo" />
+                      </div>
+                      <h3 id="partnerName">Plaza Proletaria</h3>
+                      <p id="partnerDescription">...</p>
+                      <a href="#" id="siteLink" class="site-btn" target="_blank" rel="noopener noreferrer">SITE</a>
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
