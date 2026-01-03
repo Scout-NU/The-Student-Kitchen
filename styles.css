@@ -3103,6 +3103,133 @@ section.skills-section .skills-content li::before {
   height: 1.25rem;
 }
 
+/* Search Bar Styles */
+.search-bar-container {
+  display: none;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-container.active {
+  display: block;
+}
+
+.search-bar-wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #d4c5b9;
+  border-radius: 8px;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  background-color: #faf8f5;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #056D70;
+  background-color: #fff;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  transition: color 0.3s ease;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-close-btn:hover {
+  color: #056D70;
+}
+
+.search-results {
+  max-width: 75rem;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+  display: none;
+}
+
+.search-results.has-results {
+  display: block;
+}
+
+.search-results-item {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-results-item:hover {
+  background: #f0f0f0;
+}
+
+.search-results-item h4 {
+  margin: 0 0 0.25rem 0;
+  color: #056D70;
+  font-size: 0.95rem;
+}
+
+.search-results-item p {
+  margin: 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.search-results-page-header {
+  background: #f0f7f7 !important;
+  border-left: 3px solid #056D70;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem !important;
+  cursor: pointer;
+}
+
+.search-results-page-header:first-child {
+  margin-top: 0;
+}
+
+.search-results-page-header h4 {
+  margin: 0;
+  color: #056D70;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.search-highlight {
+  background-color: #fff3cd;
+  padding: 0.1rem 0.2rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
 @media (max-width: 64rem) {
   .header-right {
     gap: 0.9375rem;

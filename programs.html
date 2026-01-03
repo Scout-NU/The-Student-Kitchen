@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=New+Spirit:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="search-index.js"></script>
+    <script src="search.js"></script>
 </head>
 <body>
     <div id="header"></div>
@@ -329,6 +331,9 @@
                         ticking = true;
                     }
                 });
+                
+                // Initialize search functionality
+                initSearch();
             });
         
         fetch('footer.html')
