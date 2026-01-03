@@ -177,7 +177,7 @@
                     if (linkPage === currentPage || 
                         (currentPage === '' && linkPage === 'index.html') ||
                         (currentPage === 'index.html' && linkPage === 'index.html')) {
-                        link.classList.add('active');
+                        link.parentElement.classList.add('active');
                     }
                 });
             });

@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  font-family: 'Heebo', 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
   font-size: 1rem;
@@ -85,7 +85,7 @@ nav a:hover{color:#3498db;}
 .contact-page .hero--contact{background:#FFFBF6;color:#C55026;padding:60px 0 40px;text-align:center;}
 .contact-page .hero__inner{padding-bottom:20px;}
 .contact-page .hero__title{font-family: 'New Spirit Semibold', serif;font-size:clamp(2.5rem,4vw,3rem);margin:10px 0;color:#C55026;font-weight:700;} /* Added font family */
-.contact-page .hero__subtitle{font-family: 'Heebo', sans-serif;max-width:800px;margin:0 auto 40px;color:#C55026;line-height:1.6;font-size:1.75rem;font-weight:400;} /* Added font family and increased size */
+.contact-page .hero__subtitle{font-family: 'Inter', sans-serif;max-width:800px;margin:0 auto 40px;color:#C55026;line-height:1.6;font-size:1.75rem;font-weight:400;} /* Added font family and increased size */
 /* styling for contact panel */ 
 .panel--contact{background:#FFF1DC;border-radius:8px;margin:0 0 60px;padding:40px 20px;}
 .panel--contact .container{padding:24px 16px;}
@@ -119,7 +119,7 @@ nav a:hover{color:#3498db;}
   border: 2px solid #d4c5b9;
   border-radius: 8px;
   background-color: #faf8f5;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   color: #333;
   appearance: none;
@@ -163,7 +163,7 @@ nav a:hover{color:#3498db;}
   margin-bottom:0.625rem;
 }
 .mission-hero p {
-  font-family: 'Heebo', sans-serif; /* Added font family */
+  font-family: 'Inter', sans-serif; /* Added font family */
   max-width:68rem; /* Increased from 45rem */
   margin:0 auto;
   color:#C55026; /* Changed from #d4704a */
@@ -208,14 +208,14 @@ nav a:hover{color:#3498db;}
 /* Text block */
 .about-text { max-width:32.5rem; }
 .about-text h2 {
-  font-family: 'Heebo', sans-serif; /* Added font family */
+  font-family: 'Inter', sans-serif; /* Added font family */
   font-size:1.5rem; /* Increased from 1.15rem */
   font-weight:700; /* Added weight */
   color:#C55026; /* Changed from #d4704a */
   margin-bottom:0.625rem;
 }
 .about-text p {
-  font-family: 'Heebo', sans-serif; /* Added font family */
+  font-family: 'Inter', sans-serif; /* Added font family */
   font-size:1rem; /* Increased from .95rem */
   font-weight:400;
   color:#C55026; /* Changed from #222 */
@@ -225,10 +225,26 @@ nav a:hover{color:#3498db;}
    START: HOMEPAGE STYLES
    =========================== */
 
+
+   /*Animagtion
+
 /* Hero Title Section with Decorative Shelves */
+/* Initial state - hidden and shifted down */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Visible state - faded in and in position */
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-title-section {
   background: #FFFBF6;
-  padding: 6.25rem 1.25rem;
+  padding: 6.25rem 1.25rem 0 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -712,7 +728,7 @@ nav a:hover{color:#3498db;}
 .hero-mission-text {
   margin: 0 0 2rem 0;
   color: var(--Primary-Orange, #C55026);
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -731,7 +747,7 @@ nav a:hover{color:#3498db;}
   padding: 0.75rem 1.5rem;
 
   border-radius: 0.5rem;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1109,6 +1125,7 @@ nav a:hover{color:#3498db;}
   align-self: end;
   gap: 3px;
   margin-top: 10px;
+  overflow: hidden;
 
 }
 
@@ -1134,6 +1151,7 @@ nav a:hover{color:#3498db;}
 
 .shelf-4 .shelf-flex-content {
   margin-left: 2rem;
+  overflow: hidden;
   
 }
 
@@ -1196,6 +1214,7 @@ nav a:hover{color:#3498db;}
   flex-wrap: nowrap;  /* Books stay in one row */
   overflow-x: auto;    /* Scroll if too many books */
   flex: 1;  /* Take remaining space */
+  overflow: hidden;
 }
 
 .book {
@@ -1450,7 +1469,7 @@ nav a:hover{color:#3498db;}
 }
 
 .section-heading {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 700;
   color: #C55026;
@@ -1459,7 +1478,7 @@ nav a:hover{color:#3498db;}
 }
 
 .section-text {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(1.25rem, 1.75vw, 1.75rem);
   font-weight: 400;
   color: #C55026;
@@ -1475,7 +1494,7 @@ nav a:hover{color:#3498db;}
   color: #056D70;
   padding: 0.75rem;
   border-radius: 0.5rem;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1556,10 +1575,11 @@ nav a:hover{color:#3498db;}
 .news-section {
   background: #FFFBF6;
   padding: 6.25rem 1.5rem;
+  justify-self: center;
 }
 
 .news-section .container {
-  max-width: 90rem;
+  max-width: 70rem;
   margin: 0 auto;
 }
 
@@ -1571,14 +1591,30 @@ nav a:hover{color:#3498db;}
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 90rem;
+  column-gap: 10rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
+.news-card-image-wrapper{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid  #C55026;
+  
+}
+
+.news-card-image{
+  border-radius: 10px;
+  width: 305px;
+  max-width: 305px;
+  overflow: hidden;
+
+}
+
 .news-card {
-  background: #FFF1DC;
-  border-radius: 0.5rem;
+  max-width: 70rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -1586,13 +1622,10 @@ nav a:hover{color:#3498db;}
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.news-card:hover {
-  transform: translateY(-0.25rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-}
 
 .news-title {
-  font-family: 'Heebo', sans-serif;
+  letter-spacing: 0.1px;
+  font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #C55026;
@@ -1600,17 +1633,16 @@ nav a:hover{color:#3498db;}
 }
 
 .news-excerpt {
-  font-family: 'Heebo', sans-serif;
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
   font-weight: 400;
-  color: #5D4037;
-  line-height: 1.6;
-  margin: 0;
+  color: #C55026;
+  line-height: 1.75rem;
   flex-grow: 1;
 }
 
 .news-link {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #056D70;
@@ -1620,6 +1652,7 @@ nav a:hover{color:#3498db;}
 
 .news-link:hover {
   color: #045a5c;
+  text-decoration: underline;
 }
 
 @media (max-width: 64rem) {
@@ -1642,10 +1675,12 @@ nav a:hover{color:#3498db;}
 .student-testimonials-section {
   background: #FFFBF6;
   padding: 6.25rem 1.5rem;
+  max-width: 80rem;
+  justify-self: center;
 }
 
 .testimonials-container {
-  max-width: 90rem;
+  max-width: 80rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1657,6 +1692,16 @@ nav a:hover{color:#3498db;}
   display: flex;
   flex-direction: column;
   background: transparent;
+
+
+}
+
+#primary-card{
+  border-radius: 10px 10px 0 0;
+}
+
+#flipped-card{
+  border-radius: 0 0 10px 10px;
 }
 
 .testimonial-image-top {
@@ -1665,6 +1710,7 @@ nav a:hover{color:#3498db;}
   margin-bottom: 0;
   overflow: hidden;
   position: relative;
+  
 }
 
 .testimonial-image-top .image-placeholder {
@@ -1689,6 +1735,7 @@ nav a:hover{color:#3498db;}
 
 .testimonial-card-flipped {
   flex-direction: column-reverse;
+  
 }
 
 .testimonial-content {
@@ -1723,7 +1770,7 @@ nav a:hover{color:#3498db;}
 }
 
 .testimonial-quote {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   color: #C55026;
@@ -1733,7 +1780,7 @@ nav a:hover{color:#3498db;}
 }
 
 .testimonial-author {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   color: #C55026;
@@ -1799,7 +1846,7 @@ nav a:hover{color:#3498db;}
 }
 
 .stat-text {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 700;
   color: #C55026;
@@ -1837,7 +1884,7 @@ nav a:hover{color:#3498db;}
 }
 
 .programs-hero p {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   color: #C55026;
   font-size: 1.75rem; 
@@ -1944,7 +1991,7 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
 
   color: #056D70 !important; 
   text-align: center !important;
-  font-family: 'Roboto', 'Heebo', sans-serif !important; 
+  font-family: 'Inter', 'Inter', sans-serif !important; 
   font-size: 0.875rem !important;
   font-style: normal !important;
   font-weight: 500 !important;
@@ -2047,7 +2094,7 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
 }
 
 .contact-section h2 {
-  font-family: 'Heebo', sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
   font-size: 1.4rem !important;
   font-weight: 300 !important; 
   line-height: 2.25rem !important; 
@@ -2086,7 +2133,7 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
   border: 1px solid #056D70 !important;
   border-radius: 0.5rem !important;
   
-  font-family: 'Heebo', sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
   font-size: 1rem !important;
   font-weight: 600 !important;
   line-height: 100% !important;
@@ -2188,7 +2235,7 @@ main {
 
 .testimonial-box .testimonial-text {
   color: #C55026;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 330;
@@ -2199,7 +2246,7 @@ main {
 }
 
 .testimonial-box .testimonial-name {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   font-weight: 330;
   color: #C55026;
@@ -2288,7 +2335,7 @@ section.skills-section .skills-content ul {
 section.skills-section .skills-content li {
   align-self: stretch !important;
   color: #AE4721 !important;
-  font-family: 'Heebo', sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
   font-size: 18px !important; /* Added px unit */
   font-style: normal !important;
   font-weight: 380 !important;
@@ -2426,7 +2473,7 @@ section.skills-section .skills-content li::before {
 
 .view-more-btn {
   color: #056D70;
-  font-family: Inter, 'Heebo', sans-serif;
+  font-family: Inter, 'Inter', sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
@@ -3206,6 +3253,7 @@ section.skills-section .skills-content li::before {
 }
 
 .main-nav ul {
+  justify-content: center;
   list-style: none;
   display: flex;
   gap: 1.875rem;
@@ -3214,17 +3262,21 @@ section.skills-section .skills-content li::before {
 }
 
 .main-nav a {
+  justify-self: center;
   color: #AE4721;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
   transition: color 0.3s ease;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 100%; /* 16px */
   letter-spacing: 0.8px;
 
+}
+.main-nav li{
+  padding: 0.2rem 0.5rem; 
 }
 
 
@@ -3232,11 +3284,15 @@ section.skills-section .skills-content li::before {
   color: #8B3618;
 }
 
-.main-nav a.active {
+.main-nav li.active {
+  background-color: #FFF1DC;
+  border-radius: 8px; 
+  padding: 0.2rem 0.5rem; 
+}
+
+.main-nav li.active a {
   color: #AE4721;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  text-decoration: none; 
   font-weight: 600;
 }
 
@@ -3250,7 +3306,7 @@ section.skills-section .skills-content li::before {
   font-weight: 500;
   transition: all 0.3s ease;
   border: 0.125rem solid #056D70;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .donate-btn:hover {
@@ -3399,7 +3455,7 @@ section.skills-section .skills-content li::before {
 
 .footer-email {
   font-size: .95rem;
-  color: white;
+  color: #FFFBF6;
   margin: 0 0 0.75rem 0;
   font-weight: 500;
 }
@@ -3411,7 +3467,7 @@ section.skills-section .skills-content li::before {
 }
 
 .footer-social-icons a {
-  color: white;
+  color: #FFFBF6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3435,7 +3491,7 @@ section.skills-section .skills-content li::before {
 }
 
 .footer-column {
-  color: white;
+  color: #FFFBF6;
   text-align: left;
 }
 
@@ -3450,7 +3506,8 @@ section.skills-section .skills-content li::before {
 }
 
 .footer-column a {
-  color: white;
+  color: #FFFBF6;
+  letter-spacing: 0.8px;
   text-decoration: none;
   transition: opacity 0.2s;
   font-size: 0.95rem;
@@ -3482,7 +3539,7 @@ section.skills-section .skills-content li::before {
   }
   
   .impact .section-description {
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.75rem;
     font-weight: 400;
     color: #C55026;
@@ -3535,7 +3592,7 @@ section.skills-section .skills-content li::before {
   }
   
   .arrow {
-    background: white;
+    background: #FFFBF6;
     border: none;
     width: 3.125rem;
     height: 3.125rem;
@@ -3563,7 +3620,7 @@ section.skills-section .skills-content li::before {
   
   .arrow:hover {
     background: #2A9D8F;
-    color: white;
+    color: #FFFBF6;
     transform: scale(1.1);
   }
   
@@ -3583,7 +3640,7 @@ section.skills-section .skills-content li::before {
   }
   
   .partners .section-description {
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.75rem;
     font-weight: 400;
     color: #C55026;
@@ -3654,7 +3711,7 @@ section.skills-section .skills-content li::before {
   }
   
   .popup-content h3 {
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.875rem; 
     font-weight: 400;
     margin-bottom: 1rem;
@@ -3702,7 +3759,7 @@ section.skills-section .skills-content li::before {
   
   .map-popup .close {
     position: static;
-    background: white;
+    background: #FFFBF6;
     border: 2px solid #333;
     font-size: 1.125rem;
     cursor: pointer;
@@ -3753,7 +3810,7 @@ section.skills-section .skills-content li::before {
   }
   
   .popup-content p {
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5;
@@ -3771,7 +3828,7 @@ section.skills-section .skills-content li::before {
     height: 2.5rem; 
     border-radius: 0.5rem;
     cursor: pointer;
-    font-family: 'Heebo', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     transition: all 0.3s ease;
     font-size: 1rem;
@@ -3786,7 +3843,7 @@ section.skills-section .skills-content li::before {
   
   .site-btn:hover {
     background: #056D70;
-    color: white;
+    color: #FFFBF6;
   }
   
   @media (max-width: 48rem) {
