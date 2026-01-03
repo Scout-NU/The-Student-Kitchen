@@ -96,7 +96,14 @@ const searchIndex = [
             { text: '2023', type: 'year' },
             { text: 'Idealist Action Incubator', type: 'organization' },
             { text: 'Communitas America', type: 'organization' },
-            { text: 'June 2025', type: 'date' }
+            { text: 'June 2025', type: 'date' },
+            { text: 'In The Media', type: 'section-title' },
+            { text: 'Latest Updates', type: 'media-title' },
+            { text: 'Stay informed about our latest programs, events, and community impact stories.', type: 'media-description' },
+            { text: 'Community Stories', type: 'media-title' },
+            { text: 'Discover how The Student Kitchen is making a difference in NYC communities.', type: 'media-description' },
+            { text: 'Program Highlights', type: 'media-title' },
+            { text: 'Learn about our cooking workshops and the skills students are developing.', type: 'media-description' }
         ]
     },
     

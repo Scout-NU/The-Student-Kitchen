@@ -76,7 +76,7 @@ function initSearch() {
         // Search main content only (excludes header and footer)
         if (mainContent) {
             // Comprehensive selector to catch all text content
-            const elements = mainContent.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, .card, .stat-text, .program-title, .program-description, .program-preview, .testimonial-text, .testimonial-quote, .news-title, .news-excerpt, article, .section-heading, .section-text, .section-title, .section-subtitle, .about-text, .hero-mission-text, .testimonial-name, .testimonial-author, button, a, span:not([class*="icon"]):not([class*="logo"]), div:not([class*="container"]):not([class*="wrapper"]):not([class*="grid"])');
+            const elements = mainContent.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li, .card, .stat-text, .program-title, .program-description, .program-preview, .testimonial-text, .testimonial-quote, .news-title, .news-excerpt, .media-title, .media-description, .media-section-heading, article, .section-heading, .section-text, .section-title, .section-subtitle, .about-text, .hero-mission-text, .testimonial-name, .testimonial-author, button, a, span:not([class*="icon"]):not([class*="logo"]), div:not([class*="container"]):not([class*="wrapper"]):not([class*="grid"])');
             
             // Use Set to avoid duplicates
             const textElements = new Set();
@@ -87,7 +87,7 @@ function initSearch() {
             });
             
             // Also search for elements with specific classes that might be missed
-            const additionalSelectors = mainContent.querySelectorAll('.news-title, .news-excerpt, article, .section-heading, .section-text, .section-title, .section-subtitle, .about-text, .hero-mission-text, .testimonial-name, .testimonial-author, .donation-label, button, a, span, div');
+            const additionalSelectors = mainContent.querySelectorAll('.news-title, .news-excerpt, .media-title, .media-description, .media-section-heading, article, .section-heading, .section-text, .section-title, .section-subtitle, .about-text, .hero-mission-text, .testimonial-name, .testimonial-author, .donation-label, button, a, span, div');
             additionalSelectors.forEach(function(el) {
                 // Skip if already added or if it's a container/image/link
                 if (textElements.has(el) || el.tagName === 'IMG' || el.tagName === 'A' || el.tagName === 'SCRIPT' || el.tagName === 'STYLE') {
@@ -342,7 +342,7 @@ function performScrollToSearch(query, resultIndex) {
     const matchingElements = [];
     
     // First, try specific selectors for common content types
-    const specificSelectors = 'h1, h2, h3, h4, h5, h6, p, li, .card, .stat-text, .program-title, .program-description, .program-preview, .testimonial-text, .testimonial-quote, .program-card-content, .about-text, .news-title, .news-excerpt, article, .section-heading, .section-text, .section-title, .section-subtitle, .hero-mission-text, .testimonial-name, .testimonial-author, button, a';
+    const specificSelectors = 'h1, h2, h3, h4, h5, h6, p, li, .card, .stat-text, .program-title, .program-description, .program-preview, .testimonial-text, .testimonial-quote, .program-card-content, .about-text, .news-title, .news-excerpt, .media-title, .media-description, .media-section-heading, article, .section-heading, .section-text, .section-title, .section-subtitle, .hero-mission-text, .testimonial-name, .testimonial-author, button, a';
     const specificElements = mainContent.querySelectorAll(specificSelectors);
     
     specificElements.forEach(function(el) {
