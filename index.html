@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="search-index.js"></script>
+    <script src="search.js"></script>
 </head>
 <body>
     <div id="header"></div>
@@ -301,71 +303,6 @@
             </div>
         </section>
 
-        <!-- News Articles Section -->
-        <section class="statistics-section animate-on-scroll">
-            <div class="container">
-                <div class="news-grid">
-                    <article class="news-card">
-                        <h3 class="news-title">Latest Updates</h3>
-                        <p class="news-excerpt">Stay informed about our latest programs, events, and community impact stories.</p>
-                        <a href="https://www.instagram.com/reels/DLI19CvOxsB/" target="_blank" rel="noopener noreferrer" class="news-link">Explore</a>
-                    </article>
-                    <article class="news-card">
-                        <h3 class="news-title">Community Stories</h3>
-                        <p class="news-excerpt">Discover how The Student Kitchen is making a difference in NYC communities.</p>
-                        <a href="https://www.instagram.com/reel/DM3mkn6Sdou/" target="_blank" rel="noopener noreferrer" class="news-link">Explore</a>
-                    </article>
-                    <article class="news-card">
-                        <h3 class="news-title">Program Highlights</h3>
-                        <p class="news-excerpt">Learn about our cooking workshops and the skills students are developing.</p>
-                        <a href="https://www.instagram.com/reel/DSTGWLakgpU/" target="_blank" rel="noopener noreferrer" class="news-link">Explore</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- News Articles Section 
-        <section class="news-section">
-            <div class="container">
-                <h2 class="section-heading">In The Media</h2>
-                <div class="news-grid">
-                    <div class="news-card">
-                        <div class="news-card-image-wrapper">
-                            <img src="assets/homepage03.png" alt="News Image 1" class="news-card-image">
-                        </div>
-                        <h3 class="news-title">Latest Updates</h3>
-                        <p class="news-excerpt">Stay informed about our latest programs, events, and community impact stories.</p>
-                        <a href="https://www.instagram.com/reels/DLI19CvOxsB/" target="_blank" rel="noopener noreferrer" class="news-link">Explore</a>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-card-image-wrapper">
-                            <img src="assets/homepage03.png" alt="News Image 1" class="news-card-image">
-                        </div>
-                        <h3 class="news-title">Community Stories</h3>
-                        <p class="news-excerpt">Discover how The Student Kitchen is making a difference in NYC communities.</p>
-                        <a href="https://www.instagram.com/reels/DLI19CvOxsB/" target="_blank" rel="noopener noreferrer" class="news-link">Explore</a>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-card-image-wrapper">
-                            <img src="assets/homepage03.png" alt="News Image 1" class="news-card-image">
-                        </div>
-                        <h3 class="news-title">Program Highlights</h3>
-                        <p class="news-excerpt">Stay informed about our latest programs, events, and community impact stories.</p>
-                        <a href="https://www.instagram.com/reels/DLI19CvOxsB/" target="_blank" rel="noopener noreferrer" class="news-link">Explore</a>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-card-image-wrapper">
-                            <img src="assets/homepage03.png" alt="News Image 1" class="news-card-image">
-                        </div>
-                        <h3 class="news-title">Article 4</h3>
-                        <p class="news-excerpt">Lorem ips.</p>
-                        <a href="https://www.instagram.com/reels/DLI19CvOxsB/" target="_blank" rel="noopener noreferrer" class="news-link">Explore</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    -->
-
         <!-- Student Testimonials Section -->
         <section class="student-testimonials-section animate-on-scroll">
             <div class="testimonials-container">
@@ -422,6 +359,41 @@
                         link.parentElement.classList.add('active');
                     }
                 });
+                
+                // Navbar hide/show on scroll
+                let lastScrollTop = 0;
+                const header = document.querySelector('.site-header');
+                let ticking = false;
+                
+                function updateHeader() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 100) { // Only hide after scrolling down 100px
+                        if (scrollTop > lastScrollTop + 5) {
+                            // Scrolling down (with threshold to prevent flickering)
+                            header.classList.add('hidden');
+                        } else if (scrollTop < lastScrollTop - 5) {
+                            // Scrolling up (with threshold to prevent flickering)
+                            header.classList.remove('hidden');
+                        }
+                    } else {
+                        // At the top, always show
+                        header.classList.remove('hidden');
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                    ticking = false;
+                }
+                
+                window.addEventListener('scroll', function() {
+                    if (!ticking) {
+                        window.requestAnimationFrame(updateHeader);
+                        ticking = true;
+                    }
+                });
+                
+                // Initialize search functionality
+                initSearch();
             });
         
         fetch('footer.html')
