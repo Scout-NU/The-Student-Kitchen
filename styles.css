@@ -1977,7 +1977,7 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
 /* Contact Section Styling */
 .contact-section {
   background-color: #056D70 !important;
-  padding: 1.5rem 3.625rem !important;
+  padding: 1rem 3.625rem !important;
     margin: 0;
     position: sticky !important; 
     bottom: 0; /* Sticks to bottom */
@@ -2006,7 +2006,7 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
 .contact-section h2 {
   font-family: 'Heebo', sans-serif !important;
   font-size: 1.4rem !important;
-  font-weight: 300 !important; 
+  font-weight: 200 !important; 
   line-height: 2.25rem !important; 
   color: #FFF1DC !important;
   margin: 0 !important;
@@ -2015,8 +2015,8 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
 
 /* Bold the middle part */
 .contact-section h2 strong {
-  font-weight: 650 !important; /* Bold for "inquires and questions" */
-  font-size: 1.8rem;
+  font-weight: 200 !important; /* Same weight as rest */
+  font-size: 1.4rem !important;
   color: #FFF1DC !important;
 
 }
@@ -2229,7 +2229,7 @@ section.skills-section .skills-content {
 section.skills-section .skills-content h3 {
 align-self: stretch!important;
 color: #AE4721 !important;
-font-family: 'New Spirit Semibold', serif !important;
+font-family: 'Heebo', sans-serif !important;
 font-size: var(--Static-Headline-Medium-Size, 28px)!important;
 font-style: normal!important;
 font-weight: 700!important;
@@ -2246,7 +2246,7 @@ section.skills-section .skills-content li {
   align-self: stretch !important;
   color: #AE4721 !important;
   font-family: 'Heebo', sans-serif !important;
-  font-size: 18px !important; /* Added px unit */
+  font-size: 16px !important; /* Added px unit */
   font-style: normal !important;
   font-weight: 380 !important;
   line-height: 140% !important;
