@@ -2114,9 +2114,10 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
 
 /* Bold the middle part */
 .contact-section h2 strong {
-  font-weight: 650 !important; /* Bold for "inquires and questions" */
-  font-size: 1.8rem;
-  color: #FFFBF6 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 300 !important; /* Same weight as rest */
+  font-size: 1.4rem !important;
+  color: #FFF1DC !important;
 
 }
 
