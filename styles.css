@@ -25,6 +25,30 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Heebo Light';
+  src: url('fonts/Heebo-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heebo Medium';
+  src: url('fonts/Heebo-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heebo Regular';
+  src: url('fonts/Heebo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root {
   --base-font-size: 16px;
@@ -845,7 +869,7 @@ nav a:hover{color:#3498db;}
 }
 
 .hero-mission-text {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Heebo Regular', sans-serif;
   font-size: clamp(2.25rem, 2.75vw, 2.75rem);
   font-weight: 400;
   color: #C55026;
@@ -1426,6 +1450,12 @@ nav a:hover{color:#3498db;}
   max-width: 30.625rem;
 }
 
+.mission-section .section-text,
+.programs-section .section-text {
+  font-family: 'Heebo Regular', sans-serif;
+  font-weight: 400;
+}
+
 .read-more-btn,
 .view-programs-btn {
   background: #FFFBF6;
@@ -1680,7 +1710,7 @@ nav a:hover{color:#3498db;}
 }
 
 .testimonial-quote {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Heebo Regular', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   color: #C55026;
@@ -2004,9 +2034,9 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
 }
 
 .contact-section h2 {
-  font-family: 'Heebo', sans-serif !important;
+  font-family: 'Heebo Light', sans-serif !important;
   font-size: 1.4rem !important;
-  font-weight: 200 !important; 
+  font-weight: 300 !important; 
   line-height: 2.25rem !important; 
   color: #FFF1DC !important;
   margin: 0 !important;
@@ -2015,7 +2045,8 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
 
 /* Bold the middle part */
 .contact-section h2 strong {
-  font-weight: 200 !important; /* Same weight as rest */
+  font-family: 'Heebo Light', sans-serif !important;
+  font-weight: 300 !important; /* Same weight as rest */
   font-size: 1.4rem !important;
   color: #FFF1DC !important;
 
