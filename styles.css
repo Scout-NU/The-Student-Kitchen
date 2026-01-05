@@ -115,14 +115,14 @@ nav a:hover{color:#3498db;}
 .panel--contact{background:#FFF1DC;border-radius:8px;margin:0 0 60px;padding:40px 20px;}
 .panel--contact .container{padding:24px 16px;}
 .contact-form{max-width:600px;margin:0 auto;display:grid;gap:16px;}
-.contact-form input,.contact-form textarea{width:100%;border:1px solid #ccc;border-radius:6px;padding:12px 16px;font:inherit;background:#FFFBF6;color:#222;font-size:.95rem;}
+.contact-form input,.contact-form textarea{width:100%;border:2px solid #ccc;border-radius:6px;padding:12px 16px;font:inherit;background:#FFFBF6;color:#222;font-size:.95rem;}
 .contact-form input::placeholder,.contact-form textarea::placeholder{color:#999;}
 .contact-form textarea{resize:vertical;min-height:120px;}
 .contact-form .btn{justify-self:end;background:#185F72;color:#FFFBF6;border:none;padding:10px 24px;border-radius:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;transition:background .3s ease;}
 .contact-form .btn:hover{background:#045a5c;}
 .contact-form select {
   color: #C55026;
-  border: 1px solid #185F72;
+  border: 2px solid #185F72;
 }
 .contact-form select option {
   color: #C55026;
@@ -132,15 +132,15 @@ nav a:hover{color:#3498db;}
 .support{padding:60px 0 80px;background:#FFFBF6;}
 .section-title{font-family: 'New Spirit Semibold', serif;font-size:clamp(2.5rem,4vw,3rem);text-align:center;margin:0 0 16px;color:#C55026;font-weight:700;}
 .section-subtitle{text-align:center;color:#C55026;max-width:800px;margin:0 auto 40px;line-height:1.6;font-size:1.1rem;}
-.donation-card{max-width:700px;margin:40px auto 0;border:1px solid #ccc;border-radius:8px;padding:30px;background:#fff;}
+.donation-card{max-width:700px;margin:40px auto 0;border:2px solid #ccc;border-radius:8px;padding:30px;background:#fff;}
 .donation-row{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center;margin-bottom:20px;}
 .donation-label{color:#333;font-size:.95rem;font-weight:500;}
 .btn-group{display:flex;gap:10px;flex-wrap:wrap;}
 .btn--chip,.btn--amount{border:2px solid #185F72;background:#FFFBF6;color:#185F72;padding:10px 20px;border-radius:6px;cursor:pointer;font-weight:500;transition:all .3s ease;}
 .btn--chip:hover,.btn--amount:hover{background:#FFFBF6;}
 .btn--chip.is-active,.btn--amount.is-active{background:#185F72;color:#FFFBF6;border-color:#185F72;}
-.input.input--full{width:100%;border:1px solid #FFFBF6;border-radius:6px;padding:12px 16px;margin:10px 0;background:#FFFBF6;font-size:.95rem;}
-.btn--primary{background:#185F72;color:#FFFBF6;border-radius:6px;padding:12px 24px;border:none;font-weight:600;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;width:100%;margin-top:10px;transition:background .3s ease;}
+.input.input--full{width:100%;border:2px solid #FFFBF6;border-radius:6px;padding:12px 16px;margin:10px 0;background:#FFFBF6;font-size:.95rem;}
+.btn--primary{background:#185F72;color:#FFFBF6;border-radius:6px;padding:12px 24px;border:none;font-weight:600;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;width:100%;margin-top:10px;}
 .btn--primary:hover{background:#045a5c;}
 /* helper for phone view */ 
 @media(max-width:720px){.donation-row{grid-template-columns:1fr;gap:10px;}.donation-label{margin-bottom:5px;}} 
@@ -235,7 +235,7 @@ nav a:hover{color:#3498db;}
   border-radius:0.375rem;
   display:block;
   background:#efefef;
-  border:1px solid #e3e3e3;
+  border:2px solid #e3e3e3;
 }
 
 /* Text block */
@@ -303,7 +303,7 @@ nav a:hover{color:#3498db;}
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #C55026;
+  border: 2px solid #C55026;
   border-radius: 8px;
   padding: 0.75rem;
   box-sizing: border-box;
@@ -352,7 +352,7 @@ nav a:hover{color:#3498db;}
   font-weight: 600;
   color: #056D70;
   text-decoration: none;
-  border: 1px solid #056D70;
+  border: 2px solid #056D70;
   background: #fff;
   padding: 0.75rem 1.5rem;
   margin: 0;
@@ -438,7 +438,7 @@ nav a:hover{color:#3498db;}
 }
 
 .shelf {
-  border: 1px solid #C55026;
+  border: 2px solid #C55026;
   border-radius: 0.625rem;
   height: 9.5rem;
   position: relative;
@@ -884,7 +884,7 @@ nav a:hover{color:#3498db;}
 }
 
 .hero-mission-box-inner {
-  border: 1px solid #C55026;
+  border: 2px solid #C55026;
   border-radius: 0.625rem;
   border-style: solid;
   padding: 2rem;
@@ -920,7 +920,7 @@ nav a:hover{color:#3498db;}
 .hero-view-programs-btn {
   align-self:flex-end;
   background: #FFFBF6;
-  border: 1px solid #185F72;
+  border: 2px solid #185F72;
   color: #185F72;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
@@ -1399,7 +1399,7 @@ nav a:hover{color:#3498db;}
 
 .book {
   background-color: #FFEBD0;
-  border: 1px solid #FFEBD0;
+  border: 2px solid #FFEBD0;
   transition: transform 0.3s ease;
 }
 
@@ -1676,7 +1676,7 @@ nav a:hover{color:#3498db;}
 .read-more-btn,
 .view-programs-btn {
   background: #FFFBF6;
-  border: 1px solid #185F72;
+  border: 2px solid #185F72;
   color: #185F72;
   padding: 0.75rem;
   border-radius: 0.5rem;
@@ -1703,7 +1703,7 @@ nav a:hover{color:#3498db;}
 }
 
 .image-frame {
-  border: 1px solid #C55026;
+  border: 2px solid #C55026;
   border-radius: 0.625rem;
   padding: 1.25rem;
   width: clamp(20rem, 38vw, 38.125rem);
@@ -1787,7 +1787,7 @@ nav a:hover{color:#3498db;}
   justify-content: center;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid  #C55026;
+  border: 2px solid  #C55026;
   
 }
 
@@ -2178,7 +2178,7 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
   align-items: center !important;
   padding: 0 0.75rem !important;
   border-radius: 0.5rem !important; 
-  border: 1px solid #185F72 !important;
+  border: 2px solid #185F72 !important;
   background: #FFFBF6 !important;
   
 
@@ -2246,7 +2246,7 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
 .dropdown-content {
   padding: 0 1rem 1rem 1rem;
   font-size: 0.95rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #C55026;
   line-height: 1.6;
   background: #FFFBF6;
@@ -2256,6 +2256,29 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
   margin: 0;
   color: #C55026;
 }
+
+/*
+animate in
+*/
+/* Initial state and animation */
+.content-section.contact-section {
+  animation: slideUpFadeIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Keyframe animation */
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Contact Section Styling */
 .contact-section {
@@ -2324,7 +2347,7 @@ letter-spacing: var(--Static-Headline-Small-Tracking, 0);
   
   background: #FFFBF6 !important;
   color: #185F72 !important;
-  border: 1px solid #185F72 !important;
+  border: 2px solid #185F72 !important;
   border-radius: 0.5rem !important;
   
   font-family: 'Inter', sans-serif !important;
@@ -2658,6 +2681,7 @@ section.skills-section .skills-content li::before {
 .view-more-section[open] {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .view-more-section[open] .view-more-btn {
@@ -2704,7 +2728,7 @@ section.skills-section .skills-content li::before {
 /* Add chevron icon using pseudo-element */
 .view-more-btn::after {
   justify-self: center;
-  
+  padding-top: 5rem;
   content: '';
   width: 24px;
   height: 24px;
@@ -2723,7 +2747,6 @@ section.skills-section .skills-content li::before {
 /* Change text when open */
 .view-more-section[open] .view-more-btn::before {
   content: 'VIEW LESS';
-  justify-self: center;
 }
 
 .view-more-section:not([open]) .view-more-btn::before {
@@ -2741,8 +2764,7 @@ section.skills-section .skills-content li::before {
 
 /* Expandable content styling - appears BELOW preview text */
 .view-more-content {
-  justify-content: center;
-  align-content: center;
+  justify-self: center;
   animation: slideDown 0.3s ease-out;
   padding-top: 1rem;
   margin-top: 0.5rem;
@@ -2772,7 +2794,7 @@ section.skills-section .skills-content li::before {
 /* Spacing for dropdowns within expanded content */
 .view-more-content .program-dropdown {
     margin-bottom: 0.75rem;
-    border: 1px solid #C55026;
+    border: 2px solid #C55026;
     border-radius: 0.75rem;
     background: #FFFBF6;
     overflow: hidden;
