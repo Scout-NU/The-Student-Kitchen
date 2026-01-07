@@ -31,7 +31,7 @@
   </section>
 
     <!--  contact form panel -->
-    <section class="panel panel--contact">
+    <section class="panel panel--contact animate-on-scroll">
       <div class="container">
         <form class="contact-form" action="#" method="post">
           <label class="sr-only" for="topic">Topic</label>
@@ -60,7 +60,7 @@
     </section>
 
     <!-- donation section -->
-    <section class="support" id="donate">
+    <section class="support animate-on-scroll" id="donate">
       <div class="container">
         <h2 class="section-title">Support The Student Kitchen</h2>
         <p class="section-subtitle">
@@ -237,5 +237,29 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
     </script>  
+    <script>
+      // Scroll animation observer with reset
+      const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -100px 0px'
+      };
+  
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+              } else {
+                  entry.target.classList.remove('is-visible');  // Reset when scrolling out
+              }
+          });
+      }, observerOptions);
+  
+      // Wait for DOM to be ready, then observe elements
+      document.addEventListener('DOMContentLoaded', () => {
+          document.querySelectorAll('.animate-on-scroll').forEach(el => {
+              observer.observe(el);
+          });
+      });
+  </script>
 </body>
 </html>

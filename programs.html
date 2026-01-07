@@ -22,7 +22,7 @@
     <div id="header"></div>
 
     <main>
-        <section class="hero programs-hero">
+        <section class="hero programs-hero" >
             <div class="hero-programs-container">
                 <h2>Programs</h2>
                 <p>The Student Kitchen programming is available in several different forms to meet your organization's needs and capacity</p>
@@ -30,7 +30,7 @@
         </section>
 
         <!-- Programs Grid Section -->
-        <section class="content-section programs-section">
+        <section class="content-section programs-section animate-on-scroll">
             <div class="container">
                 <div class="programs-grid">
                    <!-- Program Card 1 -->
@@ -213,7 +213,7 @@
 
 
         <!-- Testimonials Section -->
-        <section class="testimonials">
+        <section class="testimonials animate-on-scroll">
             <div class="container">
                 <div class="testimonials-three-col">
                     <div class="testimonial-box">
@@ -238,7 +238,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="skills-section">
+        <section class="skills-section animate-on-scroll">
             <div class="container">
                 <!-- Skill 1-->
                 <div class="skills-item">
@@ -314,49 +314,4 @@
                     if (linkPage === currentPage || 
                         (currentPage === '' && linkPage === 'index.html') ||
                         (currentPage === 'index.html' && linkPage === 'index.html')) {
-                        link.parentElement.classList.add('active');
-                    }
-                });
-                
-                // Navbar hide/show on scroll
-                let lastScrollTop = 0;
-                const header = document.querySelector('.site-header');
-                let ticking = false;
-                
-                function updateHeader() {
-                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    
-                    if (scrollTop > 100) { // Only hide after scrolling down 100px
-                        if (scrollTop > lastScrollTop + 5) {
-                            // Scrolling down (with threshold to prevent flickering)
-                            header.classList.add('hidden');
-                        } else if (scrollTop < lastScrollTop - 5) {
-                            // Scrolling up (with threshold to prevent flickering)
-                            header.classList.remove('hidden');
-                        }
-                    } else {
-                        // At the top, always show
-                        header.classList.remove('hidden');
-                    }
-                    
-                    lastScrollTop = scrollTop;
-                    ticking = false;
-                }
-                
-                window.addEventListener('scroll', function() {
-                    if (!ticking) {
-                        window.requestAnimationFrame(updateHeader);
-                        ticking = true;
-                    }
-                });
-                
-                // Initialize search functionality
-                initSearch();
-            });
-        
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
-</body>
-</html>
+          

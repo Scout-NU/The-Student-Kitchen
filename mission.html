@@ -25,10 +25,10 @@
 <h1>Our Mission</h1>
 <p>Empowering youth through hands-on culinary education, building confidence in the kitchen, and fostering healthier communities through accessible food programming.</p>
 </section>
-<section class="mission-banner">
+<section class="mission-banner animate-on-scroll">
 <img src="assets/Image from iOS.jpg" alt="Community outreach">
 </section>
-<section class="about-section">
+<section class="about-section reverse">
 <div class="about-image">
 <img src="assets/Image from iOS (2).jpg" alt="About Us">
 </div>
@@ -38,7 +38,7 @@
 <p>In June 2025 The Student Kitchen received the <strong><a href="https://www.idealist.org/en/action-incubator" target="_blank" rel="noopener noreferrer">Idealist Action Incubator and Communitas America</a></strong> grant to jumpstart this work. We currently run several ongoing workshop series, as well as food demos and catering for community organizations. Our partners include <strong><a href="https://bushwickayudamutua.com/" target="_blank" rel="noopener noreferrer">Bushwick Ayuda Mutua (BAM)</a></strong>, <strong><a href="https://collectivefocus.site/" target="_blank" rel="noopener noreferrer">Collective Focus</a></strong>, <strong><a href="https://www.aafe.org" target="_blank" rel="noopener noreferrer">Asian Americans for Equity</a></strong>, <strong><a href="https://www.fihsnyc.org/" target="_blank" rel="noopener noreferrer">Flushing International High School</a></strong>, and others.</p>
 </div>
 </section>
-<section class="about-section reverse">
+<section class="about-section reverse animate-on-scroll">
 <div class="about-image">
 <img src="assets/Image from iOS (1).jpg" alt="About Ben">
 </div>
@@ -155,6 +155,30 @@ fetch('header.html')
 fetch('footer.html')
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+<script>
+    // Scroll animation observer with reset
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            } else {
+                entry.target.classList.remove('is-visible');  // Reset when scrolling out
+            }
+        });
+    }, observerOptions);
+
+    // Wait for DOM to be ready, then observe elements
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    });
 </script>
 </body>
 </html>
