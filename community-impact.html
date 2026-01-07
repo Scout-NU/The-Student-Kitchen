@@ -509,4 +509,39 @@
                 clearTimeout(resizeTimeout);
                 resizeTimeout = setTimeout(() => {
                     const carouselWidth = carousel.offsetWidth || window.innerWidth;
-                    const newCardWidth = Math.min(carouselWidth * 0
+                    const newCardWidth = Math.min(carouselWidth * 0.75, 800);
+                    originalSlides.forEach((card) => {
+                        card.style.width = newCardWidth + 'px';
+                        card.style.marginLeft = (-newCardWidth / 2) + 'px';
+                    });
+                    updateCarousel();
+                }, 250);
+            });
+        }
+    </script>
+    <script>
+        // Scroll animation observer with reset
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');  // Reset when scrolling out
+                }
+            });
+        }, observerOptions);
+    
+        // Wait for DOM to be ready, then observe elements
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

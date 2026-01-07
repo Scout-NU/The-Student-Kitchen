@@ -4377,4 +4377,22 @@ section.skills-section .skills-content li::before {
       height: 1.8rem;
     }
   
+    .map-popup{
+      position: relative !important;
+      left: auto !important;
+      right: auto !important;
+      top: auto !important;
+      bottom: auto !important;
+      transform: none !important;
+  
+      width: min(22.4375rem, 92%) !important;
+      max-width: 92% !important;
+      margin: 0 auto !important;
+    }
+  
+    .map-popup.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
     
