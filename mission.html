@@ -28,20 +28,26 @@
 <section class="mission-banner animate-on-scroll">
 <img src="assets/Image from iOS.jpg" alt="Community outreach">
 </section>
-<section class="about-section reverse">
-<div class="about-image">
-<img src="assets/Image from iOS (2).jpg" alt="About Us">
-</div>
-<div class="about-text">
-<h2>About Us</h2>
-<p>Originally started as an afterschool club in 2023, The Student Kitchen was founded to provide hands-on culinary programming. We started as an afterschool club leading students through recipes and helping expand their culinary knowledge. Since then, The Student Kitchen has grown to provide classes for over 200 students and has served over 1,000 guests, including families, students, and school staff.</p>
-<p>In June 2025 The Student Kitchen received the <strong><a href="https://www.idealist.org/en/action-incubator" target="_blank" rel="noopener noreferrer">Idealist Action Incubator and Communitas America</a></strong> grant to jumpstart this work. We currently run several ongoing workshop series, as well as food demos and catering for community organizations. Our partners include <strong><a href="https://bushwickayudamutua.com/" target="_blank" rel="noopener noreferrer">Bushwick Ayuda Mutua (BAM)</a></strong>, <strong><a href="https://collectivefocus.site/" target="_blank" rel="noopener noreferrer">Collective Focus</a></strong>, <strong><a href="https://www.aafe.org" target="_blank" rel="noopener noreferrer">Asian Americans for Equity</a></strong>, <strong><a href="https://www.fihsnyc.org/" target="_blank" rel="noopener noreferrer">Flushing International High School</a></strong>, and others.</p>
-</div>
+
+<section class="about-section ">
+    <div class="mission-image">
+        <div class="image-frame">
+            <img src="assets/Image from iOS (2).jpg" alt="Programs image">
+        </div>
+    </div>
+    <div class="about-text">
+    <h2>About Us</h2>
+    <p>Originally started as an afterschool club in 2023, The Student Kitchen was founded to provide hands-on culinary programming. We started as an afterschool club leading students through recipes and helping expand their culinary knowledge. Since then, The Student Kitchen has grown to provide classes for over 200 students and has served over 1,000 guests, including families, students, and school staff.</p>
+    <p>In June 2025 The Student Kitchen received the <strong><a href="https://www.idealist.org/en/action-incubator" target="_blank" rel="noopener noreferrer">Idealist Action Incubator and Communitas America</a></strong> grant to jumpstart this work. We currently run several ongoing workshop series, as well as food demos and catering for community organizations. Our partners include <strong><a href="https://bushwickayudamutua.com/" target="_blank" rel="noopener noreferrer">Bushwick Ayuda Mutua (BAM)</a></strong>, <strong><a href="https://collectivefocus.site/" target="_blank" rel="noopener noreferrer">Collective Focus</a></strong>, <strong><a href="https://www.aafe.org" target="_blank" rel="noopener noreferrer">Asian Americans for Equity</a></strong>, <strong><a href="https://www.fihsnyc.org/" target="_blank" rel="noopener noreferrer">Flushing International High School</a></strong>, and others.</p>
+    </div>
 </section>
+
 <section class="about-section reverse animate-on-scroll">
-<div class="about-image">
-<img src="assets/Image from iOS (1).jpg" alt="About Ben">
-</div>
+    <div class="mission-image">
+        <div class="image-frame">
+            <img src="assets/Image from iOS (1).jpg" alt="Programs image" style="height: 130%">
+        </div>
+    </div>
 <div class="about-text">
 <h2>About Ben</h2>
 <p>Ben Averbuch began working in Boston Public Schools, and then as a 9th grade history teacher in Brooklyn. During his time teaching, he noticed a stark lack of home economics (Food Consumer Sciences) programs, as well as a lack of nutritional and health education. He developed an afterschool club to work with students and build their confidence in the kitchen. In 2023 he founded the Student Kitchen.</p>
@@ -149,36 +155,4 @@ fetch('header.html')
                     }
                 });
                 
-                // Initialize search functionality
-                initSearch();
-            });
-fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
-</script>
-<script>
-    // Scroll animation observer with reset
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-            } else {
-                entry.target.classList.remove('is-visible');  // Reset when scrolling out
-            }
-        });
-    }, observerOptions);
-
-    // Wait for DOM to be ready, then observe elements
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-    });
-</script>
-</body>
-</html>
+                // Initialize search
