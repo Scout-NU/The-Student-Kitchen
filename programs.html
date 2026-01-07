@@ -314,4 +314,73 @@
                     if (linkPage === currentPage || 
                         (currentPage === '' && linkPage === 'index.html') ||
                         (currentPage === 'index.html' && linkPage === 'index.html')) {
-          
+                        link.parentElement.classList.add('active');
+                    }
+                });
+                
+                // Navbar hide/show on scroll
+                let lastScrollTop = 0;
+                const header = document.querySelector('.site-header');
+                let ticking = false;
+                
+                function updateHeader() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 100) { // Only hide after scrolling down 100px
+                        if (scrollTop > lastScrollTop + 5) {
+                            // Scrolling down (with threshold to prevent flickering)
+                            header.classList.add('hidden');
+                        } else if (scrollTop < lastScrollTop - 5) {
+                            // Scrolling up (with threshold to prevent flickering)
+                            header.classList.remove('hidden');
+                        }
+                    } else {
+                        // At the top, always show
+                        header.classList.remove('hidden');
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                    ticking = false;
+                }
+                
+                window.addEventListener('scroll', function() {
+                    if (!ticking) {
+                        window.requestAnimationFrame(updateHeader);
+                        ticking = true;
+                    }
+                });
+                
+                // Initialize search functionality
+                initSearch();
+            });
+        
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <script>
+        // Scroll animation observer with reset
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');  // Reset when scrolling out
+                }
+            });
+        }, observerOptions);
+
+        // Wait for DOM to be ready, then observe elements
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
