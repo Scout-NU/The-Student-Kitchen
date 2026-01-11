@@ -113,7 +113,9 @@
                   <img src="assets/map.png" alt="Map of New York" class="map" />
                   <!-- ========================================== -->
               
-                  <!-- ========== MODIFY IMAGE HERE: assets/pin.png (multiple instances) ========== -->
+                  <!-- ========== MODIFY PARTNER LOCATIONS HERE: assets/pin.png (multiple instances) ========== -->
+                   <!-- Play with the percentages to change the location of the pins. Top is vertical, left is horizontal.-->
+                  <!--The data-location thing here corresponds to the "const partners" thing below, in terms of the numbering.-->
                   <div class="map-pin" data-location="0" style="top: 4%; left: 61%;">
                     <img src="assets/pin.png" alt="Location pin" />
                   </div>
@@ -273,7 +275,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Initializing map interactions...');
             
-            /* ========== MODIFY IMAGES HERE: Partner icon references in JavaScript ========== */
+            /* ========== MODIFY PARTNERS HERE: Partner icon references in JavaScript ========== */
+            /* Add partners here. The ordering matters so it can correspond to the pins above with the data-location variable.*/
             const partners = [
                 {
                     name: "Art for Aid",
@@ -313,7 +316,7 @@
                 },
                 {
                     name: "Asian Americans for Equity (AAFE)",
-                    description: "Through El Puente and NYC Department of Youth and Community Development, The Student Kitchen leads a weekly drop in cooking class for high school students. Students practice following recipes, learn about seasonal produce, and gain confidence in the kitchen.",
+                    description: "Through community development, Asian Americans for Equality (AAFE) advances racial, social and economic justice for all, regardless of background, guided by our experiences as Asian Americans and our commitment to civil rights.",
                     icon: "assets/aafe.png", /* ========== MODIFY IMAGE HERE: assets/aafe.png ========== */
                     website: "https://www.aafe.org/"
                 },
