@@ -20,6 +20,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=New+Spirit:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">    
     <script src="search-index.js"></script>
     <script src="search.js"></script>
 </head>
@@ -27,189 +30,198 @@
     <div id="header"></div>
 
     <main>
-        <section class="hero programs-hero">
-            <div class="container">
+        <section class="hero programs-hero" >
+            <div class="hero-programs-container">
                 <h2>Programs</h2>
-                <p>View our programs below.</p>
+                <p>The Student Kitchen programming is available in several different forms to meet your organization's needs and capacity</p>
             </div>
         </section>
 
         <!-- Programs Grid Section -->
-        <section class="content-section programs-section">
+        <section class="content-section programs-section animate-on-scroll">
             <div class="container">
                 <div class="programs-grid">
                    <!-- Program Card 1 -->
-<div class="program-card">
-    <div class="program-card-image">
-        <!-- ========== MODIFY IMAGE HERE: assets/appetizer.png ========== -->
-        <img src="assets/appetizer.png" alt="Appetizer program">
-        <!-- ================================================ -->
-    </div>
-    <div class="program-card-content">
-        <span class="program-level">Level One</span>
-        <h3 class="program-title">Appetizer</h3>
-        <div class="program-tags">
-            <span class="program-tag">Food Safety</span>
-            <span class="program-tag">Protocol</span>
-        </div>
-        
-        <!-- Preview text -->
-        <p class="program-preview">This introductory program gives students a glimpse into our programming. It includes 
-          kitchen and food safety, food prep, and nutrition. It can be adapted to the needs of your organization and space. 
-          Run of show available upon request.</p>
-        
-        <!-- VIEW MORE expandable section -->
-        <details class="view-more-section">
-            <summary class="view-more-btn">VIEW MORE</summary>
-            <div class="view-more-content">
-                <p class="program-description">This introductory program gives students a glimpse into our programming. It includes 
-                  kitchen and food safety, food prep, and nutrition. The program is designed to be flexible and can be adapted to the 
-                  specific needs of your organization and space. Whether you're working with younger groups, virtual-only settings, or 
-                  groups with time and logistical constraints, we can tailor the experience to fit. Run of show available upon request.</p>
-                
-                <details class="program-dropdown">
-                    <summary>Past menus</summary>
-                    <div class="dropdown-content">
-                        <p>Snacks<br>Yogurt Bowls<br>Kale Apple Salad</p>
+                <div class="program-card">
+                    <div class="program-card-image">
+                        <img src="assets/Program1img.png" alt="Appetizer program" style="height: 125%;">
                     </div>
-                </details>
-                
-                <details class="program-dropdown">
-                    <summary>Skills</summary>
-                    <div class="dropdown-content">
-                        <p>Kitchen Language and Protocol<br>Seasonal Produce<br>Kitchen Basics</p>
+                    <div class="program-card-content">
+                        <span class="program-level">Level One</span>
+                        <h3 class="program-title">Appetizer</h3>
+                        <div class="program-tags">
+                            <span class="program-tag">Food Safety</span>
+                            <span class="program-tag">Protocol</span>
+                        </div>
+                        
+                        <!-- Preview text -->
+                        <p class="program-preview">This introductory program gives students a glimpse into our programming. It includes 
+                        kitchen and food safety, food prep, and nutrition. It can be adapted to the needs of your organization and space. 
+                        Run of show available upon request.</p>
+                        
+                        <!-- VIEW MORE expandable section -->
+                        <details class="view-more-section">
+                            <summary class="view-more-btn">VIEW MORE</summary>
+                            <div class="view-more-content">
+                                <p class="program-description">This introductory program gives students a glimpse into our programming. It includes 
+                                kitchen and food safety, food prep, and nutrition. The program is designed to be flexible and can be adapted to the 
+                                specific needs of your organization and space. Whether you're working with younger groups, virtual-only settings, or 
+                                groups with time and logistical constraints, we can tailor the experience to fit. Run of show available upon request.</p>
+                                
+                                <details class="program-dropdown">
+                                    <summary>Past menus</summary>
+                                    <div class="dropdown-content">
+                                        <p>Snacks<br>Yogurt Bowls<br>Kale Apple Salad</p>
+                                    </div>
+                                </details>
+                                
+                                <details class="program-dropdown">
+                                    <summary>Skills</summary>
+                                    <div class="dropdown-content">
+                                        <p>During this program students will develop skills in safe food handling while learning to follow simple recipes. They will work as a team to build confidence in the kitchen. </p>
+                                    </div>
+                                </details>
+                                
+                                <details class="program-dropdown">
+                                    <summary>Intended audience</summary>
+                                    <div class="dropdown-content">
+                                        <p>This program is intended for younger groups, virtual-only groups, and/or groups with time or logistical constraints. </p>
+                                    </div>
+                                </details>
+                                <details class="program-dropdown">
+                                    <summary>Pricing</summary>
+                                    <div class="dropdown-content">
+                                        <p>Starting at $125 for a demo, ranging up to $550 based on class size and length.  </p>
+                                    </div>
+                                </details>
+                            </div>
+                        </details>
                     </div>
-                </details>
-                
-                <details class="program-dropdown">
-                    <summary>Intended audience</summary>
-                    <div class="dropdown-content">
-                        <p>Younger groups<br>Virtual-only<br>Groups with Time/Logistical Constraints</p>
-                    </div>
-                </details>
-            </div>
-        </details>
-    </div>
-</div>
+                </div>
 
-<!-- Program Card 2 -->
-<div class="program-card">
-    <div class="program-card-image">
-        <!-- ========== MODIFY IMAGE HERE: assets/entree.jpg ========== -->
-        <img src="assets/entree.jpg" alt="Entree program">
-        <!-- ============================================ -->
-    </div>
-    <div class="program-card-content">
-        <span class="program-level">Level Two</span>
-        <h3 class="program-title">Entree</h3>
-        <div class="program-tags">
-            <span class="program-tag">Food Safety</span>
-            <span class="program-tag">Protocol</span>
-        </div>
-        
-        <!-- Preview text -->
-        <p class="program-preview">In-person programming designed for 1-3 sessions. These are longer workshops (1.5-2 hours), 
-          that cover kitchen safety, basic knife and equipment skills, and menu creation. These classes allow students to 
-          practice what they learn by following recipes, familiarizing themselves with measurements and protocol, and eating 
-          their creations at the end.  Run of show available upon request.</p>
-        
-        <!-- VIEW MORE expandable section -->
-        <details class="view-more-section">
-            <summary class="view-more-btn">VIEW MORE</summary>
-            <div class="view-more-content">
-                <p class="program-description">
+                <!-- Program Card 2 -->
+                <div class="program-card">
+                    <div class="program-card-image">
+                        <img src="assets/Program2img.jpg" alt="Entree program">
+                    </div>
+                    <div class="program-card-content">
+                        <span class="program-level">Level Two</span>
+                        <h3 class="program-title">Entree</h3>
+                        <div class="program-tags">
+                            <span class="program-tag">Food Safety</span>
+                            <span class="program-tag">Protocol</span>
+                        </div>
+                        
+                        <!-- Preview text -->
+                        <p class="program-preview">In-person programming designed for 1-3 sessions. These are longer workshops (1.5-2 hours), 
+                        that cover kitchen safety, basic knife and equipment skills, and menu creation. These classes allow students to 
+                        practice what they learn by following recipes, familiarizing themselves with measurements and protocol, and eating 
+                        their creations at the end.  Run of show available upon request.</p>
+                        
+                        <!-- VIEW MORE expandable section -->
+                        <details class="view-more-section">
+                            <summary class="view-more-btn">VIEW MORE</summary>
+                            <div class="view-more-content">
+                                <p class="program-description">In person programming designed for 1-3 sessions. These are more intensive (1.5 hours or longer), single programs that cover kitchen safety, 
+                                    basic knife and equipment skills, and cooking a dish all together. These are great for one-off events that 
+                                    allow students to practice what they learn by following recipes, familiarizing themselves with measurements and protocol, and eating their creations at the end. Run of show available upon request.</p>
+                                <details class="program-dropdown">
+                                    <summary>Past menus</summary>
+                                    <div class="dropdown-content">
+                                        <p>Omlettes and French Toast<br>Chicken/Eggplant Parmesan<br>Halal Chicken over Rice<br>Japanese Curry<br>Seasonal Soups</p>
+                                    </div>
+                                </details>
+                                
+                                <details class="program-dropdown">
+                                    <summary>Skills</summary>
+                                    <div class="dropdown-content">
+                                        <p>This program teaches students safe knife skills as they collaborate to prepare a dish from start to finish. It covers topics and skills such as seasonal ingredients, time management, and understanding new flavors and textures. </p>
+                                    </div>
+                                </details>
+                                
+                                <details class="program-dropdown">
+                                    <summary>Intended audience</summary>
+                                    <div class="dropdown-content">
+                                        <p>This program is intended for community partners, new partnerships, and back to school and parent programming. </p>
+                                    </div>
+                                </details>
+                                <details class="program-dropdown">
+                                    <summary>Pricing</summary>
+                                    <div class="dropdown-content">
+                                        <p>Starting at $350 ranging up to $750 based on class size and length. </p>
+                                    </div>
+                                </details>
+                            </div>
+                        </details>
+                    </div>
+                </div>
 
-              In person programming designed for 1-3 sessions. These are more intensive (1.5 hours or longer), single programs that cover kitchen safety, basic knife and equipment skills, and cooking a dish all together. These are great for one-off events that allow students to practice what they learn by following recipes, familiarizing themselves with measurements and protocol, and eating their creations at the end. Run of show available upon request.</p>
-                
-                <details class="program-dropdown">
-                    <summary>Past menus</summary>
-                    <div class="dropdown-content">
-                        <p>Omlettes and French Toast<br>Chicken/Eggplant Parmesan<br>Halal Chicken over Rice<br>Japanese Curry<br>Seasonal Soups
-</p>
+                <!-- Program Card 3 -->
+                <div class="program-card">
+                    <div class="program-card-image">
+                        <img src="assets/Program3img.png" alt="10 Course program">
                     </div>
-                </details>
-                
-                <details class="program-dropdown">
-                    <summary>Skills</summary>
-                    <div class="dropdown-content">
-                        <p>Safety/Kitchen Protocol<br>Preparing vegetables, eggs, & meat<br>Baked goods</p>
+                    <div class="program-card-content">
+                        <span class="program-level">Level Three</span>
+                        <h3 class="program-title">10 Course</h3>
+                        <div class="program-tags">
+                            <span class="program-tag">Food Safety</span>
+                            <span class="program-tag">Protocol</span>
+                        </div>
+                        
+                        <!-- Preview text -->
+                        <p class="program-preview">Our comprehensive 10-course program series provides an in-depth culinary education experience. 
+                        This extended program covers advanced cooking techniques, menu planning, and cultural exploration through food. Students 
+                        develop mastery-level skills through hands-on practice and collaborative cooking sessions. Run of show available upon request.</p>
+                        
+                        <!-- VIEW MORE expandable section -->
+                        <details class="view-more-section">
+                            <summary class="view-more-btn">VIEW MORE</summary>
+                            <div class="view-more-content">
+                                <p class="program-description">Our comprehensive 10-course program series provides an in-depth culinary education experience 
+                                designed for extended engagement. This program covers advanced cooking techniques, menu planning, cultural exploration through 
+                                food, and collaborative cooking sessions. Students develop mastery-level skills through hands-on practice, working with 
+                                diverse ingredients and cuisines from around the world. The program can be adapted to fit your organization's schedule and 
+                                space requirements. Run of show available upon request.</p>
+                                
+                                <details class="program-dropdown">
+                                    <summary>Past menus</summary>
+                                    <div class="dropdown-content">
+                                        <p>Spice Profiles around the World<br>Seasonal Soups and Stews<br>Catering events</p>
+                                    </div>
+                                </details>
+                                
+                                <details class="program-dropdown">
+                                    <summary>Skills</summary>
+                                    <div class="dropdown-content">
+                                        <p>Students will gain independence and confidence while learning to experiment with new ingredients and flavors. During this course students get the opportunity to create and present their own dishes as they develop leaderships and problem solving skills. </p>
+                                    </div>
+                                </details>
+                                
+                                <details class="program-dropdown">
+                                    <summary>Intended audience</summary>
+                                    <div class="dropdown-content">
+                                        <p>This program is intended for school and nonprofit partners, afterschool clubs, and in-class nutrition and cooking workshop series. </p>
+                                    </div>
+                                </details>
+                                <details class="program-dropdown">
+                                    <summary>Intended audience</summary>
+                                    <div class="dropdown-content">
+                                        <p>Please use our contact page or email the thestudentkitchen@gmail.com for a quote and a run of show. Discounts are given for packages of 4 classes or more.  </p>
+                                    </div>
+                                </details>
+                            </div>
+                        </details>
                     </div>
-                </details>
-                
-                <details class="program-dropdown">
-                    <summary>Intended audience</summary>
-                    <div class="dropdown-content">
-                        <p>Community partners<br>New partnerships<br>Back to school and parent programming  
-</p>
-                    </div>
-                </details>
-            </div>
-        </details>
-    </div>
-</div>
-
-<!-- Program Card 3 -->
-<div class="program-card">
-    <div class="program-card-image">
-        <!-- ========== MODIFY IMAGE HERE: assets/10-course.jpg ========== -->
-        <img src="assets/10-course.jpg" alt="10 Course program">
-        <!-- =============================================== -->
-    </div>
-    <div class="program-card-content">
-        <span class="program-level">Level Three</span>
-        <h3 class="program-title">10 Course</h3>
-        <div class="program-tags">
-            <span class="program-tag">Food Safety</span>
-            <span class="program-tag">Protocol</span>
-        </div>
-        
-        <!-- Preview text -->
-        <p class="program-preview">Our comprehensive 10-course program series provides an in-depth culinary education experience. 
-          This extended program covers advanced cooking techniques, menu planning, and cultural exploration through food. Students 
-          develop mastery-level skills through hands-on practice and collaborative cooking sessions. Run of show available upon request.</p>
-        
-        <!-- VIEW MORE expandable section -->
-        <details class="view-more-section">
-            <summary class="view-more-btn">VIEW MORE</summary>
-            <div class="view-more-content">
-                <p class="program-description">Our comprehensive 10-course program series provides an in-depth culinary education experience 
-                  designed for extended engagement. This program covers advanced cooking techniques, menu planning, cultural exploration through 
-                  food, and collaborative cooking sessions. Students develop mastery-level skills through hands-on practice, working with 
-                  diverse ingredients and cuisines from around the world. The program can be adapted to fit your organization's schedule and 
-                  space requirements. Run of show available upon request.</p>
-                
-                <details class="program-dropdown">
-                    <summary>Past menus</summary>
-                    <div class="dropdown-content">
-                        <p>Spice Profiles around the World<br>Seasonal Soups and Stews<br>Catering events
-</p>
-                    </div>
-                </details>
-                
-                <details class="program-dropdown">
-                    <summary>Skills</summary>
-                    <div class="dropdown-content">
-                        <p>Preparing dressing, sides, & grains<br>Food chemistry & cultural connections<br>Food customization</p>
-                    </div>
-                </details>
-                
-                <details class="program-dropdown">
-                    <summary>Intended audience</summary>
-                    <div class="dropdown-content">
-                        <p>School and nonprofit partners<br>Afterschool clubs<br>In-class nutrition and cooking workshop series
-</p>
-                    </div>
-                </details>
-            </div>
-        </details>
-    </div>
-</div>
+                </div>
+                            </div>
+                        </div>
         </section>
 
 
 
         <!-- Testimonials Section -->
-        <section class="testimonials">
+        <section class="testimonials animate-on-scroll">
             <div class="container">
                 <div class="testimonials-three-col">
                     <div class="testimonial-box">
@@ -234,7 +246,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="skills-section">
+        <section class="skills-section animate-on-scroll">
             <div class="container">
                 <!-- Skill 1-->
                 <div class="skills-item">
@@ -296,7 +308,7 @@
 <!-- Contact Section -->
 <section class="content-section contact-section">
     <div class="container">
-        <h2>For program <strong>inquiries and questions,</strong> please use our contact form!</h2>
+        <h2>For program inquiries and questions, please use our contact form!</h2>
         <a href="contact.html" class="contact-button">CONTACT</a>
     </div>
 </section>
@@ -359,6 +371,30 @@
         fetch('footer.html')
             .then(response => response.text())
             .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    <script>
+        // Scroll animation observer with reset
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');  // Reset when scrolling out
+                }
+            });
+        }, observerOptions);
+
+        // Wait for DOM to be ready, then observe elements
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
     </script>
 </body>
 </html>
