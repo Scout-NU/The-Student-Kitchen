@@ -3742,7 +3742,6 @@ section.skills-section .skills-content li::before {
     
     /* Slide-out side menu */
     .main-nav {
-      transform: translateX(100%);
       position: fixed;
       top: 0;
       right: 0;
@@ -3789,6 +3788,7 @@ section.skills-section .skills-content li::before {
       border-radius: 0;
     }
   }
+
 .donate-btn {
   background: #FFFBF6;
   color: #185F72;
