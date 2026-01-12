@@ -3086,6 +3086,33 @@ section.skills-section .skills-content li::before {
   
 }
 
+.menu-close {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #AE4721;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 1;
+  padding: 0;
+  z-index: 103;
+}
+
+.menu-close:hover {
+  color: #8B3618;
+}
+
+@media (max-width: 1024px) {
+  .menu-close {
+    display: block;
+  }
+}
+
 
 
 @media (max-width: 990px) {
@@ -3141,32 +3168,7 @@ section.skills-section .skills-content li::before {
     padding-right: 1rem;
   }
 
-  .menu-close {
-    display: none;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 2.5rem;
-    color: #AE4721;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    line-height: 1;
-    padding: 0;
-    z-index: 103;
-  }
   
-  .menu-close:hover {
-    color: #8B3618;
-  }
-  
-  @media (max-width: 1024px) {
-    .menu-close {
-      display: block;
-    }
-  }
 
   
   /* Fix pre-transition alignment: all shelves align left on mobile */
