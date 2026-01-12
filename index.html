@@ -255,7 +255,7 @@
                             <div class="book book-md book-tilt-left"></div> 
                             
                         </div>
-                        </div>
+                    </div>
                         
                     </div>
                 </div>
@@ -271,6 +271,11 @@
         <!-- Our Mission Section -->
         <section class="mission-section animate-on-scroll">
             <div class="mission-container">
+                <div class="mission-image-mobile">
+                    <div class="image-frame">
+                        <img src="assets/HomepageImg1.png" alt="Mission image">
+                    </div>
+                </div>
                 <div class="mission-text">
                     <h2 class="section-heading">Our Mission</h2>
                     <p class="section-text">The Student Kitchen is an after-school program for New York City students that uses cooking 
@@ -322,6 +327,11 @@
         <!-- Programs section swapped side Section -->
         <section class="mission-section animate-on-scroll">
             <div class="mission-container">
+                <div class="mission-image-mobile">
+                    <div class="image-frame">
+                        <img src="assets/HomepageImg2.png" alt="Programs image">
+                    </div>
+                </div>
                 <div class="mission-text">
                     <h2 class="section-heading">Programs</h2>
                     <p class="section-text">Bring The Student Kitchen to you with our customizable programming.</p>
@@ -442,6 +452,11 @@
         const heroSection = document.querySelector('.hero-title-section');
         const heroMissionBox = document.querySelector('.hero-mission-box');
 
+        const isMobile = window.innerWidth <= 768;
+    
+        // Set delay: 0 for mobile, 1000 for desktop
+        const delay = isMobile ? 0 : 1000;
+        
         setTimeout(function() {
             heroSection.classList.add('scrolled');
             // Set visibility immediately for Firefox compatibility
@@ -449,7 +464,7 @@
                 heroMissionBox.style.visibility = 'visible';
                 heroMissionBox.style.pointerEvents = 'auto';
             }
-        }, 2000);
+        }, delay);
     </script>
 
     <script>
@@ -476,5 +491,47 @@
             });
         });
     </script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                
+                initHamburgerMenu();
+            });
+
+        // Hamburger menu function
+        function initHamburgerMenu() {
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('mainNav');
+        const menuClose = document.getElementById('menuClose');
+
+        if (hamburger && mainNav) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+
+            // Close button
+            if (menuClose) {
+                menuClose.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mainNav.classList.remove('active');
+                });
+            }
+
+            // Close when clicking nav links
+            const navLinks = document.querySelectorAll('.main-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mainNav.classList.remove('active');
+                });
+            });
+        }
+    }
+    </script>
+    
+    
 </body>
 </html>

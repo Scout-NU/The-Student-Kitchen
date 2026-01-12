@@ -7,7 +7,9 @@
                 <!-- ===================================================== -->
             </a>
         </div>
-        <nav class="main-nav">
+
+        <nav class="main-nav" id="mainNav"> 
+            <button class="menu-close" id="menuClose" aria-label="Close menu">×</button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="programs.html">Programs</a></li>
@@ -16,6 +18,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        
         <div class="header-right">
             <button class="search-icon-btn" aria-label="Search" id="searchToggleBtn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,8 +27,15 @@
                 </svg>
             </button>
             <a href="contact.html#donate" class="donate-btn">DONATE</a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </div>
+    <!-- Remove extra </div> here -->
     <div class="search-bar-container" id="searchBarContainer">
         <div class="search-bar-wrapper">
             <input type="text" class="search-input" id="searchInput" placeholder="Search..." aria-label="Search">
