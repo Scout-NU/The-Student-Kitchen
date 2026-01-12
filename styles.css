@@ -4357,4 +4357,191 @@ section.skills-section .skills-content li::before {
   }
   
   .site-btn:hover {
-    background: #
+    background: #185F72;
+    color: #FFFBF6;
+  }
+  
+  @media (max-width: 48rem) {
+    .map-popup {
+        position: relative;
+        right: auto;
+        transform: none;
+        margin: 1.25rem auto;
+        max-width: 100%;
+        width: 90%;
+        height: auto;
+        padding: 4rem 1.5rem 2rem;
+    }
+    
+    .popup-icon {
+        max-width: 12rem;
+        height: 12rem;
+    }
+    
+    .popup-content {
+        padding-top: 0;
+    }
+    
+    .popup-content h3 {
+        font-size: 0.875rem;
+    }
+    
+    .popup-content p {
+        font-size: 0.875rem;
+    }
+  }
+  
+  .partner-logos-section {
+    width: 100%;
+    background: #FFFBF6;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .partner-logos-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 3rem 0 3rem;
+    position: relative;
+  }
+  
+  .logos-track {
+    display: flex;
+    gap: 0;
+    animation: scroll-logos 20s linear infinite;
+    width: fit-content;
+  }
+  
+  .logos-track img {
+    height: 12.5rem;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+  }
+  
+  @keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-30%);
+    }
+  }
+  
+  .partner-logos-carousel:hover .logos-track {
+    animation-play-state: paused;
+  }
+  
+  @media (max-width: 64rem) {
+    .impact h1,
+    .partners h1 {
+        font-size: 2.5rem;
+    }
+    
+    .impact .section-description,
+    .partners .section-description {
+        font-size: 1.5rem;
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2.5rem 1.875rem;
+    }
+    
+    .carousel {
+        gap: 1.25rem;
+    }
+    
+    .carousel .card {
+        width: 17.5rem;
+        height: 23.75rem;
+    }
+  }
+  
+  @media (max-width: 48rem) {
+    .impact,
+    .partners {
+        padding: 3.75rem 1.25rem;
+    }
+    
+    .impact h1,
+    .partners h1 {
+        font-size: 2rem;
+    }
+    
+    .impact .section-description,
+    .partners .section-description {
+        font-size: 1.25rem;
+    }
+    
+    .carousel {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    
+    .carousel-track {
+        flex-direction: column;
+        max-width: 18.75rem;
+    }
+    
+    .carousel .card {
+        width: 100%;
+        max-width: 18.75rem;
+        height: 25rem;
+    }
+    
+    .partner-logos {
+        gap: 1.875rem;
+    }
+    
+    .partner-logos img {
+        height: 4.375rem;
+    }
+    
+  }
+  
+  .map-stage{
+    position: relative;
+    flex: 1;
+  }
+  
+
+  @media (max-width: 48rem){
+    .map-container{
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      display: flex;
+    }
+  
+    .map-stage{
+      width: 100%;
+      max-width: 40rem; 
+    }
+  
+    .map-pin{
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  
+    .map-popup{
+      position: relative !important;
+      left: auto !important;
+      right: auto !important;
+      top: auto !important;
+      bottom: auto !important;
+      transform: none !important;
+  
+      width: min(22.4375rem, 92%) !important;
+      max-width: 92% !important;
+      margin: 0 auto !important;
+    }
+  
+    .map-popup.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+    
