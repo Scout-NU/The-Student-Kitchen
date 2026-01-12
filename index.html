@@ -231,7 +231,7 @@
                             <div class="book book-md book-tilt-left"></div> 
                             
                         </div>
-                        </div>
+                    </div>
                         
                     </div>
                 </div>
@@ -404,6 +404,11 @@
         const heroSection = document.querySelector('.hero-title-section');
         const heroMissionBox = document.querySelector('.hero-mission-box');
 
+        const isMobile = window.innerWidth <= 768;
+    
+        // Set delay: 0 for mobile, 1000 for desktop
+        const delay = isMobile ? 0 : 1000;
+        
         setTimeout(function() {
             heroSection.classList.add('scrolled');
             // Set visibility immediately for Firefox compatibility
@@ -411,7 +416,7 @@
                 heroMissionBox.style.visibility = 'visible';
                 heroMissionBox.style.pointerEvents = 'auto';
             }
-        }, 2000);
+        }, delay);
     </script>
 
     <script>
@@ -432,43 +437,4 @@
         }, observerOptions);
 
         // Wait for DOM to be ready, then observe elements
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.animate-on-scroll').forEach(el => {
-                observer.observe(el);
-            });
-        });
-    </script>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                
-                initHamburgerMenu();
-            });
-
-        // Hamburger menu function
-        function initHamburgerMenu() {
-            const hamburger = document.getElementById('hamburger');
-            const mainNav = document.getElementById('mainNav');
-
-            if (hamburger && mainNav) {
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    mainNav.classList.toggle('active');
-                });
-
-                const navLinks = document.querySelectorAll('.main-nav a');
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        hamburger.classList.remove('active');
-                        mainNav.classList.remove('active');
-                    });
-                });
-            }
-        }
-    </script>
-    
-    
-</body>
-</html>
+        document.addEventListener('DOMContentLoaded', () 
