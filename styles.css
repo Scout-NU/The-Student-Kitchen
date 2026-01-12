@@ -1370,7 +1370,7 @@ nav a:hover{color:#3498db;}
   align-items: flex-end;
   gap: 3px;
   flex-wrap: nowrap;  /* Books stay in one row */
-  overflow-x: auto;    /* Scroll if too many books */
+  overflow-x: hidden;    /* Hide overflow to prevent scrollbars */
   flex: 1;  /* Take remaining space */
   
 }
@@ -1383,7 +1383,7 @@ nav a:hover{color:#3498db;}
   width: 100%;
   gap: 3px;
   flex-wrap: nowrap;  /* Books stay in one row */
-  overflow-x: auto;    /* Scroll if too many books */
+  overflow-x: hidden;    /* Hide overflow to prevent scrollbars */
   flex: 1;  /* Take remaining space */
   
 }
@@ -1397,7 +1397,7 @@ nav a:hover{color:#3498db;}
   width: 100%;
   gap: 3px;
   flex-wrap: nowrap;  /* Books stay in one row */
-  overflow-x: auto;    /* Scroll if too many books */
+  overflow-x: hidden;    /* Hide overflow to prevent scrollbars */
   flex: 1;  /* Take remaining space */
   
 }
@@ -1410,7 +1410,7 @@ nav a:hover{color:#3498db;}
   width: 100%;
   gap: 3px;
   flex-wrap: nowrap;  /* Books stay in one row */
-  overflow-x: auto;    /* Scroll if too many books */
+  overflow-x: hidden;    /* Hide overflow to prevent scrollbars */
   flex: 1;  /* Take remaining space */
   
 }
@@ -1421,7 +1421,7 @@ nav a:hover{color:#3498db;}
   align-items: flex-end;
   gap: 3px;
   flex-wrap: nowrap;  /* Books stay in one row */
-  overflow-x: auto;    /* Scroll if too many books */
+  overflow-x: hidden;    /* Hide overflow to prevent scrollbars */
   flex: 1;  /* Take remaining space */
   overflow: hidden;
 }
@@ -3715,9 +3715,46 @@ section.skills-section .skills-content li::before {
   /* ===== MOBILE STYLES ===== */
   @media (max-width: 1100px) {
     
-    /* Show hamburger on mobile */
+    /* Make header smaller on mobile */
+    .site-header {
+      padding: 0.75rem 0;
+    }
+    
+    .header-container {
+      padding: 0 1rem;
+      max-width: 100%;
+    }
+    
+    /* Make logo much smaller on mobile */
+    .header-logo {
+      height: 2rem;
+      width: auto;
+    }
+    
+    /* Reduce gap between header elements */
+    .header-right {
+      gap: 0.75rem;
+    }
+    
+    /* Make search icon smaller */
+    .search-icon-btn {
+      padding: 0.25rem;
+    }
+    
+    .search-icon-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+    
+    /* Make hamburger smaller */
     .hamburger {
       display: flex; /* ← NOW VISIBLE on mobile */
+      padding: 0.25rem;
+    }
+    
+    .hamburger span {
+      width: 20px;
+      height: 2.5px;
     }
     
     /* Hide donate button on mobile to save space */
@@ -3777,8 +3814,21 @@ section.skills-section .skills-content li::before {
   
   /* Even smaller screens */
   @media (max-width: 480px) {
+    .site-header {
+      padding: 0.5rem 0;
+    }
+    
     .header-container {
-      padding: 0 1rem;
+      padding: 0 0.75rem;
+    }
+    
+    /* Make logo even smaller on very small screens */
+    .header-logo {
+      height: 1.75rem;
+    }
+    
+    .header-right {
+      gap: 0.5rem;
     }
     
     .donate-btn {
